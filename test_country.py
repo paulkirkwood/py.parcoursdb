@@ -1,0 +1,30 @@
+import country
+
+class TestCountry:
+
+    def test_country(self):
+        assert country.Andorra().name         == "Andorra"
+        assert country.Austria().name         == "Austria"
+        assert country.Belgium().name         == "Belgium"
+        assert country.Croatia().name         == "Croatia"
+        assert country.Denmark().name         == "Denmark"
+        assert country.Fiume().name           == "Free State of Fiume"
+        assert country.France().name          == "France"
+        assert country.Germany().name         == "Germany"
+        assert country.Greece().name          == "Greece"
+        assert country.Ireland().name         == "Ireland"
+        assert country.Israel().name          == "Israel"
+        assert country.Italy().name           == "Italy"
+        assert country.Luxembourg().name      == "Luxembourg"
+        assert country.Monaco().name          == "Monaco"
+        assert country.Netherlands().name     == "Netherlands"
+        assert country.NorthernIreland().name == "Northern Ireland"
+        assert country.Portugal().name        == "Portugal"
+        assert country.SanMarino().name       == "San Marino"
+        assert country.Slovenia().name        == "Slovenia"
+        assert country.Spain().name           == "Spain"
+        assert country.Switzerland().name     == "Switzerland"
+        assert country.UnitedKingdom().name   == "United Kingdom"
+        assert country.VaticanCity().name     == "Vatican City"
+        assert country.WestGermany().name     == "West Germany"
+        assert country.Yugoslavia().name      == "Yugoslavia"
