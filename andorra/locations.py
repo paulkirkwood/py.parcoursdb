@@ -10,7 +10,7 @@ def envalira():
 def estacio_de_pal():
     return Location("Estacio de Pal", Andorra())
 
-def estacio_d_esqui_d_ordino_arcalis():
+def estacio_d_esqui_d_ordino_alcalis():
     return Location("Estacio d'Esqui d'Ordino-Alcalis", Andorra())
 
 def escaldes_engordany():
@@ -18,6 +18,9 @@ def escaldes_engordany():
 
 def naturlandia():
     return Location("Naturlandia", Andorra())
+
+def ordino():
+    return Location("Ordino", Andorra())
 
 def pal():
     return Location("Pal", Andorra())

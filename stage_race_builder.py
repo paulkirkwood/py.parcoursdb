@@ -35,6 +35,10 @@ class StageRaceBuilder(object):
     def enable_morning_stage(self):
         self._new_state(MorningStageBuilder)
 
+    def enable_a_b_stage(self):
+        self._new_state(StageABuilder)
+        self._stage_suffix = 'A'
+
     def mountain_stage(self, start):
         self._stage_start = start
         self._new_state(MountainStageBuilder)
@@ -247,6 +251,28 @@ class MountainTimeTrialBuilder(MountainStageBuilder):
         self._increment_stage_date()
         self._increment_stage_number()
         self._increment_stage_suffix()
+        self._new_state(ConsecutiveStageBuilder)
+
+class StageABuilder(ConsecutiveStageBuilder):
+
+    def out_and_back_individual_time_trial(self, start, distance):
+        itt = IndividualTimeTrial(self._date, self.stage_id(), start, start, distance, copy.deepcopy(self._cols))
+        self._stages.append(itt)
+        self._increment_stage_date()
+        self._stage_suffix = chr(ord(self._stage_suffix) + 1)
+        self._new_state(StageBBuilder)
+
+    def stage_id(self):
+        id = '{i}{suffix}'
+        return id.format(i = self._stage_number, suffix = self._stage_suffix)
+
+class StageBBuilder(StageABuilder):
+
+    def criterium(self, start, distance):
+        stage = RoadStage(self._date, self.stage_id(), start, start, distance)
+        self._stages.append(stage)
+        self._increment_stage_date()
+        self._increment_stage_number()
         self._new_state(ConsecutiveStageBuilder)
 
 class NonConsecutiveStageRaceBuilder(object):

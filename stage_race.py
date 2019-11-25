@@ -145,7 +145,7 @@ class StageRace(object):
         #
         # How many road, team or individual time trials ?
         #
-        stage_id_re = re.compile(r'(^\d+$)')
+        stage_id_re = re.compile(r'(^\d+[AB]?$)')
         non_split_stages = [stage for stage in self.racing_stages if stage_id_re.match(stage.id)]
         non_split = len(non_split_stages)
 

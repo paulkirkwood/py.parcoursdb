@@ -22,7 +22,7 @@ import yugoslavia
 import mountains.alps
 import mountains.dolomites
 import mountains.appennines
-import mountains.sciliy
+import mountains.sicily
 from col                import ColCategory
 from stage_race         import TourOfItaly
 from stage_race_builder import NonConsecutiveStageRaceBuilder, TourOfItalyBuilder
@@ -4312,7 +4312,7 @@ def giro1989():
 
     # Stage 2
     builder.mountain_stage(italy.catania())
-    builder.summit_finish(mountains.sciliy.mount_etna(), ColCategory.C1, 132)
+    builder.summit_finish(mountains.sicily.mount_etna(), ColCategory.C1, 132)
 
     # Stage 3
     builder.team_time_trial(italy.villafranca(), italy.messina(), 32.5)
@@ -6531,7 +6531,7 @@ def giro2018():
 
     # Stage 6
     builder.mountain_stage(italy.caltanissetta())
-    builder.summit_finish(mountains.sciliy.mount_etna(), ColCategory.C1, 169.0)
+    builder.summit_finish(mountains.sicily.mount_etna(), ColCategory.C1, 169.0)
 
     # Stage 7
     builder.road_stage(italy.pizzo(), italy.praia_a_mare(), 159.0)
