@@ -1,6 +1,7 @@
 import inspect
 import pytest
 import tdf
+from collections import defaultdict
 
 class TestTourDeFrance:
 
@@ -1021,6 +1022,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1952()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "23 stages"
+        assert edition.summit_finishes == 3
 
     def test_tdf1953(self):
         route="""1,3 July,Strasbourg to Metz,195.0 km,Road stage
@@ -1051,6 +1053,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1953()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "22 stages"
+        assert edition.summit_finishes == 1
 
     def test_tdf1954(self):
         route="""1,8 July,Amsterdam (Netherlands) to Brasschaat (Belgium),216.0 km,Road stage
@@ -1069,8 +1072,8 @@ class TestTourDeFrance:
         12,20 July,Pau to Luchon,161.0 km,Road stage
         13,21 July,Luchon to Mulhouse,203.0 km,Road stage
         14,22 July,Mulhouse to Millau,225.0 km,Road stage
-        15,23 July,Millau to Le Puy,197.0 km,Road stage
-        16,24 July,Le Puy to Lyon,194.0 km,Road stage
+        15,23 July,Millau to Le Puy-en-Velay,197.0 km,Road stage
+        16,24 July,Le Puy-en-Velay to Lyon,194.0 km,Road stage
         ,25 July,Rest day,Lyon
         17,26 July,Lyon to Grenoble,182.0 km,Road stage
         18,27 July,Grenoble to Briançon,216.0 km,Road stage
@@ -1208,6 +1211,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1958()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "24 stages"
+        assert edition.summit_finishes == 1
 
     def test_tdf1959(self):
         route="""1,25 June,Mulhouse to Metz,238.0 km,Road stage
@@ -1238,6 +1242,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1959()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "22 stages"
+        assert edition.summit_finishes == 1
 
     def test_tdf1960(self):
         route="""1a,26 June,Lille to Brussels (Belgium),108.0 km,Road stage
@@ -1296,6 +1301,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1961()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "21 stages including 1 split stage"
+        assert edition.summit_finishes == 1
 
     def test_tdf1962(self):
         route="""1,24 June,Nancy to Spa (Belgium),253.0 km,Road stage
@@ -1326,6 +1332,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1962()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "22 stages including 2 split stages"
+        assert edition.summit_finishes == 1
 
     def test_tdf1963(self):
         route="""1,23 June,Paris to Epernay,152.0 km,Road stage
@@ -1356,6 +1363,7 @@ class TestTourDeFrance:
         edition = tdf.tdf1963()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "21 stages including 2 split stages"
+        assert edition.summit_finishes == 1
 
     def test_tdf1964(self):
         route="""1,22 June,Rennes to Lisieux,215.0 km,Road stage

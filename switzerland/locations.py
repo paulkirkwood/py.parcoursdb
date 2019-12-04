@@ -7,6 +7,9 @@ def basel():
 def bern():
     return _swiss_location("Bern")
 
+def crans_montana():
+    return _swiss_location("Crans-Montana", 1670)
+
 def fribourg():
     return _swiss_location("Fribourg")
 
@@ -53,13 +56,16 @@ def saas_fee():
     return _swiss_location("Saas Fee")
 
 def saint_moritz():
-    return _swiss_location("Saint Moritz")
+    return _swiss_location("Saint Moritz", 1822)
 
 def sion():
     return _swiss_location("Sion")
 
+def verbier():
+    return _swiss_location("Verbier", 1468)
+
 def zurich():
     return _swiss_location("Zurich")
 
-def _swiss_location(name):
-    return Location(name, Switzerland())
+def _swiss_location(name, elevation = None):
+    return Location(name, Switzerland(), elevation)

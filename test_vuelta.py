@@ -1,6 +1,7 @@
 import inspect
 import pytest
 import vuelta
+from collections import defaultdict
 
 class TestTourOfSpain:
 
@@ -999,7 +1000,7 @@ class TestTourOfSpain:
         15a,5 May,Albacete to Tomelloso,119.0 km,Road stage
         15b,5 May,Tomelloso to Campo de Criptana,35.0 km,Individual time trial
         16,6 May,Campo de Criptana to San Fernando de Henares,176.0 km,Road stage
-        17,7 May,San Fernando de Henares to Navacerrada,178.0 km,Road stage
+        17,7 May,San Fernando de Henares to Puerto de Navacerrada,178.0 km,Road stage
         18,8 May,Palazuelos de Eresma (Destilerias DYC),184.0 km,Road stage
         19,9 May,Madrid,84.0 km,Road stage"""
 
@@ -1291,7 +1292,7 @@ class TestTourOfSpain:
         3,28 April,Vigo to Ourense,171.4 km,Road stage
         4,29 April,A Gudina to Salamanca,233.4 km,Road stage
         5,30 April,Salamanca to Ávila,219.8 km,Road stage
-        6,1 May,Palazuelos de Eresma (Destilerias DYC) to Navacerrada,24.1 km,Individual time trial
+        6,1 May,Palazuelos de Eresma (Destilerias DYC) to Puerto de Navacerrada,24.1 km,Individual time trial
         7,2 May,Palazuelos de Eresma (Destilerias DYC) to Madrid,184.0 km,Road stage
         8,3 May,Aranjuez to Albacete,225.1 km,Road stage
         9,4 May,Albacete to Valencia,224.0 km,Road stage
@@ -1446,7 +1447,7 @@ class TestTourOfSpain:
         17,22 September,Burgos to León,188.5 km,Road stage
         18,23 September,León to Salamanca,223.0 km,Road stage
         19,24 September,Ávila to Segovia,170.4 km,Road stage
-        20,25 September,Segovia to Alto de Navacerrada,206.0 km,Road stage
+        20,25 September,Segovia to Puerto de Navacerrada,206.0 km,Road stage
         21,26 September,Fuenlabrada,39.0 km,Individual time trial
         22,27 September,Madrid,163.0 km,Road stage"""
 
@@ -1621,7 +1622,7 @@ class TestTourOfSpain:
         17,22 September,Plasencia to La Covatilla,170.0 km,Road stage
         18,23 September,Béjar to Ávila,196.0 km,Road stage
         19,24 September,Ávila to Collado Villalba,142.0 km,Road stage
-        20,25 September,Alcobendas to Alto de Navacerrada,178.0 km,Road stage
+        20,25 September,Alcobendas to Puerto de Navacerrada,178.0 km,Road stage
         21,26 September,Madrid,28.0 km,Individual time trial"""
 
         edition = vuelta.vuelta2004()
@@ -1737,7 +1738,7 @@ class TestTourOfSpain:
         17,17 September,Zamora to Valladolid,148.2 km,Road stage
         18,18 September,Valladolid to Las Rozas,167.4 km,Road stage
         19,19 September,Las Rozas to Segovia,145.5 km,Road stage
-        20,20 September,La Granja de San Ildefonso to Alto de Navacerrada,17.1 km,Individual time trial
+        20,20 September,La Granja de San Ildefonso to Puerto de Navacerrada,17.1 km,Individual time trial
         21,21 September,San Sebastián de los Reyes to Madrid,102.2 km,Road stage"""
 
         edition = vuelta.vuelta2008()
@@ -2033,3 +2034,92 @@ class TestTourOfSpain:
         edition = vuelta.vuelta2018()
         assert edition.route == inspect.cleandoc(route)
         assert edition.stage_summary == "21 stages"
+
+    def test_vuelta2019(self):
+
+        editions = []
+        editions.append(vuelta.vuelta1935())
+        editions.append(vuelta.vuelta1936())
+        editions.append(vuelta.vuelta1941())
+        editions.append(vuelta.vuelta1942())
+        editions.append(vuelta.vuelta1945())
+        editions.append(vuelta.vuelta1946())
+        editions.append(vuelta.vuelta1948())
+        editions.append(vuelta.vuelta1950())
+        editions.append(vuelta.vuelta1955())
+        editions.append(vuelta.vuelta1956())
+        editions.append(vuelta.vuelta1957())
+        editions.append(vuelta.vuelta1958())
+        editions.append(vuelta.vuelta1959())
+        editions.append(vuelta.vuelta1960())
+        editions.append(vuelta.vuelta1961())
+        editions.append(vuelta.vuelta1962())
+        editions.append(vuelta.vuelta1963())
+        editions.append(vuelta.vuelta1964())
+        editions.append(vuelta.vuelta1965())
+        editions.append(vuelta.vuelta1966())
+        editions.append(vuelta.vuelta1967())
+        editions.append(vuelta.vuelta1968())
+        editions.append(vuelta.vuelta1969())
+        editions.append(vuelta.vuelta1970())
+        editions.append(vuelta.vuelta1971())
+        editions.append(vuelta.vuelta1972())
+        editions.append(vuelta.vuelta1973())
+        editions.append(vuelta.vuelta1974())
+        editions.append(vuelta.vuelta1975())
+        editions.append(vuelta.vuelta1976())
+        editions.append(vuelta.vuelta1977())
+        editions.append(vuelta.vuelta1978())
+        editions.append(vuelta.vuelta1979())
+        editions.append(vuelta.vuelta1980())
+        editions.append(vuelta.vuelta1981())
+        editions.append(vuelta.vuelta1982())
+        editions.append(vuelta.vuelta1983())
+        editions.append(vuelta.vuelta1984())
+        editions.append(vuelta.vuelta1985())
+        editions.append(vuelta.vuelta1986())
+        editions.append(vuelta.vuelta1987())
+        editions.append(vuelta.vuelta1988())
+        editions.append(vuelta.vuelta1989())
+        editions.append(vuelta.vuelta1990())
+        editions.append(vuelta.vuelta1991())
+        editions.append(vuelta.vuelta1992())
+        editions.append(vuelta.vuelta1993())
+        editions.append(vuelta.vuelta1994())
+        editions.append(vuelta.vuelta1995())
+        editions.append(vuelta.vuelta1996())
+        editions.append(vuelta.vuelta1997())
+        editions.append(vuelta.vuelta1998())
+        editions.append(vuelta.vuelta1999())
+        editions.append(vuelta.vuelta2000())
+        editions.append(vuelta.vuelta2001())
+        editions.append(vuelta.vuelta2002())
+        editions.append(vuelta.vuelta2003())
+        editions.append(vuelta.vuelta2004())
+        editions.append(vuelta.vuelta2005())
+        editions.append(vuelta.vuelta2006())
+        editions.append(vuelta.vuelta2007())
+        editions.append(vuelta.vuelta2008())
+        editions.append(vuelta.vuelta2009())
+        editions.append(vuelta.vuelta2010())
+        editions.append(vuelta.vuelta2011())
+        editions.append(vuelta.vuelta2012())
+        editions.append(vuelta.vuelta2013())
+        editions.append(vuelta.vuelta2014())
+        editions.append(vuelta.vuelta2015())
+        editions.append(vuelta.vuelta2016())
+        editions.append(vuelta.vuelta2017())
+        editions.append(vuelta.vuelta2018())
+
+        d = defaultdict(list)
+
+        for edition in editions:
+            year = edition.start_date.year
+            summary = edition.stage_summary
+            d[summary].append(year)
+
+        for key in d.keys():
+            yrs = ','.join(str(y) for y in d[key])
+            print( '  | year `elem` [{}] = "{}"'.format(yrs, key))
+
+        assert 1 == 1

@@ -1739,7 +1739,7 @@ def tdf1952():
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 266.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.alpe_d_huez())
+    builder.rest_day(france.alpe_d_huez())
 
     # Stage 11
     builder.mountain_stage(france.le_bourg_d_oisans())
@@ -1828,7 +1828,7 @@ def tdf1953():
     builder.summit_finish(mountains.pyrenees.cauterets(), ColCategory.HC, 103.0)
 
     # Stage 11
-    builder.road_stage(mountains.pyrenees.cauterets(), france.luchon(), 115.0)
+    builder.road_stage(france.cauterets(), france.luchon(), 115.0)
 
     # Stage 12
     builder.road_stage(france.luchon(), france.albi(), 228.0)
@@ -1921,10 +1921,10 @@ def tdf1954():
     builder.road_stage(france.mulhouse(), france.millau(), 225.0)
 
     # Stage 15
-    builder.road_stage(france.millau(), france.le_puy(), 197.0)
+    builder.road_stage(france.millau(), france.le_puy_en_velay(), 197.0)
 
     # Stage 16
-    builder.road_stage(france.le_puy(), france.lyon(), 194.0)
+    builder.road_stage(france.le_puy_en_velay(), france.lyon(), 194.0)
 
     # Rest day
     builder.rest_day(france.lyon())
@@ -2333,7 +2333,9 @@ def tdf1959():
     builder.road_stage(france.aurillac(), france.clermont_ferrand(), 231.0)
 
     # Stage 15
-    builder.out_and_back_individual_time_trial(mountains.massif_central.puy_de_dome(), 12.0)
+    puy_de_dome = mountains.massif_central.puy_de_dome()
+    builder.mountain_time_trial(puy_de_dome)
+    builder.summit_finish(puy_de_dome, ColCategory.C1, 12.0)
 
     # Stage 16
     builder.road_stage(france.clermont_ferrand(), france.saint_etienne(), 210.0)
@@ -2656,7 +2658,7 @@ def tdf1963():
     builder.summit_finish(mountains.alps.val_d_isere(), ColCategory.C1, 202.0)
 
     # Stage 17
-    builder.road_stage(mountains.alps.val_d_isere(), france.chamonix(), 228.0)
+    builder.road_stage(france.val_d_isere(), france.chamonix(), 228.0)
 
     # Stage 18
     builder.road_stage(france.chamonix(), france.lons_le_saunier(), 225.0)
@@ -3338,10 +3340,10 @@ def tdf1971():
     builder.summit_finish(mountains.alps.orcieres_merlette(), ColCategory.C1, 134.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.orcieres_merlette())
+    builder.rest_day(france.orcieres_merlette())
 
     # Stage 12
-    builder.road_stage(mountains.alps.orcieres_merlette(), france.marseille(), 251.0)
+    builder.road_stage(france.orcieres_merlette(), france.marseille(), 251.0)
 
     # Stage 13
     builder.criterium(france.albi(), 16.3)
@@ -3428,10 +3430,10 @@ def tdf1972():
     builder.summit_finish(mountains.alps.orcieres_merlette(), ColCategory.C1, 192.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.orcieres_merlette())
+    builder.rest_day(france.orcieres_merlette())
 
     # Stage 13
-    builder.road_stage(mountains.alps.orcieres_merlette(), france.briancon(), 201.0)
+    builder.road_stage(france.orcieres_merlette(), france.briancon(), 201.0)
 
     # Stages 14a & 14b
     builder.enable_split_stages()
@@ -3602,11 +3604,11 @@ def tdf1974():
     builder.road_stage(france.gaillard(), france.aix_les_bains(), 131.0)
 
     # Stage 11
-    builder.road_stage(france.aix_les_bains(), france.serre_chevalier(), 199.0)
+    builder.mountain_stage(france.aix_les_bains())
+    builder.summit_finish(mountains.alps.serre_chevalier(), ColCategory.C1, 199.0)
 
     # Rest day
     builder.rest_day(france.aix_les_bains())
-
 
     # Stage 12
     builder.road_stage(france.savines_le_lac(), france.orange(), 231.0)
@@ -3619,7 +3621,6 @@ def tdf1974():
 
     # Rest day
     builder.rest_day(france.colomiers())
-
 
     # Stage 15
     builder.road_stage(france.colomiers(), spain.la_seu_d_urgell(), 225.0)
@@ -3724,7 +3725,8 @@ def tdf1975():
     builder.summit_finish(mountains.alps.pra_loup(), ColCategory.C1, 217.0)
 
     # Stage 16
-    builder.road_stage(france.barcelonette(), france.serre_chevalier(), 107.0)
+    builder.mountain_stage(france.barcelonette())
+    builder.summit_finish(mountains.alps.serre_chevalier(), ColCategory.C1, 107.0)
 
     # Stage 17
     builder.road_stage(france.valloire(), france.morzine_avoriaz(), 225.0)
@@ -3907,7 +3909,7 @@ def tdf1977():
     builder.enable_split_stages()
     builder.road_stage(france.thonon_les_bains(), france.morzine(), 105.0)
     builder.mountain_time_trial(france.morzine())
-    builder.summit_finish(france.avoriaz(), ColCategory.C1, 14.0)
+    builder.summit_finish(mountains.alps.avoriaz(), ColCategory.C1, 14.0)
     builder.disable_split_stages()
 
     # Stage 16
@@ -4004,7 +4006,7 @@ def tdf1978():
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 241.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.alpe_d_huez())
+    builder.rest_day(france.alpe_d_huez())
 
     # Stage 17
     builder.road_stage(france.grenoble(), france.morzine(), 225.0)
@@ -4082,12 +4084,12 @@ def tdf1979():
     builder.mountain_stage(france.morzine_avoriaz())
     builder.summit_finish(mountains.alps.les_menuires(), ColCategory.C1, 201)
 
-    builder.rest_day(mountains.alps.les_menuires())
+    builder.rest_day(france.les_menuires())
 
     # Stage 17
     alpe_d_huez = mountains.alps.alpe_d_huez()
 
-    builder.mountain_stage(mountains.alps.les_menuires())
+    builder.mountain_stage(france.les_menuires())
     builder.summit_finish(alpe_d_huez, ColCategory.HC, 167)
 
     # Stage 18
@@ -4095,7 +4097,7 @@ def tdf1979():
     builder.summit_finish(alpe_d_huez, ColCategory.HC, 119)
 
     # Stage 19
-    builder.road_stage(alpe_d_huez, france.saint_priest(), 162)
+    builder.road_stage(france.alpe_d_huez(), france.saint_priest(), 162)
 
     # Stage 20
     builder.road_stage(france.saint_priest(), france.dijon(), 240)
@@ -4356,7 +4358,6 @@ def tdf1982():
 
     # Stage 16
     builder.mountain_stage(mountains.alps.orcieres_merlette())
-
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 123.0)
 
     # Stage 17
@@ -4437,7 +4438,7 @@ def tdf1983():
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 233.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.alpe_d_huez())
+    builder.rest_day(france.alpe_d_huez())
 
     # Stage 18
     builder.road_stage(france.le_bourg_d_oisans(), france.morzine(), 247.0)
@@ -4496,7 +4497,6 @@ def tdf1984():
 
     # Stage 10
     builder.mountain_stage(france.pau())
-
     builder.summit_finish(mountains.pyrenees.guzet_neige(), ColCategory.C1, 227.0)
 
     # Stage 11
@@ -4535,7 +4535,7 @@ def tdf1984():
     builder.summit_finish(mountains.alps.crans_montana(), ColCategory.C1, 141.0)
 
     # Stage 20
-    builder.road_stage(mountains.alps.crans_montana(), france.villefranche_sur_saone(), 320.0)
+    builder.road_stage(switzerland.crans_montana(), france.villefranche_sur_saone(), 320.0)
 
     # Stage 21
     builder.individual_time_trial(france.villie_morgon(), france.villefranche_sur_saone(), 51.0)
@@ -4590,10 +4590,11 @@ def tdf1985():
     builder.summit_finish(mountains.alps.lans_en_vercors(), ColCategory.C1, 269.0)
 
     # Stage 13
-    builder.out_and_back_individual_time_trial(mountains.alps.villard_de_lans(), 32.0)
+    builder.mountain_time_trial(france.villard_de_lans())
+    builder.summit_finish(mountains.alps.villard_de_lans(), ColCategory.C1, 32.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.villard_de_lans())
+    builder.rest_day(france.villard_de_lans())
 
     # Stage 14
     builder.road_stage(france.autrans(), france.saint_etienne(), 179.0)
@@ -4686,17 +4687,18 @@ def tdf1986():
     builder.road_stage(france.nimes(), france.gap(), 246.5)
 
     # Stage 17
-    builder.road_stage(france.gap(), france.serre_chevalier(), 190.0)
+    builder.mountain_stage(france.gap())
+    builder.summit_finish(mountains.alps.serre_chevalier(), ColCategory.C1, 190)
 
     # Stage 18
     builder.mountain_stage(france.briancon())
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 162.5)
 
     # Rest day
-    builder.rest_day(mountains.alps.alpe_d_huez())
+    builder.rest_day(france.alpe_d_huez())
 
     # Stage 19
-    builder.road_stage(mountains.alps.villard_de_lans(), france.saint_etienne(), 179.5)
+    builder.road_stage(france.villard_de_lans(), france.saint_etienne(), 179.5)
 
     # Stage 20
     builder.out_and_back_individual_time_trial(france.saint_etienne(), 58.0)
@@ -4789,7 +4791,7 @@ def tdf1987():
     builder.summit_finish(mountains.alps.villard_de_lans(), ColCategory.C1, 185.0)
 
     # Stage 20
-    builder.mountain_stage(mountains.alps.villard_de_lans())
+    builder.mountain_stage(france.villard_de_lans())
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 201.0)
 
     # Stage 21
@@ -4872,7 +4874,7 @@ def tdf1988():
 
     # Stage 16
     builder.enable_morning_stage()
-    builder.road_stage(mountains.pyrenees.luz_ardiden(), france.pau(), 38.0)
+    builder.road_stage(france.luz_ardiden(), france.pau(), 38.0)
 
     # Stage 17
     builder.road_stage(france.pau(), france.bordeaux(), 210.0)
@@ -4935,7 +4937,7 @@ def tdf1989():
     builder.summit_finish(mountains.pyrenees.cauterets(), ColCategory.HC, 147.0)
 
     # Stage 10
-    builder.mountain_stage(mountains.pyrenees.cauterets())
+    builder.mountain_stage(france.cauterets())
     builder.summit_finish(mountains.pyrenees.superbagneres(), ColCategory.HC, 136.0)
 
     # Stage 11
@@ -4955,7 +4957,7 @@ def tdf1989():
     builder.summit_finish(mountains.alps.orcieres_merlette(), ColCategory.C1, 39.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.orcieres_merlette())
+    builder.rest_day(france.orcieres_merlette())
 
     # Stage 16
     builder.road_stage(france.gap(), france.briancon(), 175.0)
@@ -4969,7 +4971,7 @@ def tdf1989():
     builder.summit_finish(mountains.alps.villard_de_lans(), ColCategory.C1, 91.5)
 
     # Stage 19
-    builder.road_stage(mountains.alps.villard_de_lans(), france.aix_les_bains(), 125.0)
+    builder.road_stage(france.villard_de_lans(), france.aix_les_bains(), 125.0)
 
     # Stage 20
     builder.road_stage(france.aix_les_bains(), france.l_isle_d_abeau(), 130.0)
@@ -5029,7 +5031,7 @@ def tdf1990():
     builder.summit_finish(mountains.alps.villard_de_lans(), ColCategory.C1, 33.5)
 
     # Rest day
-    builder.rest_day(mountains.alps.villard_de_lans())
+    builder.rest_day(france.villard_de_lans())
 
     # Stage 13
     builder.road_stage(mountains.alps.villard_de_lans(), france.saint_etienne(), 149.0)
@@ -5042,7 +5044,6 @@ def tdf1990():
 
     # Stage 16
     builder.mountain_stage(france.blagnac())
-
     builder.summit_finish(mountains.pyrenees.luz_ardiden(), ColCategory.HC, 215.0)
 
     # Stage 17
@@ -5255,10 +5256,11 @@ def tdf1993():
     builder.out_and_back_individual_time_trial(france.lac_de_madine(), 59.0)
 
     # Rest day
-    builder.rest_day(mountains.alps.villard_de_lans())
+    builder.rest_day(france.villard_de_lans())
 
     # Stage 10
-    builder.road_stage(mountains.alps.villard_de_lans(), france.serre_chevalier(), 203.0)
+    builder.mountain_stage(france.villard_de_lans())
+    builder.summit_finish(mountains.alps.serre_chevalier(), ColCategory.C1, 203)
 
     # Stage 11
     builder.mountain_stage(france.serre_chevalier())
@@ -5360,7 +5362,6 @@ def tdf1994():
 
     # Stage 17
     builder.mountain_stage(france.le_bourg_d_oisans())
-
     builder.summit_finish(mountains.alps.val_thorens(), ColCategory.HC, 149.0)
 
     # Stage 18
@@ -5368,7 +5369,7 @@ def tdf1994():
 
     # Stage 19
     builder.mountain_time_trial(france.cluses())
-    builder.summit_finish(france.avoriaz(), ColCategory.C1, 47.5)
+    builder.summit_finish(mountains.alps.avoriaz(), ColCategory.C1, 47.5)
 
     # Stage 20
     builder.road_stage(france.morzine(), france.lac_saint_point(), 208.5)
@@ -5431,7 +5432,6 @@ def tdf1995():
 
     # Stage 14
     builder.mountain_stage(france.saint_orens_de_gameville())
-
     builder.summit_finish(mountains.pyrenees.guzet_neige(), ColCategory.C1, 164.0)
 
     # Rest day
@@ -5439,7 +5439,6 @@ def tdf1995():
 
     # Stage 15
     builder.mountain_stage(france.saint_girons())
-
     builder.summit_finish(mountains.pyrenees.cauterets(), ColCategory.HC, 206.0)
 
     # Stage 16
@@ -5593,11 +5592,10 @@ def tdf1997():
 
     # Stage 14
     builder.mountain_stage(france.le_bourg_d_oisans())
-
     builder.summit_finish(mountains.alps.courchevel(), ColCategory.C1, 148.0)
 
     # Stage 15
-    builder.road_stage(mountains.alps.courchevel(), france.morzine(), 208.5)
+    builder.road_stage(france.courchevel(), france.morzine(), 208.5)
 
     # Stage 16
     builder.road_stage(france.morzine(), switzerland.fribourg(), 181.0)
@@ -5830,10 +5828,10 @@ def tdf2000():
     builder.summit_finish(mountains.alps.courchevel(), ColCategory.C1, 173.5)
 
     # Rest day
-    builder.rest_day(mountains.alps.courchevel())
+    builder.rest_day(france.courchevel())
 
     # Stage 16
-    builder.road_stage(mountains.alps.courchevel(), france.morzine(), 196.5)
+    builder.road_stage(france.courchevel(), france.morzine(), 196.5)
 
     # Stage 17
     builder.road_stage(france.evian_les_bains(), switzerland.lausanne(), 155.0)
@@ -5991,11 +5989,10 @@ def tdf2002():
 
     # Stage 15
     builder.mountain_stage(france.vaison_la_romaine())
-
     builder.summit_finish(mountains.alps.les_deux_alpes(), ColCategory.C1, 226.5)
 
     # Stage 16
-    builder.mountain_stage(mountains.alps.les_deux_alpes())
+    builder.mountain_stage(france.les_deux_alpes())
     builder.summit_finish(mountains.alps.la_plagne(), ColCategory.HC, 179.5)
 
     # Stage 17
@@ -6042,7 +6039,6 @@ def tdf2003():
 
     # Stage 8
     builder.mountain_stage(france.sallanches())
-
     builder.summit_finish(mountains.alps.alpe_d_huez(), ColCategory.HC, 219.0)
 
     # Stage 9
@@ -6210,7 +6206,7 @@ def tdf2005():
     builder.rest_day(france.grenoble())
 
     # Stage 11
-    builder.road_stage(mountains.alps.courchevel(), france.briancon(), 173.0)
+    builder.road_stage(france.courchevel(), france.briancon(), 173.0)
 
     # Stage 12
     builder.road_stage(france.briancon(), france.digne_les_bains(), 187.0)
@@ -6361,7 +6357,7 @@ def tdf2007():
     builder.rest_day(france.tignes())
 
     # Stage 9
-    builder.road_stage(mountains.alps.val_d_isere(), france.briancon(), 159.5)
+    builder.road_stage(france.val_d_isere(), france.briancon(), 159.5)
 
     # Stage 10
     builder.road_stage(france.tallard(), france.marseille(), 229.5)
@@ -6454,7 +6450,8 @@ def tdf2008():
     builder.road_stage(france.nimes(), france.digne_les_bains(), 194.5)
 
     # Stage 15
-    builder.road_stage(france.embrun(), italy.prato_nevoso(), 183.0)
+    builder.mountain_stage(france.embrun())
+    builder.summit_finish(mountains.alps.prato_nevoso(), ColCategory.C1, 183)
 
     # Rest day
     builder.rest_day(italy.cuneo())
@@ -6535,7 +6532,7 @@ def tdf2009():
     builder.summit_finish(mountains.alps.verbier(), ColCategory.C1, 207.5)
 
     # Rest day
-    builder.rest_day(mountains.alps.verbier())
+    builder.rest_day(switzerland.verbier())
 
     # Stage 16
     builder.road_stage(switzerland.martigny(), france.bourg_saint_maurice(), 159.0)
@@ -7170,7 +7167,8 @@ def tdf2017():
     builder.road_stage(france.le_puy_en_velay(), france.romans_sur_isere(), 165.0)
 
     # Stage 17
-    builder.road_stage(france.la_mure(), france.serre_chevalier(), 183.0)
+    builder.mountain_stage(france.la_mure())
+    builder.summit_finish(mountains.alps.serre_chevalier(), ColCategory.C1, 183.0)
 
     # Stage 18
     builder.mountain_stage(france.briancon())
@@ -7186,6 +7184,7 @@ def tdf2017():
     builder.road_stage(france.montgeron(), france.paris(), 103.0)
 
     return builder.build()
+
 def tdf2018():
 
     builder = TourDeFranceBuilder(2018,7,7)

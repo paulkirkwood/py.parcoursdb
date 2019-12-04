@@ -44,6 +44,9 @@ def alfortville():
 def altkirch():
     return _french_location("Altkirch")
 
+def alpe_d_huez():
+    return _french_location("Alpe d'Huez", 1850)
+    
 def amiens():
     return _french_location("Amiens")
 
@@ -147,7 +150,7 @@ def avignon():
     return _french_location("Avignon")
 
 def avoriaz():
-    return _french_location("Avoriaz")
+    return _french_location("Avoriaz", 1800)
 
 def avranches():
     return _french_location("Avranches")
@@ -373,6 +376,9 @@ def castillon_la_bataille():
 def castres():
     return _french_location("Castres")
 
+def cauterets():
+    return _french_location("Cauterets", 1320)
+
 def cergy_pontoise():
     return _french_location("Cergy-Pontoise")
 
@@ -405,6 +411,9 @@ def chamonix():
 
 def champagnole():
     return _french_location("Champagnole")
+
+def chamrousse():
+    return _french_location("Chamrousse", 1730)
 
 def chaumont():
     return _french_location("Chaumont")
@@ -516,6 +525,9 @@ def correze():
 
 def cosne_sur_loire():
     return _french_location("Cosne-sur-Loire")
+
+def courchevel():
+    return _french_location("Courchevel", 2004)
 
 def creteil():
     return _french_location("Creteil")
@@ -725,6 +737,9 @@ def gueugnon():
 def guillestre():
     return _french_location("Guillestre")
 
+def guzet_neige():
+    return _french_location("Guzet-Neige", 1480)
+
 # H
 def hendaye():
     return _french_location("Hendaye")
@@ -810,8 +825,14 @@ def la_haie_fouassiere():
 def la_loupe():
     return _french_location("La Loupe")
 
+def la_mongie():
+    return _french_location("La Mongie", 1715)
+
 def la_mure():
     return _french_location("La Mure")
+
+def la_plagne():
+    return _french_location("La Plagne", 1970)
 
 def la_roche_sur_yon():
     return _french_location("La Roche-sur-Yon")
@@ -821,6 +842,9 @@ def la_rochelle():
 
 def la_tour_du_pin():
     return _french_location("La Tour-du-Pin")
+
+def la_toussuire():
+    return _french_location("La Toussuire", 1705)
 
 def la_toussuire_les_sybelles():
     return _french_location("La Toussuire - Les Sybelles")
@@ -861,6 +885,9 @@ def lannemezan():
 def lannion():
     return _french_location("Lannion")
 
+def lans_en_vercors():
+    return _french_location("Lans-en-Vercors", 1410)
+
 def laon():
     return _french_location("Laon")
 
@@ -884,6 +911,9 @@ def lavelanet():
 
 def le_barcares():
     return _french_location("Le Barcarès")
+
+def le_bettex():
+    return _french_location("Le Bettex, Saint-Gervais - Mont Blanc", 1372)
 
 def le_blanc():
     return _french_location("Le Blanc")
@@ -927,11 +957,20 @@ def le_touquet_paris_plage():
 def le_treport():
     return _french_location("Le Treport")
 
+def les_arcs():
+    return _french_location("Les Arcs", 1700)
+
+def les_deux_alpes():
+    return _french_location("Les Deux Alpes", 1644)
+
 def les_echelles():
     return _french_location("Les Echelles")
 
 def les_essarts():
     return _french_location("Les Essarts")
+
+def les_menuires():
+    return _french_location("Les Menuires", 1809)
 
 def les_sables_d_olonne():
     return _french_location("Les Sables-d'Olonne")
@@ -1010,6 +1049,9 @@ def lugny():
 
 def luneville():
     return _french_location("Luneville")
+
+def luz_ardiden():
+    return _french_location("Luz Ardiden", 1715)
 
 def luz_saint_sauveur():
     return _french_location("Luz-Saint-Sauveur")
@@ -1245,6 +1287,9 @@ def oloron_sainte_marie():
 def orange():
     return _french_location("Orange")
 
+def orcieres_merlette():
+    return _french_location("Orcières-Merlette", 1838)
+
 def orchies():
     return _french_location("Orchies")
 
@@ -1347,6 +1392,9 @@ def pouilly_en_auxois():
 
 def prades():
     return _french_location("Prades")
+
+def pra_loup():
+    return _french_location("Pra-Loup", 1630)
 
 def prapoutel():
     return _french_location("Prapoutel")
@@ -1640,7 +1688,7 @@ def sens():
     return _french_location("Sens")
 
 def serre_chevalier():
-    return _french_location("Serre Chevalier")
+    return _french_location("Serre Chevalier", 1200)
 
 def sete():
     return _french_location("Sete")
@@ -1732,8 +1780,14 @@ def utah_beach():
 def vaison_la_romaine():
     return _french_location("Vaison-la-Romaine")
 
+def val_d_isere():
+    return _french_location("Val d'Isère", 1820)
+
 def val_louron():
     return _french_location("Val Louron")
+
+def val_thorens():
+    return _french_location("Val Thorens", 2275)
 
 def valence():
     return _french_location("Valence")
@@ -1792,6 +1846,9 @@ def vichy():
 def vierzon():
     return _french_location("Vierzon")
 
+def villard_de_lans():
+    return _french_location("Villard-de-Lans", 1150)
+
 def villar_les_dombes():
     return _french_location("Villar-les-Dombes (Parc des Oiseaux)")
 
@@ -1841,5 +1898,5 @@ def voreppe():
 def wasquehal():
     return _french_location("Wasquehal")
 
-def _french_location(name):
-    return Location(name, France())
+def _french_location(name, elevation = None):
+    return Location(name, France(), elevation)

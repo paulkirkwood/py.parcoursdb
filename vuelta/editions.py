@@ -15,8 +15,10 @@ import mountains.sierra_de_los_filabres
 import mountains.sierra_nevada
 import mountains.sierra_morena
 import mountains.sierra_sur_de_jaen
+import mountains.sistema_central
 import netherlands
-from col                import ColCategory
+from col                import Col, ColCategory
+from location           import vicinity
 from stage_race_builder import TourOfSpainBuilder
 
 def vuelta1935():
@@ -1844,7 +1846,8 @@ def vuelta1972():
     builder.road_stage(spain.manresa(), spain.zaragoza(), 259.0)
 
     # Stage 12
-    builder.road_stage(spain.zaragoza(), spain.formigal(), 169.0)
+    builder.mountain_stage(spain.zaragoza())
+    builder.summit_finish(mountains.pyrenees.formigal(), ColCategory.C1, 169)
 
     # Stage 13
     builder.road_stage(spain.sanguesa(), spain.arrate(), 201.0)
@@ -2060,7 +2063,8 @@ def vuelta1975():
     builder.road_stage(spain.barcelona(), spain.tremp(), 189.0)
 
     # Stage 14
-    builder.road_stage(spain.tremp(), spain.formigal(), 233.0)
+    builder.mountain_stage(spain.tremp())
+    builder.summit_finish(mountains.pyrenees.formigal(), ColCategory.C1, 233)
 
     # Stage 15
     builder.road_stage(spain.jaca(), spain.irache(), 160.0)
@@ -2207,7 +2211,8 @@ def vuelta1977():
     builder.road_stage(spain.la_seu_d_urgell(), spain.monzon(), 200.0)
 
     # Stage 15
-    builder.road_stage(spain.monzon(), spain.formigal(), 166.0)
+    builder.mountain_stage(spain.monzon())
+    builder.summit_finish(mountains.pyrenees.formigal(), ColCategory.C1, 166)
 
     # Stage 16
     builder.road_stage(spain.formigal(), spain.cordovilla(), 170.0)
@@ -2267,8 +2272,9 @@ def vuelta1978():
     builder.disable_split_stages()
 
     # Stage 12
-    builder.road_stage(spain.bellaterra("Cerdanyola del Vallès"),
-        spain.la_tossa_de_montbui("Santa Margarida de Montbui"), 205.0)
+    bellaterra = vicinity(spain.bellaterra(), "Cerdanyola del Vallès")
+    la_tossa_de_montbui = vicinity(spain.la_tossa_de_montbui(), "Santa Margarida de Montbui")
+    builder.road_stage(bellaterra, la_tossa_de_montbui, 205)
 
     # Stage 13
     builder.road_stage(spain.igualada(), spain.jaca(), 243.0)
@@ -2310,7 +2316,8 @@ def vuelta1979():
     builder.road_stage(spain.seville(), spain.cordoba(), 188.0)
 
     # Stage 3
-    builder.road_stage(spain.cordoba(), spain.sierra_nevada(), 190.0)
+    builder.mountain_stage(spain.cordoba())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 190)
 
     # Stage 4
     builder.road_stage(spain.granada(), spain.puerto_lumbreras(), 222.0)
@@ -2471,7 +2478,8 @@ def vuelta1981():
     # Stages 8a & 8b
     builder.enable_split_stages()
     builder.road_stage(spain.jaen(), spain.granada(), 100.0)
-    builder.individual_time_trial(spain.granada(), spain.sierra_nevada(), 30.5)
+    builder.mountain_time_trial(spain.granada())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 30.5)
     builder.disable_split_stages()
 
     # Stage 9
@@ -2574,7 +2582,8 @@ def vuelta1982():
     builder.road_stage(spain.campo_de_criptana(), spain.san_fernando_de_henares(), 176.0)
 
     # Stage 17
-    builder.road_stage(spain.san_fernando_de_henares(), spain.navacerrada(), 178.0)
+    builder.mountain_stage(spain.san_fernando_de_henares())
+    builder.summit_finish(mountains.sierra_de_guadarrama.puerto_de_navacerrada(), ColCategory.C1, 178)
 
     # Stage 18
     builder.criterium(spain.palazuelos_de_eresma_destilerias_dyc(), 184.0)
@@ -2751,7 +2760,8 @@ def vuelta1985():
     builder.summit_finish(mountains.asturias.lagos_de_covadonga(), ColCategory.C1, 145.0)
 
     # Stage 7
-    builder.road_stage(spain.cangas_de_onis(), spain.alto_campoo(), 190.0)
+    builder.mountain_stage(spain.cangas_de_onis())
+    builder.summit_finish(mountains.cantabria.alto_campoo(), ColCategory.HC, 190)
 
     # Stage 8
     builder.road_stage(spain.aguilar_de_campoo(), spain.logrono(), 224.0)
@@ -2821,7 +2831,8 @@ def vuelta1986():
     builder.road_stage(spain.cangas_de_onis(), spain.oviedo(), 180.0)
 
     # Stage 8
-    builder.individual_time_trial(spain.oviedo(), mountains.asturias.alto_del_naranco(), 9.7)
+    builder.mountain_time_trial(spain.oviedo())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 9.7)
 
     # Stage 9
     builder.road_stage(spain.oviedo(), spain.san_isidro(), 180.0)
@@ -2848,7 +2859,8 @@ def vuelta1986():
     builder.road_stage(spain.albacete(), spain.jaen(), 264.0)
 
     # Stage 17
-    builder.road_stage(spain.jaen(), spain.sierra_nevada(), 172.0)
+    builder.mountain_stage(spain.jaen())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 172)
 
     # Stage 18
     builder.road_stage(spain.granada(), spain.benalmadena(), 191.0)
@@ -2901,7 +2913,8 @@ def vuelta1987():
     builder.road_stage(spain.zaragoza(), spain.pamplona(), 180.0)
 
     # Stage 10
-    builder.road_stage(spain.miranda_de_ebro(), spain.alto_campoo(), 213.0)
+    builder.mountain_stage(spain.miranda_de_ebro())
+    builder.summit_finish(mountains.cantabria.alto_campoo(), ColCategory.HC, 213)
 
     # Stage 11
     builder.mountain_stage(spain.santander())
@@ -3108,7 +3121,8 @@ def vuelta1990():
     builder.road_stage(spain.murcia(), spain.almeria(), 226.2)
 
     # Stage 5
-    builder.road_stage(spain.almeria(), spain.sierra_nevada(), 198.0)
+    builder.mountain_stage(spain.almeria())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 198)
 
     # Stage 6
     builder.road_stage(spain.loja(), spain.ubrique(), 195.2)
@@ -3222,7 +3236,8 @@ def vuelta1991():
     builder.summit_finish(mountains.asturias.lagos_de_covadonga(), ColCategory.C1, 186.6)
 
     # Stage 17
-    builder.road_stage(spain.cangas_de_onis(), mountains.asturias.alto_del_naranco(), 152.0)
+    builder.mountain_stage(spain.cangas_de_onis())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 152.0)
 
     # Stage 18
     builder.road_stage(spain.leon(), spain.valladolid(), 137.5)
@@ -3290,7 +3305,8 @@ def vuelta1992():
     builder.summit_finish(mountains.asturias.lagos_de_covadonga(), ColCategory.C1, 213.4)
 
     # Stage 15
-    builder.road_stage(spain.cangas_de_onis(), mountains.asturias.alto_del_naranco(), 163.0)
+    builder.mountain_stage(spain.cangas_de_onis())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 163)
 
     # Stage 16
     builder.road_stage(spain.oviedo(), spain.leon(), 162.0)
@@ -3332,7 +3348,8 @@ def vuelta1993():
     builder.road_stage(spain.salamanca(), spain.avila(), 219.8)
 
     # Stage 6
-    builder.individual_time_trial(spain.palazuelos_de_eresma_destilerias_dyc(), spain.navacerrada(), 24.1)
+    builder.mountain_time_trial(spain.palazuelos_de_eresma_destilerias_dyc())
+    builder.summit_finish(mountains.sierra_de_guadarrama.puerto_de_navacerrada(), ColCategory.C1, 24.1)
 
     # Stage 7
     builder.road_stage(spain.palazuelos_de_eresma_destilerias_dyc(), spain.madrid(), 184.0)
@@ -3364,7 +3381,8 @@ def vuelta1993():
     builder.road_stage(spain.santo_domingo_de_la_calzada(), spain.santander(), 226.2)
 
     # Stage 16
-    builder.road_stage(spain.santander(), spain.alto_campoo(), 160.0)
+    builder.mountain_stage(spain.santander())
+    builder.summit_finish(mountains.cantabria.alto_campoo(), ColCategory.HC, 160)
 
     # Stage 17
     builder.mountain_stage(spain.santander())
@@ -3374,7 +3392,8 @@ def vuelta1993():
     builder.road_stage(spain.cangas_de_onis(), spain.gijon(), 170.0)
 
     # Stage 19
-    builder.road_stage(spain.gijon(), mountains.asturias.alto_del_naranco(), 153.0)
+    builder.mountain_stage(spain.gijon())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 153)
 
     # Stage 20
     builder.road_stage(spain.salas(), spain.ferol(), 247.0)
@@ -3404,7 +3423,8 @@ def vuelta1994():
     builder.road_stage(spain.cordoba(), spain.granada(), 166.9)
 
     # Stage 6
-    builder.road_stage(spain.granada(), spain.sierra_nevada(), 151.7)
+    builder.mountain_stage(spain.granada())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 151.7)
 
     # Stage 7
     builder.road_stage(spain.baza(), spain.alicante(), 256.5)
@@ -3470,7 +3490,8 @@ def vuelta1995():
     builder.road_stage(spain.san_asensio(), spain.santander(), 223.5)
 
     # Stage 3
-    builder.road_stage(spain.santander(), mountains.asturias.alto_del_naranco(), 206.0)
+    builder.mountain_stage(spain.santander())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 206)
 
     # Stage 4
     builder.road_stage(spain.tapia_de_casariego(), spain.a_coruna(), 82.6)
@@ -3497,7 +3518,8 @@ def vuelta1995():
     builder.road_stage(spain.seville(), spain.marbella(), 162.5)
 
     # Stage 12
-    builder.road_stage(spain.marbella(), spain.sierra_nevada(), 238.5)
+    builder.mountain_stage(spain.marbella())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 238.5)
 
     # Stage 13
     builder.road_stage(spain.olula_del_rio(), spain.murcia(), 181.0)
@@ -3515,7 +3537,8 @@ def vuelta1995():
     builder.road_stage(spain.tarrega(), spain.pla_de_beret(), 197.3)
 
     # Stage 17
-    builder.mountain_stage(spain.salardu("Naut Aran"))
+    salardu_naut_aran = vicinity(spain.salardu(), "Naut Aran")
+    builder.mountain_stage(salardu_naut_aran)
     builder.summit_finish(mountains.pyrenees.luz_ardiden(), ColCategory.C1, 179.2)
 
     # Stage 18
@@ -3634,7 +3657,8 @@ def vuelta1997():
     builder.road_stage(spain.malaga(), spain.granada(), 147.0)
 
     # Stage 7
-    builder.road_stage(spain.guadix(), spain.sierra_nevada(), 219.0)
+    builder.mountain_stage(spain.guadix())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 219)
 
     # Stage 8
     builder.road_stage(spain.granada(), spain.cordoba(), 176.0)
@@ -3656,7 +3680,8 @@ def vuelta1997():
     builder.road_stage(spain.ponferrada(), spain.estacion_valgrande_pajares(), 196.0)
 
     # Stage 14
-    builder.road_stage(spain.oviedo(), mountains.asturias.alto_del_naranco(), 169.0)
+    builder.mountain_stage(spain.oviedo())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 169)
 
     # Stage 15
     builder.mountain_stage(spain.oviedo())
@@ -3727,7 +3752,8 @@ def vuelta1998():
     builder.summit_finish(spain.cerler(), ColCategory.C1, 186.0)
 
     # Stage 12
-    builder.road_stage(spain.benasque(), spain.jaca("Canfranc International Station"), 187.0)
+    jaca = vicinity(spain.jaca(), "Canfranc International Station")
+    builder.road_stage(spain.benasque(), jaca, 187)
 
     # Stage 13
     builder.criterium(spain.sabinanigo(), 208.5)
@@ -3752,7 +3778,7 @@ def vuelta1998():
 
     # Stage 20
     builder.mountain_stage(spain.segovia())
-    builder.summit_finish(mountains.sierra_de_guadarrama.alto_de_navacerrada(), ColCategory.C1, 206.0)
+    builder.summit_finish(mountains.sierra_de_guadarrama.puerto_de_navacerrada(), ColCategory.C1, 206.0)
 
     # Stage 21
     builder.out_and_back_individual_time_trial(spain.fuenlabrada(), 39.0)
@@ -3812,7 +3838,8 @@ def vuelta1999():
     builder.summit_finish(mountains.pyrenees.arcalis(), ColCategory.C1, 147.4)
 
     # Stage 13
-    builder.road_stage(andorra.andorra_la_vella(), spain.castellar_del_riu("Rasos de Peguera"), 149.0)
+    castellar_del_riu = vicinity(spain.castellar_del_riu(), "Rasos de Peguera")
+    builder.road_stage(andorra.andorra_la_vella(), castellar_del_riu, 149)
 
     # Stage 14
     builder.criterium(spain.barcelona(), 94.4)
@@ -4016,7 +4043,8 @@ def vuelta2002():
     builder.road_stage(spain.aguilas(), spain.roquetas_de_mar(), 149.5)
 
     # Stage 5
-    builder.road_stage(spain.el_ejido(), spain.sierra_nevada(), 198.0)
+    builder.mountain_stage(spain.el_ejido())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 198)
 
     # Stage 6
     builder.mountain_stage(spain.granada())
@@ -4063,7 +4091,8 @@ def vuelta2002():
     builder.road_stage(spain.benavente(), spain.salamanca(), 146.6)
 
     # Stage 18
-    builder.road_stage(spain.salamanca(), spain.la_covatilla(), 193.7)
+    builder.mountain_stage(spain.salamanca())
+    builder.summit_finish(mountains.sistema_central.la_covatilla(), ColCategory.HC, 193.7)
 
     # Stage 19
     builder.road_stage(spain.bejar(), spain.avila(), 177.8)
@@ -4133,7 +4162,8 @@ def vuelta2003():
     builder.rest_day()
 
     # Stage 16
-    builder.road_stage(spain.jaen(), spain.sierra_nevada(), 162.0)
+    builder.mountain_stage(spain.jaen())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 162)
 
     # Stage 17
     builder.road_stage(spain.granada(), spain.cordoba(), 188.4)
@@ -4205,7 +4235,8 @@ def vuelta2004():
     builder.road_stage(spain.malaga(), spain.granada(), 167.0)
 
     # Stage 15
-    builder.individual_time_trial(spain.granada(), spain.sierra_nevada(), 29.6)
+    builder.mountain_time_trial(spain.granada())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 29.6)
 
     # Transfer day
     builder.rest_day()
@@ -4214,7 +4245,8 @@ def vuelta2004():
     builder.road_stage(spain.olivenza(), spain.caceres(), 190.1)
 
     # Stage 17
-    builder.road_stage(spain.plasencia(), spain.la_covatilla(), 170.0)
+    builder.mountain_stage(spain.plasencia())
+    builder.summit_finish(mountains.sistema_central.la_covatilla(), ColCategory.HC, 170.0)
 
     # Stage 18
     builder.road_stage(spain.bejar(), spain.avila(), 196.0)
@@ -4224,7 +4256,7 @@ def vuelta2004():
 
     # Stage 20
     builder.mountain_stage(spain.alcobendas())
-    builder.summit_finish(mountains.sierra_de_guadarrama.alto_de_navacerrada(), ColCategory.C1, 178.0)
+    builder.summit_finish(mountains.sierra_de_guadarrama.puerto_de_navacerrada(), ColCategory.C1, 178.0)
 
     # Stage 21
     builder.out_and_back_individual_time_trial(spain.madrid(), 28.0)
@@ -4276,7 +4308,8 @@ def vuelta2005():
     builder.road_stage(spain.logrono(), spain.burgos(), 133.0)
 
     # Stage 13
-    builder.road_stage(spain.burgos(), spain.santuario_de_la_bien_aparecida("Ampuero"), 196.0)
+    santuario_de_la_bien_aparecida = vicinity(spain.santuario_de_la_bien_aparecida(), "Ampuero")
+    builder.road_stage(spain.burgos(), santuario_de_la_bien_aparecida, 196)
 
     # Stage 14
     builder.mountain_stage(spain.la_penilla())
@@ -4325,7 +4358,9 @@ def vuelta2006():
     builder.road_stage(spain.almendralejo(), spain.caceres(), 142.0)
 
     # Stage 5
-    builder.road_stage(spain.plasencia(), spain.la_covatilla("Estacion de Esqui"), 178.0)
+    la_covatilla = vicinity(spain.la_covatilla(), "Estacion de Esqui")
+    builder.mountain_stage(spain.plasencia())
+    builder.summit_finish(Col(la_covatilla.name, la_covatilla.country, la_covatilla.elevation), ColCategory.HC, 178.0)
 
     # Stage 6
     builder.road_stage(spain.zamora(), spain.leon(), 155.0)
@@ -4345,7 +4380,8 @@ def vuelta2006():
     builder.rest_day()
 
     # Stage 10
-    builder.road_stage(spain.aviles(), spain.santillana_del_mar("Museo de Altamira"), 190.0)
+    santillana_del_mar = vicinity(spain.santillana_del_mar(), "Museo de Altamira")
+    builder.road_stage(spain.aviles(), santillana_del_mar, 190.0)
 
     # Stage 11
     builder.road_stage(spain.torrelavega(), spain.burgos(), 165.0)
@@ -4535,7 +4571,7 @@ def vuelta2008():
 
     # Stage 20
     builder.mountain_time_trial(spain.la_granja_de_san_ildefonso())
-    builder.summit_finish(mountains.sierra_de_guadarrama.alto_de_navacerrada(), ColCategory.C1, 17.1)
+    builder.summit_finish(mountains.sierra_de_guadarrama.puerto_de_navacerrada(), ColCategory.C1, 17.1)
 
     # Stage 21
     builder.road_stage(spain.san_sebastian_de_los_reyes(), spain.madrid(), 102.2)
@@ -4591,7 +4627,8 @@ def vuelta2009():
     builder.summit_finish(mountains.sierra_de_los_filabres.alto_de_velefique(), ColCategory.HC, 179.3)
 
     # Stage 13
-    builder.road_stage(spain.berja(), spain.sierra_nevada(), 172.4)
+    builder.mountain_stage(spain.berja())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 172.4)
 
     # Stage 14
     builder.mountain_stage(spain.granada())
@@ -4711,7 +4748,8 @@ def vuelta2011():
     builder.road_stage(spain.petrer(), spain.totana(), 163.0)
 
     # Stage 4
-    builder.road_stage(spain.baza(), spain.sierra_nevada(), 170.2)
+    builder.mountain_stage(spain.baza())
+    builder.summit_finish(mountains.sierra_nevada.sierra_nevada(), ColCategory.C1, 170.2)
 
     # Stage 5
     builder.road_stage(spain.sierra_nevada(), spain.valdepenas_de_jaen(), 187.0)
@@ -4726,7 +4764,8 @@ def vuelta2011():
     builder.road_stage(spain.talavera_de_la_reina(), spain.san_lorenzo_de_el_escorial(), 177.3)
 
     # Stage 9
-    builder.road_stage(spain.villacastin(), spain.la_covatilla(), 183.0)
+    builder.mountain_stage(spain.villacastin())
+    builder.summit_finish(mountains.sistema_central.la_covatilla(), ColCategory.HC, 183.0)
 
     # Stage 10
     builder.out_and_back_individual_time_trial(spain.salamanca(), 47.0)
@@ -4744,7 +4783,8 @@ def vuelta2011():
     builder.road_stage(spain.sarria(), spain.ponferrada(), 158.2)
 
     # Stage 14
-    builder.road_stage(spain.astorga(), spain.la_farrapona("Lagos de Somiedo"), 172.8)
+    la_farrapona = vicinity(spain.la_farrapona(), "Lagos de Somiedo")
+    builder.road_stage(spain.astorga(), la_farrapona, 172.8)
 
     # Stage 15
     builder.mountain_stage(spain.aviles())
@@ -4754,10 +4794,12 @@ def vuelta2011():
     builder.rest_day()
 
     # Stage 16
-    builder.road_stage(spain.villa_romana_la_olmeda("Palancia"), spain.haro(), 188.1)
+    villa_romana_la_olmeda = vicinity(spain.villa_romana_la_olmeda(), "Palancia")
+    builder.road_stage(villa_romana_la_olmeda, spain.haro(), 188.1)
 
     # Stage 17
-    builder.road_stage(spain.faustino_v("Oyon"), spain.pena_cabarga(), 211.0)
+    faustino_v_oyon = vicinity(spain.faustino_v(), "Oyon")
+    builder.road_stage(faustino_v_oyon, spain.pena_cabarga(), 211.0)
 
     # Stage 18
     builder.road_stage(spain.solares(), spain.noja(), 174.6)
@@ -4784,7 +4826,8 @@ def vuelta2012():
     builder.road_stage(spain.pamplona(), spain.viana(), 181.4)
 
     # Stage 3
-    builder.road_stage(spain.oion(), spain.arrate("Eibar"), 155.3)
+    arrate_eibar = vicinity(spain.arrate(), "Eibar")
+    builder.road_stage(spain.oion(), arrate_eibar, 155.3)
 
     # Stage 4
     builder.road_stage(spain.barakaldo(), spain.valdezcaray(), 160.6)
@@ -4793,7 +4836,8 @@ def vuelta2012():
     builder.criterium(spain.logrono(), 168.0)
 
     # Stage 6
-    builder.road_stage(spain.tarazona(), spain.el_fuerte_del_rapitan("Jaca"), 175.4)
+    el_fuerte_del_rapitan = vicinity(spain.el_fuerte_del_rapitan(), "Jaca")
+    builder.road_stage(spain.tarazona(), el_fuerte_del_rapitan, 175.4)
 
     # Stage 7
     builder.road_stage(spain.huesca(), spain.motorland_aragon_alcaniz(), 164.2)
@@ -4908,7 +4952,8 @@ def vuelta2013():
     builder.summit_finish(mountains.pyrenees.peyragudes(), ColCategory.C1, 224.9)
 
     # Stage 16
-    builder.road_stage(spain.graus(), spain.formigal(), 146.8)
+    builder.mountain_stage(spain.graus())
+    builder.summit_finish(mountains.pyrenees.formigal(), ColCategory.C1, 146.8)
 
     # Transfer day
     builder.rest_day()
@@ -4920,7 +4965,8 @@ def vuelta2013():
     builder.road_stage(spain.burgos(), spain.pena_cabarga(), 186.5)
 
     # Stage 19
-    builder.road_stage(spain.san_vicente_de_la_barquera(), mountains.asturias.alto_del_naranco(), 181.0)
+    builder.mountain_stage(spain.san_vicente_de_la_barquera())
+    builder.summit_finish(mountains.asturias.alto_del_naranco(), ColCategory.C1, 181)
 
     # Stage 20
     builder.mountain_stage(spain.aviles())
@@ -4951,7 +4997,8 @@ def vuelta2014():
     builder.road_stage(spain.priego_de_cordoba(), spain.ronda(), 180.0)
 
     # Stage 6
-    builder.road_stage(spain.benalmadena(), spain.cumbres_verdes("La Zubia"), 167.1)
+    cumbres_verdes = vicinity(spain.cumbres_verdes(), "La Zubia")
+    builder.road_stage(spain.benalmadena(), cumbres_verdes, 167.1)
 
     # Stage 7
     builder.road_stage(spain.alhendin(), spain.alcaudete(), 169.0)
@@ -4975,17 +5022,20 @@ def vuelta2014():
     builder.criterium(spain.logrono(), 166.4)
 
     # Stage 13
-    builder.road_stage(spain.belorado(), spain.parque_de_cabarceno("Obregon"), 188.7)
+    parque_de_cabarceno = vicinity(spain.parque_de_cabarceno(), "Obregon")
+    builder.road_stage(spain.belorado(), parque_de_cabarceno, 188.7)
 
     # Stage 14
-    builder.road_stage(spain.santander(), spain.la_camperona("Valle de Sabero"), 200.8)
+    la_camperona = vicinity(spain.la_camperona(), "Valle de Sabero")
+    builder.road_stage(spain.santander(), la_camperona, 200.8)
 
     # Stage 15
     builder.mountain_stage(spain.oviedo())
     builder.summit_finish(mountains.asturias.lagos_de_covadonga(), ColCategory.C1, 152.2)
 
     # Stage 16
-    builder.road_stage(spain.san_martin_del_rey_aurelio(), spain.la_farrapona("Lagos de Somiedo"), 160.5)
+    la_farrapona = vicinity(spain.la_farrapona(), "Lagos de Somiedo")
+    builder.road_stage(spain.san_martin_del_rey_aurelio(), la_farrapona, 160.5)
 
     # Transfer day
     builder.rest_day()
@@ -4994,7 +5044,8 @@ def vuelta2014():
     builder.road_stage(spain.ortigueira(), spain.a_coruna(), 190.7)
 
     # Stage 18
-    builder.road_stage(spain.a_estrada(), spain.mont_castrove("Meis"), 157.0)
+    mont_castrove = vicinity(spain.mont_castrove(), "Meis")
+    builder.road_stage(spain.a_estrada(), mont_castrove, 157.0)
 
     # Stage 19
     builder.road_stage(spain.salvaterra_de_mino(), spain.cangas_do_morrazo(), 180.5)
@@ -5036,7 +5087,8 @@ def vuelta2015():
     builder.road_stage(spain.puebla_de_don_fadrique(), spain.murcia(), 182.5)
 
     # Stage 9
-    builder.road_stage(spain.torrevieja(), spain.cumbre_del_sol("Benitachell"), 168.3)
+    cumbre_del_sol = vicinity(spain.cumbre_del_sol(), "Benitachell")
+    builder.road_stage(spain.torrevieja(), cumbre_del_sol, 168.3)
 
     # Stage 10
     builder.road_stage(spain.valencia(), spain.castellon_de_la_plana(), 146.6)
@@ -5054,13 +5106,15 @@ def vuelta2015():
     builder.road_stage(spain.calatayud(), spain.tarazona(), 178.0)
 
     # Stage 14
-    builder.road_stage(spain.vitoria_gasteiz(), spain.alto_campoo(), 215.0)
+    builder.mountain_stage(spain.vitoria_gasteiz())
+    builder.summit_finish(mountains.cantabria.alto_campoo(), ColCategory.HC, 215)
 
     # Stage 15
     builder.road_stage(spain.comillas(), spain.sotres(), 175.8)
 
     # Stage 16
-    builder.road_stage(spain.luarca(), spain.ermita_del_alba("Quiros"), 185.0)
+    ermita_del_alba = vicinity(spain.ermita_del_alba(), "Quiros")
+    builder.road_stage(spain.luarca(), ermita_del_alba, 185.0)
 
     # Rest day
     builder.rest_day(spain.burgos())
@@ -5093,8 +5147,9 @@ def vuelta2016():
     builder.road_stage(spain.ourense(), spain.baiona(), 160.8)
 
     # Stage 3
+    mirador_de_ezaro = vicinity(spain.mirador_de_ezaro(), "Dumbria")
     builder.mountain_stage(spain.marin())
-    builder.summit_finish(mountains.galicia.mirador_de_ezaro("Dumbria"), ColCategory.C1, 176.4)
+    builder.summit_finish(Col(mirador_de_ezaro.name, mirador_de_ezaro.country, mirador_de_ezaro.elevation), ColCategory.C1, 176.4)
 
     # Stage 4
     builder.road_stage(spain.betanzos(), spain.san_andres_de_teixido(), 163.5)
@@ -5109,7 +5164,8 @@ def vuelta2016():
     builder.road_stage(spain.maceda(), spain.puebla_de_sanabria(), 158.5)
 
     # Stage 8
-    builder.road_stage(spain.villalpando(), spain.la_camperona("Valle de Sabero"), 181.5)
+    la_camperona = vicinity(spain.la_camperona(), "Valle de Sabero")
+    builder.road_stage(spain.villalpando(), la_camperona, 181.5)
 
     # Stage 9
     builder.road_stage(spain.cistierna(), mountains.asturias.alto_del_naranco(), 164.5)
@@ -5122,7 +5178,8 @@ def vuelta2016():
     builder.rest_day(spain.oviedo())
 
     # Stage 11
-    builder.road_stage(spain.jurassic_museum_of_asturias("Colunga"), spain.pena_cabarga(), 168.6)
+    jurassic_museum_of_asturias = vicinity(spain.jurassic_museum_of_asturias(), "Colunga")
+    builder.road_stage(jurassic_museum_of_asturias, spain.pena_cabarga(), 168.6)
 
     # Stage 12
     builder.road_stage(spain.los_corrales_de_buelna(), spain.bilbao(), 193.2)
@@ -5135,7 +5192,8 @@ def vuelta2016():
     builder.summit_finish(mountains.pyrenees.col_d_aubisque(), ColCategory.HC, 196.0)
 
     # Stage 15
-    builder.road_stage(spain.sabinanigo(), spain.aramon_formigal("Sallent de Gallego"), 118.5)
+    aramon_formigal = vicinity(spain.aramon_formigal(), "Sallent de Gallego")
+    builder.road_stage(spain.sabinanigo(), aramon_formigal, 118.5)
 
     # Stage 16
     builder.road_stage(spain.alcaniz(), spain.peniscola(), 156.4)
@@ -5144,7 +5202,8 @@ def vuelta2016():
     builder.rest_day(spain.castellon_de_la_plana())
 
     # Stage 17
-    builder.road_stage(spain.castellon_de_la_plana(), spain.camins_del_penyagolosa("Llucena"), 177.5)
+    camins_del_penyagolosa = vicinity(spain.camins_del_penyagolosa(), "Llucena")
+    builder.road_stage(spain.castellon_de_la_plana(), camins_del_penyagolosa, 177.5)
 
     # Stage 18
     builder.road_stage(spain.requena(), spain.gandia(), 200.6)
@@ -5270,7 +5329,8 @@ def vuelta2018():
     builder.road_stage(spain.linares(), spain.almaden(), 195.5)
 
     # Stage 9
-    builder.road_stage(spain.talavera_de_la_reina(), spain.la_covatilla(), 195.0)
+    builder.mountain_stage(spain.talavera_de_la_reina())
+    builder.summit_finish(mountains.sistema_central.la_covatilla(), ColCategory.HC, 195.0)
 
     # Rest day
     builder.rest_day(spain.salamanca())

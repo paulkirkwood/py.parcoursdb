@@ -12,14 +12,14 @@ from .locations import agropoli
 from .locations import alassio
 from .locations import alba
 from .locations import alba_adriatica
-from .locations import albenga, alberobello_valle_d_itria
+from .locations import albenga, alberobello
 from .locations import albese_con_cassano
 from .locations import alessandria
 from .locations import alghero
 from .locations import alleghe
 from .locations import alpago
 from .locations import alpe_di_pampeago
-from .locations import alpe_di_siusi, alpe_di_siusi_seiseralm
+from .locations import alpe_di_siusi
 from .locations import altopiano_del_montasio
 from .locations import amalfi
 from .locations import amantea
@@ -27,7 +27,7 @@ from .locations import amatrice
 from .locations import anagi
 from .locations import ancona
 from .locations import andalo, anterselva_antholz
-from .locations import aosta
+from .locations import aosta, aprica
 from .locations import arabba
 from .locations import arco
 from .locations import arcore
@@ -173,7 +173,7 @@ from .locations import celle_ligure
 from .locations import cellole
 from .locations import cenate_sotto
 from .locations import cento
-from .locations import cepagatti
+from .locations import cepagatti, ceresole_reale
 from .locations import certosa_di_pavia
 from .locations import cervere
 from .locations import cervia
@@ -181,7 +181,7 @@ from .locations import cervinia
 from .locations import cesana_torinese
 from .locations import cesano_maderno
 from .locations import cesena
-from .locations import cesenatico
+from .locations import cesenatico, cevo
 from .locations import cherasco, chianti_classico_stage
 from .locations import chianale
 from .locations import chianciano
@@ -628,7 +628,7 @@ from .locations import san_giorgio_piacentino
 from .locations import san_giovanni_rotondo
 from .locations import san_lorenzo_al_mare
 from .locations import san_luca
-from .locations import san_marcello_pistoiese
+from .locations import san_marcello_pistoiese, san_martino_di_castrozza
 from .locations import san_pellegrino_terme
 from .locations import san_remo
 from .locations import san_romolo
@@ -648,7 +648,7 @@ from .locations import santa_margherita_ligure
 from .locations import santa_maria_del_cedro
 from .locations import santa_maria_della_versa
 from .locations import santa_maria_di_sala
-from .locations import santa_ninfa_valle_del_belice
+from .locations import santa_ninfa
 from .locations import santarcangelo_di_romagna
 from .locations import santuario_di_oropa
 from .locations import santuario_nostra_signora_della_guardia
@@ -686,7 +686,7 @@ from .locations import seregno
 from .locations import serniga_di_salo
 from .locations import serra_san_bruno
 from .locations import serraville_scrivia
-from .locations import sestola
+from .locations import sestola, sestriere
 from .locations import sestri_levante
 from .locations import siena
 from .locations import sillian
@@ -807,7 +807,7 @@ all = [ abano_terme
       , alba
       , alba_adriatica
       , albenga
-      , alberobello_valle_d_itria
+      , alberobello
       , albese_con_cassano
       , alessandria
       , alghero
@@ -815,7 +815,6 @@ all = [ abano_terme
       , alpago
       , alpe_di_pampeago
       , alpe_di_siusi
-      , alpe_di_siusi_seiseralm
       , altopiano_del_montasio
       , amalfi
       , amantea
@@ -825,6 +824,7 @@ all = [ abano_terme
       , andalo
       , anterselva_antholz
       , aosta
+      , aprica
       , arabba
       , arco
       , arcore
@@ -980,6 +980,7 @@ all = [ abano_terme
       , cesano_maderno
       , cesena
       , cesenatico
+      , cevo
       , cherasco
       , chianti_classico_stage
       , chianale
@@ -1434,6 +1435,7 @@ all = [ abano_terme
       , san_giovanni_rotondo
       , san_lorenzo_al_mare
       , san_luca
+      , san_martino_di_castrozza
       , san_marcello_pistoiese
       , san_pellegrino_terme
       , san_remo
@@ -1454,7 +1456,7 @@ all = [ abano_terme
       , santa_maria_del_cedro
       , santa_maria_della_versa
       , santa_maria_di_sala
-      , santa_ninfa_valle_del_belice
+      , santa_ninfa
       , santarcangelo_di_romagna
       , santuario_di_oropa
       , santuario_nostra_signora_della_guardia
@@ -1493,6 +1495,7 @@ all = [ abano_terme
       , serra_san_bruno
       , serraville_scrivia
       , sestola
+      , sestriere
       , sestri_levante
       , siena
       , sillian

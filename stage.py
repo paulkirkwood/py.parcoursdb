@@ -54,7 +54,7 @@ class RacingStage(Stage):
         return '%.1f km' % (self.distance)
 
     def from_to(self,country):
-        if self.start == self.finish:
+        if self.start.fqnc == self.finish.fqnc:
             return self.start.qualified_location(country)
         else:
             return '%s to %s' % (self.start.qualified_location(country), self.finish.qualified_location(country))

@@ -1,4 +1,7 @@
-from .cols import montevergine_di_mercogliano
+from .cols import blockhaus
+from .cols import montevergine_di_mercogliano, monte_terminillo
 
-all = [ montevergine_di_mercogliano
+all = [ blockhaus
+      , montevergine_di_mercogliano
+      , monte_terminillo
       ]

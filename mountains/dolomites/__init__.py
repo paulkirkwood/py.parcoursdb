@@ -1,13 +1,15 @@
-from .cols import anterselva, antholz
+from .cols import alpe_di_pampeago, alpe_di_siusi, anterselva, antholz
 from .cols import cima_campo, croce_d_aune
 from .cols import elvas
 from .cols import lamon
 from .cols import monte_avena, monte_grappa, monte_zoncolan
-from .cols import passo_manghen, passo_rolle, passo_di_san_boldo, passo_pordoi, pieve_di_alpago
+from .cols import passo_manghen, passo_rolle, passo_di_san_boldo, passo_pordoi, pieve_di_alpago, plan_de_corones
 from .cols import san_martino_di_castrozza
-from .cols import torricelle, terento
+from .cols import torricelle, terento, tre_cime_di_lavaredo
 
-all = [ anterselva
+all = [ alpe_di_pampeago
+      , alpe_di_siusi
+      , anterselva
       , antholz
       , cima_campo
       , croce_d_aune
@@ -21,7 +23,9 @@ all = [ anterselva
       , passo_di_san_boldo
       , passo_pordoi
       , pieve_di_alpago
+      , plan_de_corones
       , san_martino_di_castrozza
       , torricelle
       , terento
+      , tre_cime_di_lavaredo
       ]

@@ -17,7 +17,7 @@ from .cols import cauterets
 from .cols import col_du_chioula
 from .cols import col_de_la_core
 from .cols import port_d_envalira
-from .cols import font_romeu
+from .cols import font_romeu, formigal
 from .cols import pyrenees2000
 from .cols import cote_de_fanjeaux
 from .cols import coll_de_la_gallina
@@ -88,6 +88,7 @@ all = [ col_d_agnes
       , col_de_la_core
       , port_d_envalira
       , font_romeu
+      , formigal
       , pyrenees2000
       , cote_de_fanjeaux
       , coll_de_la_gallina

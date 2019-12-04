@@ -1,5 +1,5 @@
 from .cols import alpe_d_huez, aprica, avoriaz 
-from .cols import bardonecchia_monte_jafferau
+from .cols import bardonecchia_monte_jafferau, bormio
 from .cols import ceresole_reale, cervinia, cevo, chamrousse, col_bayard, col_d_agnel, col_d_allos, col_d_izoard, col_de_bluffy
 from .cols import col_de_cordon
 from .cols import col_de_joux_verte
@@ -56,7 +56,7 @@ from .cols import colle_del_lys
 from .cols import colle_del_morte
 from .cols import colle_san_carlo
 from .cols import colma_di_sormano
-from .cols import cormet_de_roselend
+from .cols import cormet_de_roselend, cortina_d_ampezzo
 from .cols import cote_de_brie
 from .cols import cote_de_laffrey
 from .cols import cote_de_sainte_eulalie
@@ -93,7 +93,7 @@ from .cols import orcieres_merlette
 from .cols import pas_de_morgins, passo_del_mortirolo, passo_dello_stelvio, pian_del_lupo, pian_del_lupo, pra_loup
 from .cols import prato_nevoso
 from .cols import ramaz, restefond, risoul
-from .cols import saint_gervais_mont_blanc, saint_nizier, sestriere
+from .cols import saint_gervais_mont_blanc, saint_moritz, saint_nizier, serre_chevalier, sestriere
 from .cols import truc_d_arbe
 from .cols import val_d_isere, val_thorens, valmorel, verbier, verrayes, verrogne, villard_de_lans
 
@@ -101,6 +101,7 @@ all = [ alpe_d_huez
       , aprica
       , avoriaz
       , bardonecchia_monte_jafferau
+      , bormio
       , ceresole_reale
       , cervinia
       , cevo
@@ -166,6 +167,7 @@ all = [ alpe_d_huez
       , colle_san_carlo
       , colma_di_sormano
       , cormet_de_roselend
+      , cortina_d_ampezzo
       , cote_de_brie
       , cote_de_laffrey
       , cote_de_sainte_eulalie
@@ -210,7 +212,9 @@ all = [ alpe_d_huez
       , restefond
       , risoul
       , saint_gervais_mont_blanc
+      , saint_moritz
       , saint_nizier
+      , serre_chevalier
       , sestriere
       , truc_d_arbe
       , val_d_isere

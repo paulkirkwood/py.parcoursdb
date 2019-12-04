@@ -47,8 +47,8 @@ def alba_adriatica():
 def albenga():
     return _italian_location("Albenga")
 
-def alberobello_valle_d_itria():
-    return _italian_location("Alberobello (Valle D'Itria)")
+def alberobello():
+    return _italian_location("Alberobello")
 
 def albese_con_cassano():
     return _italian_location("Albese con Cassano")
@@ -63,16 +63,13 @@ def alleghe():
     return _italian_location("Alleghe")
 
 def alpago():
-    return _italian_location("Alpago (Farra)")
+    return _italian_location("Alpago")
 
 def alpe_di_pampeago():
-    return _italian_location("Alpe di Pampeago")
+    return _italian_location("Alpe di Pampeago", 1983)
 
 def alpe_di_siusi():
-    return _italian_location("Alpe di Siusi")
-
-def alpe_di_siusi_seiseralm():
-    return _italian_location("Alpe di Siusi/Seiseralm")
+    return _italian_location("Alpe di Siusi", 1844)
 
 def altopiano_del_montasio():
     return _italian_location("Altopiano del Montasio")
@@ -100,6 +97,9 @@ def anterselva_antholz():
 
 def aosta():
     return _italian_location("Aosta")
+
+def aprica():
+    return _italian_location("Aprica", 1173)
 
 def arabba():
     return _italian_location("Arabba")
@@ -289,7 +289,7 @@ def borgomanero():
     return _italian_location("Borgomanero")
 
 def bormio():
-    return _italian_location("Bormio")
+    return _italian_location("Bormio", 1225)
 
 def bormio2000():
     return _italian_location("Bormio 2000")
@@ -382,8 +382,8 @@ def campobasso():
 def campotenese():
     return _italian_location("Campotenese")
 
-def canazei(municipality = None):
-    return _italian_location("Canazei", municipality)
+def canazei():
+    return _italian_location("Canazei")
 
 def canelli():
     return _italian_location("Canelli")
@@ -544,6 +544,9 @@ def cento():
 def cepagatti():
     return _italian_location("Cepagatti")
 
+def ceresole_reale():
+    return _italian_location("Ceresole Reale", 2247)
+
 def certosa_di_pavia():
     return _italian_location("Certosa di Pavia")
 
@@ -554,7 +557,7 @@ def cervia():
     return _italian_location("Cervia")
 
 def cervinia():
-    return _italian_location("Cervinia")
+    return _italian_location("Cervinia", 2050)
 
 def cesana_torinese():
     return _italian_location("Cesana Torinese")
@@ -567,6 +570,9 @@ def cesena():
 
 def cesenatico():
     return _italian_location("Cesenatico")
+
+def cevo():
+    return _italian_location("Cevo", 1054)
 
 def cherasco():
     return _italian_location("Cherasco")
@@ -662,7 +668,7 @@ def comerio():
     return _italian_location("Comerio")
 
 def commezzadura():
-    return _italian_location("Commezzadura (Val di Sole)")
+    return _italian_location("Commezzadura")
 
 def como():
     return _italian_location("Como")
@@ -686,7 +692,7 @@ def corno_alle_scale():
     return _italian_location("Corno alle Scale")
 
 def cortina_d_ampezzo():
-    return _italian_location("Cortina d'Ampezzo")
+    return _italian_location("Cortina d'Ampezzo", 1224)
 
 def cortona():
     return _italian_location("Cortona")
@@ -1296,8 +1302,8 @@ def modica():
 def modigiliana():
     return _italian_location("Modigiliana")
 
-def moena(municipality = None):
-    return _italian_location("Moena", municipality)
+def moena():
+    return _italian_location("Moena")
 
 def mola_di_bari():
     return _italian_location("Mola di Bari")
@@ -1484,8 +1490,8 @@ def oneglia():
 def orbetello():
     return _italian_location("Orbetello")
 
-def oropa(municipality = None):
-    return _italian_location("Oropa", municipality)
+def oropa():
+    return _italian_location("Oropa")
 
 def orta_san_giulio():
     return _italian_location("Orta San Giulio")
@@ -1617,8 +1623,8 @@ def pian_del_re():
 def pian_del_resinelli():
     return _italian_location("Pian del Resinelli")
 
-def piancavallo(municipality = None):
-    return _italian_location("Piancavallo", municipality)
+def piancavallo():
+    return _italian_location("Piancavallo")
 
 def piancogno():
     return _italian_location("Piancogno")
@@ -1666,7 +1672,7 @@ def pizzo_calabro():
     return _italian_location("Pizzo Calabro")
 
 def plan_de_corones():
-    return _italian_location("Plan de Corones")
+    return _italian_location("Plan de Corones", 2273)
 
 def plan_di_montecampione():
     return _italian_location("Plan di Montecampione")
@@ -1768,7 +1774,7 @@ def prato():
     return _italian_location("Prato")
 
 def prato_nevoso():
-    return _italian_location("Prato Nevoso")
+    return _italian_location("Prato Nevoso", 1480)
 
 def predappio():
     return _italian_location("Predappio")
@@ -1918,7 +1924,7 @@ def san_benedetto_del_tronto():
     return _italian_location("San Benedetto del Tronto")
 
 def san_candido():
-    return _italian_location("San Candido/Innichen")
+    return _italian_location("San Candido")
 
 def san_dona_di_piave():
     return _italian_location("San Dona di Piave")
@@ -1946,6 +1952,9 @@ def san_luca():
 
 def san_marcello_pistoiese():
     return _italian_location("San Marcello Pistoiese")
+
+def san_martino_di_castrozza():
+    return _italian_location("San Martino di Castrozza", 1487)
 
 def san_pellegrino_terme():
     return _italian_location("San Pellegrino Terme")
@@ -2004,8 +2013,8 @@ def santa_maria_della_versa():
 def santa_maria_di_sala():
     return _italian_location("Santa Maria di Sala")
 
-def santa_ninfa_valle_del_belice():
-    return _italian_location("Santa Ninfa (Valle del Belice)")
+def santa_ninfa():
+    return _italian_location("Santa Ninfa")
 
 def santarcangelo_di_romagna():
     return _italian_location("Santarcangelo di Romagna")
@@ -2120,6 +2129,9 @@ def serraville_scrivia():
 
 def sestola():
     return _italian_location("Sestola")
+
+def sestriere():
+    return _italian_location("Sestrière", 2035)
 
 def sestri_levante():
     return _italian_location("Sestri Levante")
@@ -2317,7 +2329,7 @@ def val_martello():
     return _italian_location("Val Martello")
 
 def valdaora():
-    return _italian_location("Valdaora/Olang")
+    return _italian_location("Valdaora")
 
 def valdengo():
     return _italian_location("Valdengo")
@@ -2440,7 +2452,8 @@ def zingonia():
 def zoldo_alto():
     return _italian_location("Zoldo Alto")
 
-def _italian_location(name, municipality = None):
-    if municipality is None:
+def _italian_location(name, elevation = None):
+    if elevation is None:
         return Location(name, Italy())
-    return Location('{} ({})'.format(name, municipality), Italy())
+    else:
+        return Location(name, Italy(), elevation)

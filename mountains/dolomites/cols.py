@@ -1,4 +1,11 @@
 from ..util import italian_col
+import italy
+
+def alpe_di_pampeago():
+    return italian_col(italy.alpe_di_pampeago().name, italy.alpe_di_pampeago().elevation)
+
+def alpe_di_siusi():
+    return italian_col(italy.alpe_di_siusi().name, italy.alpe_di_siusi().elevation)
 
 def anterselva():
     return italian_col("Anterselva", 1635)
@@ -42,11 +49,17 @@ def passo_pordoi():
 def pieve_di_alpago():
     return italian_col("Pieve di Alpago", 691)
 
+def plan_de_corones():
+    return italian_col(italy.plan_de_corones().name, italy.plan_de_corones().elevation)
+
 def san_martino_di_castrozza():
-    return italian_col("San Martino di Castrozza", 1478)
+    return italian_col(italy.san_martino_di_castrozza().name, italy.san_martino_di_castrozza().elevation)
 
 def torricelle():
     return italian_col("Torricelle", 277)
 
 def terento():
     return italian_col("Terento", 1244)
+
+def tre_cime_di_lavaredo():
+    return italian_col("Tre Cime di Lavaredo", 2333)

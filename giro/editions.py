@@ -23,7 +23,9 @@ import mountains.alps
 import mountains.dolomites
 import mountains.appennines
 import mountains.sicily
-from col                import ColCategory
+from col                import Col, ColCategory
+from country            import Italy
+from location           import commune, vicinity
 from stage_race         import TourOfItaly
 from stage_race_builder import NonConsecutiveStageRaceBuilder, TourOfItalyBuilder
 
@@ -619,7 +621,8 @@ def giro1936():
     builder.road_stage(italy.l_aquila(), italy.rieti(), 117.0)
 
     # Stage 11
-    builder.individual_time_trial(italy.rieti(), italy.monte_terminillo(), 20.0)
+    builder.mountain_time_trial(italy.rieti())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 20.0)
 
     # Stage 12
     builder.road_stage(italy.rieti(), italy.florence(), 292.0)
@@ -689,7 +692,8 @@ def giro1937():
 
     # Stages 8a & 8b
     builder.enable_split_stages()
-    builder.individual_time_trial(italy.rieti(), italy.monte_terminillo(), 20.0)
+    builder.mountain_time_trial(italy.rieti())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 20.0)
     builder.road_stage(italy.rieti(), italy.rome(), 152.0)
     builder.disable_split_stages()
 
@@ -773,7 +777,8 @@ def giro1938():
 
     # Stages 7a & 7b
     builder.enable_split_stages()
-    builder.individual_time_trial(italy.rieti(), italy.monte_terminillo(), 19.8)
+    builder.mountain_time_trial(italy.rieti())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 19.8)
     builder.road_stage(italy.rieti(), italy.rome(), 152.0)
     builder.disable_split_stages()
 
@@ -850,7 +855,8 @@ def giro1939():
     # Stages 6a & 6b
     builder.enable_split_stages()
     builder.road_stage(italy.rome(), italy.rieti(), 85.7)
-    builder.individual_time_trial(italy.rieti(), italy.monte_terminillo(), 14.0)
+    builder.mountain_time_trial(italy.rieti())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 14.0)
     builder.disable_split_stages()
 
     # Stage 7
@@ -884,7 +890,8 @@ def giro1939():
     builder.individual_time_trial(italy.trieste(), italy.gorizia(), 39.8)
 
     # Stage 14
-    builder.road_stage(italy.gorizia(), italy.cortina_d_ampezzo(), 195.0)
+    builder.mountain_stage(italy.gorizia())
+    builder.summit_finish(mountains.alps.cortina_d_ampezzo(), ColCategory.C1, 195.0)
 
     # Stage 15
     builder.road_stage(italy.cortina_d_ampezzo(), italy.trento(), 256.2)
@@ -1202,7 +1209,8 @@ def giro1948():
     builder.rest_day()
 
     # Stage 16
-    builder.road_stage(italy.auronzo_di_cadore(), italy.cortina_d_ampezzo(), 90.0)
+    builder.mountain_stage(italy.auronzo_di_cadore())
+    builder.summit_finish(mountains.alps.cortina_d_ampezzo(), ColCategory.C1, 90.0)
 
     # Stage 17
     builder.road_stage(italy.cortina_d_ampezzo(), italy.trento(), 160.0)
@@ -1421,13 +1429,15 @@ def giro1951():
     builder.rest_day()
 
     # Stage 17
-    builder.road_stage(italy.trieste(), italy.cortina_d_ampezzo(), 255.0)
+    builder.mountain_stage(italy.trieste())
+    builder.summit_finish(mountains.alps.cortina_d_ampezzo(), ColCategory.C1, 255)
 
     # Stage 18
     builder.road_stage(italy.cortina_d_ampezzo(), italy.bolzano(), 242.0)
 
     # Stage 19
-    builder.road_stage(italy.bolzano(), switzerland.saint_moritz(), 166.0)
+    builder.mountain_stage(italy.bolzano())
+    builder.summit_finish(mountains.alps.saint_moritz(), ColCategory.C1, 166)
 
     # Stage 20
     builder.road_stage(switzerland.saint_moritz(), italy.milan(), 172.0)
@@ -1577,7 +1587,8 @@ def giro1953():
     builder.road_stage(italy.auronzo_di_cadore(), italy.bolzano(), 164.0)
 
     # Stage 19
-    builder.road_stage(italy.bolzano(), italy.bormio(), 125.0)
+    builder.mountain_stage(italy.bolzano())
+    builder.summit_finish(mountains.alps.bormio(), ColCategory.C1, 125)
 
     # Stage 20
     builder.road_stage(italy.bormio(), italy.milan(), 220.0)
@@ -1656,7 +1667,8 @@ def giro1954():
     builder.road_stage(mountains.dolomites.san_martino_di_castrozza(), italy.bolzano(), 152.0)
 
     # Stage 21
-    builder.road_stage(italy.bolzano(), switzerland.saint_moritz(), 222.0)
+    builder.mountain_stage(italy.bolzano())
+    builder.summit_finish(mountains.alps.saint_moritz(), ColCategory.C1, 222.0)
 
     # Stage 22
     builder.road_stage(switzerland.saint_moritz(), italy.milan(), 222.0)
@@ -1725,7 +1737,8 @@ def giro1955():
     builder.rest_day()
 
     # Stage 18
-    builder.road_stage(italy.trieste(), italy.cortina_d_ampezzo(), 236.0)
+    builder.mountain_stage(italy.trieste())
+    builder.summit_finish(mountains.alps.cortina_d_ampezzo(), ColCategory.C1, 236)
 
     # Stage 19
     builder.road_stage(italy.cortina_d_ampezzo(), italy.trento(), 227.0)
@@ -2116,7 +2129,8 @@ def giro1960():
     builder.road_stage(italy.belluno(), italy.trento(), 110.0)
 
     # Stage 20
-    builder.road_stage(italy.trento(), italy.bormio(), 229.0)
+    builder.mountain_stage(italy.trento())
+    builder.summit_finish(mountains.alps.bormio(), ColCategory.C1, 229)
 
     # Stage 21
     builder.road_stage(italy.bormio(), italy.milan(), 225.0)
@@ -2191,7 +2205,8 @@ def giro1961():
     builder.road_stage(italy.vittorio_veneto(), italy.trento(), 249.0)
 
     # Stage 20
-    builder.road_stage(italy.trento(), italy.bormio(), 275.0)
+    builder.mountain_stage(italy.trento())
+    builder.summit_finish(mountains.alps.bormio(), ColCategory.C1, 275)
 
     # Stage 21
     builder.road_stage(italy.bormio(), italy.milan(), 214.0)
@@ -2253,7 +2268,7 @@ def giro1962():
     builder.summit_finish(mountains.alps.aprica(), ColCategory.C3, 215.0)
 
     # Stage 16
-    builder.road_stage(mountains.alps.aprica(), italy.pian_del_resinelli(), 123.0)
+    builder.road_stage(italy.aprica(), italy.pian_del_resinelli(), 123.0)
 
     # Stage 17
     builder.road_stage(italy.lecco(), italy.casale_monferrato(), 194.0)
@@ -2608,7 +2623,8 @@ def giro1967():
     builder.road_stage(italy.potenza(), italy.salerno(), 160.0)
 
     # Stage 12
-    builder.road_stage(italy.caserta(), italy.blockhaus(), 220.0)
+    builder.mountain_stage(italy.caserta())
+    builder.summit_finish(mountains.appennines.blockhaus(), ColCategory.C1, 220)
 
     # Stage 13
     builder.road_stage(italy.chieti(), italy.riccione(), 253.0)
@@ -2632,7 +2648,8 @@ def giro1967():
     builder.road_stage(italy.vicenza(), italy.udine(), 167.0)
 
     # Stage 19
-    builder.road_stage(italy.udine(), italy.tre_cime_di_lavaredo(), 170.0)
+    builder.mountain_stage(italy.udine())
+    builder.summit_finish(mountains.dolomites.tre_cime_di_lavaredo(), ColCategory.C1, 170)
 
     # Stage 20
     builder.road_stage(italy.cortina_d_ampezzo(), italy.trento(), 235.0)
@@ -2690,7 +2707,8 @@ def giro1968():
     builder.road_stage(italy.bassano_del_grappa(), italy.trieste(), 197.0)
 
     # Stage 12
-    builder.road_stage(italy.gorizia(), italy.tre_cime_di_lavaredo(), 213.0)
+    builder.mountain_stage(italy.gorizia())
+    builder.summit_finish(mountains.dolomites.tre_cime_di_lavaredo(), ColCategory.C1, 213)
 
     # Stage 13
     builder.road_stage(italy.cortina_d_ampezzo(), italy.vittorio_veneto(), 163.0)
@@ -2720,7 +2738,8 @@ def giro1968():
     builder.road_stage(italy.rome(), italy.rocca_di_cambio(), 215.0)
 
     # Stage 21
-    builder.road_stage(italy.rocca_di_cambio(), italy.blockhaus(), 198.0)
+    builder.mountain_stage(italy.rocca_di_cambio())
+    builder.summit_finish(mountains.appennines.blockhaus(), ColCategory.C1, 198)
 
     # Stage 22
     builder.road_stage(italy.chieti(), italy.naples(), 235.0)
@@ -2966,8 +2985,9 @@ def giro1972():
 
     # Stages 4a & 4b
     builder.enable_split_stages()
-    builder.road_stage(italy.francavilla_al_mare(), italy.blockhaus(), 48.0)
-    builder.road_stage(italy.blockhaus(), italy.foggia(), 210.0)
+    builder.mountain_stage(italy.francavilla_al_mare())
+    builder.summit_finish(mountains.appennines.blockhaus(), ColCategory.C1, 48)
+    builder.road_stage(mountains.appennines.blockhaus(), italy.foggia(), 210.0)
     builder.disable_split_stages()
 
     # Stage 5
@@ -3180,7 +3200,8 @@ def giro1974():
     builder.road_stage(italy.borgo_valsugana(), italy.pordenone(), 146.0)
 
     # Stage 20
-    builder.road_stage(italy.pordenone(), italy.tre_cime_di_lavaredo(), 163.0)
+    builder.mountain_stage(italy.pordenone())
+    builder.summit_finish(mountains.dolomites.tre_cime_di_lavaredo(), ColCategory.C1, 163)
 
     # Stage 21
     builder.road_stage(italy.misurina(), italy.bassano_del_grappa(), 194.0)
@@ -3421,7 +3442,8 @@ def giro1977():
     builder.disable_split_stages()
 
     # Stage 17
-    builder.road_stage(italy.conegliano(), italy.cortina_d_ampezzo(), 220.0)
+    builder.mountain_stage(italy.conegliano())
+    builder.summit_finish(mountains.alps.cortina_d_ampezzo(), ColCategory.C1, 220)
 
     # Stage 18
     builder.road_stage(italy.cortina_d_ampezzo(), italy.pinzolo(), 223.0)
@@ -3929,7 +3951,8 @@ def giro1984():
     builder.road_stage(italy.bologna(), italy.numana(), 238.0)
 
     # Stage 5
-    builder.road_stage(italy.numana(), italy.blockhaus(), 194.0)
+    builder.mountain_stage(italy.numana())
+    builder.summit_finish(mountains.appennines.blockhaus(), ColCategory.C1, 194)
 
     # Stage 6
     builder.road_stage(italy.chieti(), italy.foggia(), 193.0)
@@ -4173,7 +4196,8 @@ def giro1987():
     builder.road_stage(italy.montalcino(), italy.terni(), 208.0)
 
     # Stage 6
-    builder.road_stage(italy.terni(), italy.monte_terminillo(), 134.0)
+    builder.mountain_stage(italy.terni())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 134)
 
     # Stage 7
     builder.road_stage(italy.rieti(), italy.roccaraso(), 205.0)
@@ -4275,7 +4299,8 @@ def giro1988():
     builder.road_stage(italy.bergamo(), italy.chiesa_in_valmalenco(), 129.0)
 
     # Stage 14
-    builder.road_stage(italy.chiesa_in_valmalenco(), italy.bormio(), 120.0)
+    builder.mountain_stage(italy.chiesa_in_valmalenco())
+    builder.summit_finish(mountains.alps.bormio(), ColCategory.C1, 120)
 
     # Stage 15
     builder.road_stage(italy.spondigna(), italy.merano2000(), 83.0)
@@ -4439,7 +4464,7 @@ def giro1990():
     builder.summit_finish(mountains.alps.aprica(), ColCategory.C3, 223.0)
 
     # Stage 17
-    builder.road_stage(mountains.alps.aprica(), italy.gallarate(), 180.0)
+    builder.road_stage(italy.aprica(), italy.gallarate(), 180.0)
 
     # Stage 18
     builder.individual_time_trial(italy.gallarate(), italy.sacro_monte_di_varese(), 39.0)
@@ -4559,7 +4584,8 @@ def giro1992():
     builder.road_stage(italy.aversa(), italy.latina(), 165.0)
 
     # Stage 10
-    builder.road_stage(italy.latina(), italy.monte_terminillo(), 196.0)
+    builder.mountain_stage(italy.latina())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 196)
 
     # Stage 11
     builder.road_stage(italy.montepulciano(), italy.imola(), 233.0)
@@ -4923,7 +4949,8 @@ def giro1997():
     builder.road_stage(san_marino.san_marino(), italy.arezzo(), 156.0)
 
     # Stage 5
-    builder.road_stage(italy.arezzo(), italy.monte_terminillo(), 215.0)
+    builder.mountain_stage(italy.arezzo())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 215)
 
     # Stage 6
     builder.road_stage(italy.rieti(), italy.lanciano(), 210.0)
@@ -5117,7 +5144,8 @@ def giro1999():
     builder.out_and_back_individual_time_trial(italy.treviso(), 45.0)
 
     # Stage 19
-    builder.road_stage(italy.castelfranco_veneto(), italy.alpe_di_pampeago(), 166.0)
+    builder.mountain_stage(italy.castelfranco_veneto())
+    builder.summit_finish(mountains.dolomites.alpe_di_pampeago(), ColCategory.C1, 166.0)
 
     # Stage 20
     builder.road_stage(italy.predazzo(), italy.madonna_di_campiglio(), 175.0)
@@ -5180,7 +5208,8 @@ def giro2000():
     builder.road_stage(italy.feltre(), italy.selva(), 186.0)
 
     # Stage 14
-    builder.road_stage(italy.selva(), italy.bormio(), 203.0)
+    builder.mountain_stage(italy.selva())
+    builder.summit_finish(mountains.alps.bormio(), ColCategory.C1, 203)
 
     # Stage 15
     builder.road_stage(italy.bormio(), italy.brescia(), 180.0)
@@ -5383,7 +5412,8 @@ def giro2003():
     builder.road_stage(italy.maddaloni(), italy.avezzano(), 222.0)
 
     # Stage 7
-    builder.road_stage(italy.avezzano(), italy.monte_terminillo(), 146.0)
+    builder.mountain_stage(italy.avezzano())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 146)
 
     # Stage 8
     builder.road_stage(italy.rieti(), italy.arezzo(), 214.0)
@@ -5405,7 +5435,8 @@ def giro2003():
     builder.road_stage(italy.pordenone(), italy.marostica(), 149.0)
 
     # Stage 14
-    builder.road_stage(italy.marostica(), italy.alpe_di_pampeago(), 162.0)
+    builder.mountain_stage(italy.marostica())
+    builder.summit_finish(mountains.dolomites.alpe_di_pampeago(), ColCategory.C1, 162.0)
 
     # Stage 15
     builder.individual_time_trial(italy.merano(), italy.bolzano(), 42.5)
@@ -5641,7 +5672,8 @@ def giro2006():
     builder.road_stage(italy.rovato(), italy.trento(), 173.0)
 
     # Stage 17
-    builder.road_stage(italy.tramin(), italy.plan_de_corones(), 133.0)
+    builder.mountain_stage(italy.tramin())
+    builder.summit_finish(mountains.dolomites.plan_de_corones(), ColCategory.C1, 133)
 
     # Stage 18
     builder.road_stage(italy.sillian(), italy.gemona_del_friuli(), 210.0)
@@ -5708,7 +5740,8 @@ def giro2007():
     builder.road_stage(italy.cantu(), italy.bergamo(), 192.0)
 
     # Stage 15
-    builder.road_stage(italy.trento(), italy.tre_cime_di_lavaredo(), 184.0)
+    builder.mountain_stage(italy.trento())
+    builder.summit_finish(mountains.dolomites.tre_cime_di_lavaredo(), ColCategory.C1, 184)
 
     # Transfer day
     builder.rest_day()
@@ -5781,13 +5814,15 @@ def giro2008():
     builder.road_stage(italy.modena(), italy.cittadella(), 177.0)
 
     # Stage 14
-    builder.road_stage(italy.verona(), italy.alpe_di_pampeago(), 195.0)
+    builder.mountain_stage(italy.verona())
+    builder.summit_finish(mountains.dolomites.alpe_di_pampeago(), ColCategory.C1, 195.0)
 
     # Stage 15
     builder.road_stage(italy.arabba(), italy.passo_fedaia(), 153.0)
 
     # Stage 16
-    builder.individual_time_trial(italy.san_vigillo_di_marebbe(), italy.plan_de_corones(), 12.8)
+    builder.mountain_time_trial(italy.san_vigillo_di_marebbe())
+    builder.summit_finish(mountains.dolomites.plan_de_corones(), ColCategory.C1, 12.8)
 
     # Transfer day
     builder.rest_day()
@@ -5827,7 +5862,8 @@ def giro2009():
     builder.summit_finish(mountains.dolomites.san_martino_di_castrozza(), ColCategory.C2, 162.0)
 
     # Stage 5
-    builder.road_stage(mountains.dolomites.san_martino_di_castrozza(), italy.alpe_di_siusi(), 125.0)
+    builder.mountain_stage(italy.san_martino_di_castrozza())
+    builder.summit_finish(mountains.dolomites.alpe_di_siusi(), ColCategory.C1, 125.0)
 
     # Stage 6
     builder.road_stage(italy.brixen(), austria.mayrhofen(), 248.0)
@@ -5869,7 +5905,8 @@ def giro2009():
     builder.rest_day()
 
     # Stage 17
-    builder.road_stage(italy.chieti(), italy.blockhaus(), 83.0)
+    builder.mountain_stage(italy.chieti())
+    builder.summit_finish(mountains.appennines.blockhaus(), ColCategory.C1, 83)
 
     # Stage 18
     builder.road_stage(italy.sulmona(), italy.benevento(), 182.0)
@@ -5914,7 +5951,8 @@ def giro2010():
     builder.road_stage(italy.carrara(), italy.montalcino(), 215.0)
 
     # Stage 8
-    builder.road_stage(italy.chianciano(), italy.monte_terminillo(), 189.0)
+    builder.mountain_stage(italy.chianciano())
+    builder.summit_finish(mountains.appennines.monte_terminillo(), ColCategory.C1, 189)
 
     # Stage 9
     builder.road_stage(italy.frosinone(), italy.cava_de_tirreni(), 188.0)
@@ -5943,7 +5981,8 @@ def giro2010():
     builder.rest_day()
 
     # Stage 16
-    builder.individual_time_trial(italy.mareo(), italy.plan_de_corones(), 12.9)
+    builder.mountain_time_trial(italy.mareo())
+    builder.summit_finish(mountains.dolomites.plan_de_corones(), ColCategory.C1, 12.9)
 
     # Stage 17
     builder.road_stage(italy.bruneck(), italy.peio_terme(), 173.0)
@@ -6100,13 +6139,15 @@ def giro2012():
     builder.road_stage(italy.limone_sul_garda(), italy.pfalzen(), 173.0)
 
     # Stage 17
-    builder.road_stage(italy.pfalzen(), italy.cortina_d_ampezzo(), 186.0)
+    builder.mountain_stage(italy.pfalzen())
+    builder.summit_finish(mountains.alps.cortina_d_ampezzo(), ColCategory.C1, 186)
 
     # Stage 18
     builder.road_stage(italy.san_vito_di_cadore(), italy.vedelago(), 149.0)
 
     # Stage 19
-    builder.road_stage(italy.treviso(), italy.alpe_di_pampeago(), 198.0)
+    builder.mountain_stage(italy.treviso())
+    builder.summit_finish(mountains.dolomites.alpe_di_pampeago(), ColCategory.C1, 198.0)
 
     # Stage 20
     builder.mountain_stage(italy.caldes_val_di_sole())
@@ -6185,7 +6226,8 @@ def giro2013():
     builder.road_stage(italy.ponte_di_legno(), italy.martell(), 139.0)
 
     # Stage 20
-    builder.road_stage(italy.schlanders(), italy.tre_cime_di_lavaredo(), 203.0)
+    builder.mountain_stage(italy.schlanders())
+    builder.summit_finish(mountains.dolomites.tre_cime_di_lavaredo(), ColCategory.C1, 203)
 
     # Stage 21
     builder.road_stage(italy.riese_pio_x(), italy.brescia(), 197.0)
@@ -6372,7 +6414,8 @@ def giro2016():
     builder.road_stage(italy.praia_a_mare(), italy.benevento(), 233.0)
 
     # Stage 6
-    builder.road_stage(italy.ponte(), italy.roccaraso_aremogna(), 157.0)
+    roccaraso_aremogna = vicinity(italy.roccaraso(), "Aremogna")
+    builder.road_stage(italy.ponte(), roccaraso_aremogna, 157.0)
 
     # Stage 7
     builder.road_stage(italy.sulmona(), italy.foligno(), 211.0)
@@ -6399,10 +6442,13 @@ def giro2016():
     builder.road_stage(italy.palmanova(), italy.cividale_del_fruili(), 170.0)
 
     # Stage 14
-    builder.road_stage(italy.alpago(), italy.corvara(), 210.0)
+    alpago_farra = vicinity(italy.alpago(), "Farra")
+    builder.road_stage(alpago_farra, italy.corvara(), 210.0)
 
     # Stage 15
-    builder.individual_time_trial(italy.castelrotto(), italy.alpe_di_siusi_seiseralm(), 10.8)
+    seiseralm = commune(italy.alpe_di_siusi(), "Seiseralm")
+    builder.mountain_time_trial(italy.castelrotto())
+    builder.summit_finish(Col(seiseralm.name, Italy(), seiseralm.elevation), ColCategory.C1, 10.8)
 
     # Transfer day
     builder.rest_day()
@@ -6454,7 +6500,8 @@ def giro2017():
     builder.road_stage(italy.reggio_calabria(), italy.terme_luigiane(), 217.0)
 
     # Stage 7
-    builder.road_stage(italy.castrovillari(), italy.alberobello_valle_d_itria(), 224.0)
+    alberobello_valle_d_itria = vicinity(italy.alberobello(), "Valle D'Itria")
+    builder.road_stage(italy.castrovillari(), alberobello_valle_d_itria, 224.0)
 
     # Stage 8
     builder.road_stage(italy.molfetta(), italy.peschici(), 189.0)
@@ -6469,7 +6516,8 @@ def giro2017():
     builder.individual_time_trial(italy.foligno(), italy.montefalco(), 39.8)
 
     # Stage 11
-    builder.road_stage(italy.firenze_ponte_a_ema(), italy.bagno_di_romagna(), 161.0)
+    firenze_ponte_a_ema = vicinity(italy.firenze(), "Ponte a Ema")
+    builder.road_stage(firenze_ponte_a_ema, italy.bagno_di_romagna(), 161.0)
 
     # Stage 12
     builder.road_stage(italy.forli(), italy.reggio_emilia(), 234.0)
@@ -6478,8 +6526,9 @@ def giro2017():
     builder.road_stage(italy.reggio_emilia(), italy.tortona(), 167.0)
 
     # Stage 14
+    oropa_biella = vicinity(italy.oropa(), "Biella")
     builder.mountain_stage(italy.castellania())
-    builder.summit_finish(italy.oropa("Biella"), ColCategory.C1, 131.0)
+    builder.summit_finish(Col(oropa_biella.name, Italy(), oropa_biella.elevation), ColCategory.C1, 131.0)
 
     # Stage 15
     builder.road_stage(italy.valdengo(), italy.bergamo(), 199.0)
@@ -6488,16 +6537,22 @@ def giro2017():
     builder.rest_day()
 
     # Stage 16
-    builder.road_stage(italy.rovetta(), italy.bormio(), 222.0)
+    builder.mountain_stage(italy.rovetta())
+    builder.summit_finish(mountains.alps.bormio(), ColCategory.C1, 222)
 
     # Stage 17
-    builder.road_stage(italy.tirano(), italy.canazei("Val di Fassa"), 219.0)
+    canazei_val_di_fassa = vicinity(italy.canazei(), "Val di Fassa")
+    builder.road_stage(italy.tirano(), canazei_val_di_fassa, 219.0)
 
     # Stage 18
-    builder.road_stage(italy.moena("Val di Fassa"), italy.ortisei_st_ulrich_val_gardena(), 137.0)
+    moena_val_di_fassa = vicinity(italy.moena(), "Val di Fassa")
+    ortisei_st_ulrich_val_gardena = vicinity(commune(italy.ortisei(), "St. Ulrich"), "Val Gardena")
+    builder.road_stage(moena_val_di_fassa, ortisei_st_ulrich_val_gardena, 137)
 
     # Stage 19
-    builder.road_stage(italy.san_candido(), italy.piancavallo("Monte Jafferau"), 191.0)
+    san_candido_innichen = commune(italy.san_candido(), "Innichen")
+    piancavallo_monte_jafferau = vicinity(italy.piancavallo(), "Monte Jafferau")
+    builder.road_stage(san_candido_innichen, piancavallo_monte_jafferau, 191)
 
     # Stage 20
     builder.road_stage(italy.pordenone(), italy.asiago(), 190.0)
@@ -6527,7 +6582,8 @@ def giro2018():
     builder.road_stage(italy.catania(), italy.caltagirone(), 202.0)
 
     # Stage 5
-    builder.road_stage(italy.agrigento(), italy.santa_ninfa_valle_del_belice(), 153.0)
+    santa_ninfa_valle_del_belice = vicinity(italy.santa_ninfa(), "Valle del Belice")
+    builder.road_stage(italy.agrigento(), santa_ninfa_valle_del_belice, 153)
 
     # Stage 6
     builder.mountain_stage(italy.caltanissetta())
@@ -6541,7 +6597,8 @@ def giro2018():
     builder.summit_finish(mountains.appennines.montevergine_di_mercogliano(), ColCategory.C2, 209.0)
 
     # Stage 9
-    builder.road_stage(italy.pesco_sannita(), italy.gran_sasso_d_italia_campo_imperatore(), 225.0)
+    gran_sasso_d_italia_campo_imperatore = vicinity(italy.gran_sasso_d_italia(), "Campo Imperatore")
+    builder.road_stage(italy.pesco_sannita(), gran_sasso_d_italia_campo_imperatore, 225.0)
 
     # Transfer day
     builder.rest_day()
@@ -6635,11 +6692,13 @@ def giro2019():
     builder.road_stage(italy.cuneo(), italy.pinerolo(), 158.0)
 
     # Stage 13
+    ceresole_reale_lago_serru = vicinity(italy.ceresole_reale(), "Lago Serrù")
     builder.mountain_stage(italy.pinerolo())
-    builder.summit_finish(mountains.alps.ceresole_reale(), ColCategory.C1, 196.0)
+    builder.summit_finish(Col(ceresole_reale_lago_serru.name, Italy(), ceresole_reale_lago_serru.elevation), ColCategory.C1, 196.0)
 
     # Stage 14
-    builder.road_stage(italy.saint_vincent(), italy.courmayeur_skyway_monte_bianco(), 131.0)
+    courmayeur_skyway_monte_bianco = vicinity(italy.courmayeur(), "Skyway Monte Bianco")
+    builder.road_stage(italy.saint_vincent(), courmayeur_skyway_monte_bianco, 131.0)
 
     # Stage 15
     builder.road_stage(italy.ivrea(), italy.como(), 232.0)
@@ -6651,11 +6710,13 @@ def giro2019():
     builder.road_stage(italy.lovere(), italy.ponte_di_legno(), 194.0)
 
     # Stage 17
-    builder.mountain_stage(italy.commezzadura())
+    commezzadura_val_di_sole = vicinity(italy.commezzadura(), "Val di Sole")
+    builder.mountain_stage(commezzadura_val_di_sole)
     builder.summit_finish(italy.anterselva_antholz(), ColCategory.C3, 181.0)
 
     # Stage 18
-    builder.road_stage(italy.valdaora(), italy.santa_maria_di_sala(), 222.0)
+    valdaora_olang = commune(italy.valdaora(), "Olang")
+    builder.road_stage(valdaora_olang, italy.santa_maria_di_sala(), 222.0)
 
     # Stage 19
     builder.mountain_stage(italy.treviso())

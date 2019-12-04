@@ -1,4 +1,7 @@
 from ..util import french_col, italian_col, swiss_col
+import france
+import italy
+import switzerland
 
 def col_d_agnel():
     return french_col("Col d'Agnel", 2744)
@@ -7,19 +10,19 @@ def col_d_allos():
     return french_col("Col d'Allos", 2250)
 
 def alpe_d_huez():
-    return french_col("Alpe d'Huez", 1850, 13.8, 8.1)
+    return french_col(france.alpe_d_huez().name, france.alpe_d_huez().elevation, 13.8, 8.1)
 
 def aprica():
-    return italian_col("Aprica", 1173)
+    return italian_col(italy.aprica().name, italy.aprica().elevation)
 
 def les_arcs():
-    return french_col("Les Arcs", 1700)
+    return french_col(france.les_arcs().name, france.les_arcs().elevation)
 
 def col_des_aravis():
     return french_col("Col des Aravis",1498)
 
 def avoriaz():
-    return french_col("Avoriaz", 1800)
+    return french_col(france.avoriaz().name, france.avoriaz().elevation)
 
 # B
 def col_bayard():
@@ -40,15 +43,18 @@ def cote_de_brie():
 def bardonecchia_monte_jafferau():
     return italian_col("Bardonecchia (Monte Jafferau)",  1980)
 
+def bormio():
+    return italian_col(italy.bormio().name, italy.bormio().elevation)
+
 # C
-def ceresole_reale():
-    return italian_col("Ceresole Reale (Lago Serrù)",2247)
+def ceresole_reale(municipality = None):
+    return italian_col(italy.ceresole_reale().name,  municipality, italy.ceresole_reale().elevation)
 
 def cervinia():
-    return italian_col("Cervinia", 2001)
+    return italian_col(italy.cervinia().name, italy.cervinia().elevation)
 
 def cevo():
-    return italian_col("Cevo",1054)
+    return italian_col(italy.cevo().name, italy.cevo().elevation)
 
 def col_de_la_cabre():
     return french_col("Col de la Cabre",1180)
@@ -63,7 +69,7 @@ def col_du_chaussy():
     return french_col("Col du Chaussy",1533)
 
 def chamrousse():
-    return french_col("Chamrousse",1730)
+    return french_col(france.chamrousse().name, france.chamrousse().elevation)
 
 def col_des_champs():
     return french_col("Col des Champs",2095)
@@ -89,11 +95,14 @@ def colma_di_sormano():
 def cormet_de_roselend():
     return french_col("Cormet de Roselend", 1968, 5.7, 6.5)
 
+def cortina_d_ampezzo():
+    return italian_col(italy.cortina_d_ampezzo().name, italy.cortina_d_ampezzo().elevation)
+
 def courchevel():
-    return french_col("Courchevel",2004)
+    return french_col(france.courchevel().name, france.courchevel().elevation)
 
 def crans_montana():
-    return swiss_col("Crans-Montana",1670)
+    return swiss_col(switzerland.crans_montana().name, switzerland.crans_montana().elevation)
 
 def col_de_la_croix():
     return swiss_col("Col de la Croix",1778)
@@ -175,22 +184,22 @@ def col_de_la_lombarde():
     return french_col("Col de la Lombarde",2351)
 
 def la_toussuire():
-    return french_col("La Toussuire",1705)
+    return french_col(france.la_toussuire().name, france.la_toussuire().elevation)
 
 def la_toussuire_les_sybelles():
     return french_col("La Toussuire - Les Sybelles",1705)
 
 def lans_en_vercors():
-    return french_col("Lans-en-Vercors", 1409)
+    return french_col(france.lans_en_vercors().name, france.lans_en_vercors().elevation)
 
 def col_du_lautaret():
     return french_col("Col du Lautaret",2058)
 
 def les_deux_alpes():
-    return french_col("Les Deux Alpes",1644)
+    return french_col(france.les_deux_alpes().name, france.les_deux_alpes().elevation)
 
 def les_menuires():
-    return french_col("Les Menuires",1809)
+    return french_col(france.les_menuires().name, france.les_menuires().elevation)
 
 def les_orres():
     return french_col("Les Orres", 1496)
@@ -243,7 +252,7 @@ def col_du_noyer():
 
 # O
 def orcieres_merlette():
-    return french_col("Orcières-Merlette",1838)
+    return french_col(france.orcieres_merlette().name, france.orcieres_merlette().elevation)
 
 def col_de_palaquit():
     return french_col("Col de Palaquit",1154)
@@ -285,7 +294,7 @@ def pian_del_lupo():
     return italian_col("Pian del Lupo",1405)
 
 def pra_loup():
-    return french_col("Pra-Loup",1630)
+    return french_col(france.pra_loup().name, france.pra_loup().elevation)
 
 def prato_nevoso():
     return italian_col("Prato Nevoso", 1607)
@@ -295,6 +304,9 @@ def prapoutel_les_sept_laux():
 
 def col_des_pres():
     return french_col("Col des Prés",1135)
+
+def plan_de_corones():
+    return italian_col(italy.plan_de_corones().name, italy.plan_de_corones().elevation)
 
 # R
 def ramaz():
@@ -331,6 +343,9 @@ def cote_de_sainte_eulalie():
 def saint_gervais_mont_blanc():
     return french_col("Saint-Gervais Mont-Blanc", 970)
 
+def saint_moritz():
+    return swiss_col(switzerland.saint_moritz().name, switzerland.saint_moritz().elevation)
+
 def saint_nizier():
     return french_col("Saint-Nizier",1180)
 
@@ -352,8 +367,11 @@ def col_de_la_sentinelle():
 def passo_dello_stelvio():
     return italian_col("Passo dello Stelvio",2757)
 
+def serre_chevalier():
+    return french_col(france.serre_chevalier().name, france.serre_chevalier().elevation)
+
 def sestriere():
-    return italian_col("Sestrière",2035)
+    return italian_col(italy.sestriere().name, italy.sestriere().elevation)
 
 def col_de_tamie():
     return french_col("Col de Tamié",907)
@@ -375,19 +393,19 @@ def truc_d_arbe():
 
 # V
 def val_d_isere():
-    return french_col("Val d'Isère",1820)
+    return french_col(france.val_d_isere().name, france.val_d_isere().elevation)
 
 def valmorel():
     return french_col("Valmorel", 1369)
 
 def val_thorens():
-    return french_col("Val Thorens",2275)
+    return french_col(france.val_thorens().name, france.val_thorens().elevation)
 
 def col_de_vars():
     return french_col("Col de Vars",2109)
 
 def verbier():
-    return swiss_col("Verbier",1468)
+    return swiss_col(switzerland.verbier().name, switzerland.verbier().elevation)
 
 def verrayes():
     return italian_col("Verrayes",1017)
@@ -396,5 +414,5 @@ def verrogne():
     return italian_col("Verrogne",1582)
 
 def villard_de_lans():
-    return french_col("Villard-de-Lans",1150)
+    return french_col(france.villard_de_lans().name, france.villard_de_lans().elevation)
 

@@ -1,4 +1,6 @@
-from ..util import andorran_col, french_col
+from ..util import andorran_col, french_col, spanish_col
+import france
+import spain
 
 # A
 def col_d_agnes():
@@ -49,7 +51,7 @@ def cote_de_capvern_les_bains():
     return french_col("Cote de Capvern-les-Bains", 604, 3.4, 5.1)
 
 def cauterets():
-    return french_col("Cauterets", 1320)
+    return french_col(france.cauterets().name, france.cauterets().elevation)
 
 def col_du_chioula():
     return french_col("Col du Chioula", 1450)
@@ -68,6 +70,9 @@ def font_romeu(name = "Font-Romeu"):
 def pyrenees2000():
     return font_romeu("Pyrénées 2000")
 
+def formigal():
+    return spanish_col(spain.formigal().name, spain.formigal().elevation)
+
 def cote_de_fanjeaux():
     return french_col("Cote de Fanjeaux", 348, 2.4, 4.9)
 
@@ -79,7 +84,7 @@ def grau_roig():
     return andorran_col("Grau Roig", 2000)
 
 def guzet_neige():
-    return french_col("Guzet-Neige", 1480)
+    return french_col(france.guzet_neige().name, france.guzet_neige().elevation)
 
 # H
 def hautacam():
@@ -97,7 +102,7 @@ def cote_de_loucrup():
     return french_col("Cote de Loucrup", 532, 1.8, 7.2)
 
 def la_mongie():
-    return french_col("La Mongie", 1715)
+    return french_col(france.la_mongie().name, france.la_mongie().elevation)
 
 def la_pierre_saint_martin():
     return french_col("La Pierre Saint-Martin", 1610)
@@ -106,7 +111,7 @@ def col_de_latrape():
     return french_col("Col de Latrape", 1110)
 
 def luz_ardiden():
-    return french_col("Luz Ardiden", 1715)
+    return french_col(france.luz_ardiden().name, france.luz_ardiden().elevation)
 
 # M
 def cote_de_madiran():

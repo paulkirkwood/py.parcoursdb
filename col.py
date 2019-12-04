@@ -55,11 +55,15 @@ class Col(object):
     def maximum_gradient(self):
         return self._maximum_gradient
 
+    @property
+    def fqnc(self):
+        return self.name + " (" + self.country.name + ")"
+
     def qualified_location(self,country):
         if self.country == country:
             return self.name
         else:
-            return self.name + " (" + self.country.name + ")"
+            return self.fqnc
 
 class CategorisedCol(object):
 

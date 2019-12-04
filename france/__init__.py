@@ -1,22 +1,5 @@
-from .locations import abbeville
-from .locations import agde
-from .locations import agen
-from .locations import aigurande
-from .locations import aime
-from .locations import aix_en_provence
-from .locations import aix_les_bains
-from .locations import ajaccio
-from .locations import albertville
-from .locations import albi
-from .locations import alencon
-from .locations import ales
-from .locations import alfortville
-from .locations import altkirch
-from .locations import amiens
-from .locations import ancenis
-from .locations import angers
-from .locations import angouleme
-from .locations import annecy
+from .locations import abbeville, agde, agen, aigurande, aime, aix_en_provence, aix_les_bains, ajaccio, albertville, albi
+from .locations import alencon, ales, alfortville, alpe_d_huez, altkirch, amiens, ancenis, angers, angouleme, annecy
 from .locations import annemasse
 from .locations import annonay_davezieux
 from .locations import antibes
@@ -120,7 +103,7 @@ from .locations import carpentras
 from .locations import castelnaudary
 from .locations import castelsarrasin
 from .locations import castillon_la_bataille
-from .locations import castres
+from .locations import castres, cauterets
 from .locations import cergy_pontoise
 from .locations import cerilly
 from .locations import chablis
@@ -131,7 +114,7 @@ from .locations import chalons_sur_marne
 from .locations import chambery
 from .locations import chambord
 from .locations import chamonix
-from .locations import champagnole
+from .locations import champagnole, chamrousse
 from .locations import chaumont
 from .locations import chantilly
 from .locations import chantonnay
@@ -168,7 +151,7 @@ from .locations import compiegne
 from .locations import concarneau
 from .locations import corbeil_essonnes
 from .locations import correze
-from .locations import cosne_sur_loire
+from .locations import cosne_sur_loire, courchevel
 from .locations import creteil
 from .locations import cugnaux
 from .locations import culoz
@@ -236,7 +219,7 @@ from .locations import grenoble
 from .locations import gruissan
 from .locations import gueret
 from .locations import gueugnon
-from .locations import guillestre
+from .locations import guillestre, guzet_neige
 from .locations import hendaye
 from .locations import houilles
 from .locations import hyeres
@@ -263,11 +246,11 @@ from .locations import la_grande_motte
 from .locations import la_guerche_de_bretagne
 from .locations import la_haie_fouassiere
 from .locations import la_loupe
-from .locations import la_mure
+from .locations import la_mongie, la_mure
 from .locations import la_roche_sur_yon
 from .locations import la_rochelle
 from .locations import la_tour_du_pin
-from .locations import la_toussuire_les_sybelles
+from .locations import la_toussuire, la_toussuire_les_sybelles
 from .locations import labastide_d_armagnac
 from .locations import lacanau
 from .locations import lac_de_madine
@@ -279,7 +262,7 @@ from .locations import lamballe
 from .locations import lanester
 from .locations import langon
 from .locations import lannemezan
-from .locations import lannion
+from .locations import lannion, lans_en_vercors
 from .locations import laon
 from .locations import laplume
 from .locations import laruns
@@ -303,9 +286,7 @@ from .locations import le_revard
 from .locations import le_touquet
 from .locations import le_touquet_paris_plage
 from .locations import le_treport
-from .locations import les_echelles
-from .locations import les_essarts
-from .locations import les_sables_d_olonne
+from .locations import les_arcs, les_deux_alpes, les_echelles, les_essarts, les_menuires, les_essarts, les_sables_d_olonne
 from .locations import levallois_perret
 from .locations import lezat_sur_leze
 from .locations import lezignan_corbieres
@@ -331,7 +312,7 @@ from .locations import luchon
 from .locations import lucon
 from .locations import lugny
 from .locations import luneville
-from .locations import luz_saint_sauveur
+from .locations import luz_ardiden, luz_saint_sauveur
 from .locations import lyon
 from .locations import machecoul
 from .locations import macon
@@ -408,7 +389,7 @@ from .locations import obernai
 from .locations import olonne_sur_mer
 from .locations import oloron_sainte_marie
 from .locations import orange
-from .locations import orchies
+from .locations import orchies, orcieres_merlette
 from .locations import orleans
 from .locations import orsonville
 from .locations import orthez
@@ -442,7 +423,7 @@ from .locations import porte_maillot
 from .locations import porto_vecchio
 from .locations import pouilly_en_auxois
 from .locations import prades
-from .locations import prapoutel
+from .locations import pra_loup, prapoutel
 from .locations import privas
 from .locations import provence
 from .locations import quimper
@@ -568,7 +549,7 @@ from .locations import troyes
 from .locations import tulle
 from .locations import utah_beach
 from .locations import vaison_la_romaine
-from .locations import val_louron
+from .locations import val_d_isere, val_louron, val_thorens
 from .locations import valence
 from .locations import valence_d_agen
 from .locations import valenciennes
@@ -588,7 +569,7 @@ from .locations import vesoul
 from .locations import veurey
 from .locations import vichy
 from .locations import vierzon
-from .locations import villar_les_dombes
+from .locations import villard_de_lans, villar_les_dombes
 from .locations import ville_d_avray
 from .locations import villefranche_sur_saone
 from .locations import villeneuve_sur_lot
@@ -619,6 +600,7 @@ all = [ abbeville
       , ales
       , alfortville
       , altkirch
+      , alpe_d_huez
       , amiens
       , ancenis
       , angers
@@ -728,6 +710,7 @@ all = [ abbeville
       , castelsarrasin
       , castillon_la_bataille
       , castres
+      , cauterets
       , cergy_pontoise
       , cerilly
       , chablis
@@ -776,6 +759,7 @@ all = [ abbeville
       , corbeil_essonnes
       , correze
       , cosne_sur_loire
+      , courchevel
       , creteil
       , cugnaux
       , culoz
@@ -844,6 +828,7 @@ all = [ abbeville
       , gueret
       , gueugnon
       , guillestre
+      , guzet_neige
       , hendaye
       , houilles
       , hyeres
@@ -870,10 +855,12 @@ all = [ abbeville
       , la_guerche_de_bretagne
       , la_haie_fouassiere
       , la_loupe
+      , la_mongie
       , la_mure
       , la_roche_sur_yon
       , la_rochelle
       , la_tour_du_pin
+      , la_toussuire
       , la_toussuire_les_sybelles
       , labastide_d_armagnac
       , lacanau
@@ -887,6 +874,7 @@ all = [ abbeville
       , langon
       , lannemezan
       , lannion
+      , lans_en_vercors
       , laon
       , laplume
       , laruns
@@ -910,8 +898,11 @@ all = [ abbeville
       , le_touquet
       , le_touquet_paris_plage
       , le_treport
+      , les_arcs
+      , les_deux_alpes
       , les_echelles
       , les_essarts
+      , les_menuires
       , les_sables_d_olonne
       , levallois_perret
       , lezat_sur_leze
@@ -938,6 +929,7 @@ all = [ abbeville
       , lucon
       , lugny
       , luneville
+      , luz_ardiden
       , luz_saint_sauveur
       , lyon
       , machecoul
@@ -1016,6 +1008,7 @@ all = [ abbeville
       , oloron_sainte_marie
       , orange
       , orchies
+      , orcieres_merlette
       , orleans
       , orsonville
       , orthez
@@ -1049,6 +1042,7 @@ all = [ abbeville
       , porto_vecchio
       , pouilly_en_auxois
       , prades
+      , pra_loup
       , prapoutel
       , privas
       , provence
@@ -1175,7 +1169,9 @@ all = [ abbeville
       , tulle
       , utah_beach
       , vaison_la_romaine
+      , val_d_isere
       , val_louron
+      , val_thorens
       , valence
       , valence_d_agen
       , valenciennes
@@ -1195,6 +1191,7 @@ all = [ abbeville
       , veurey
       , vichy
       , vierzon
+      , villard_de_lans
       , villar_les_dombes
       , ville_d_avray
       , villefranche_sur_saone

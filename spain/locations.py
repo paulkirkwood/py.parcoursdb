@@ -131,8 +131,8 @@ def antella():
 def antequera():
     return _spanish_location("Antequera")
 
-def aramon_formigal(municipality = None):
-    return _spanish_location("Aramon Formigal", municipality)
+def aramon_formigal():
+    return _spanish_location("Aramon Formigal")
 
 def aramon_valdelinares():
     return _spanish_location("Aramon Valdelinares")
@@ -149,8 +149,8 @@ def arcos_de_la_frontera():
 def argamasilla_de_alba():
     return _spanish_location("Argamasilla de Alba")
 
-def arrate(municipality = None):
-    return _spanish_location("Arrate", municipality)
+def arrate():
+    return _spanish_location("Arrate")
 
 def arroyomolinos():
     return _spanish_location("Arroyomolinos")
@@ -213,8 +213,8 @@ def becilla():
 def bejar():
     return _spanish_location("Béjar")
 
-def bellaterra(municipality = None):
-    return _spanish_location("Bellaterra", municipality)
+def bellaterra():
+    return _spanish_location("Bellaterra")
 
 def belorado():
     return _spanish_location("Belorado")
@@ -308,7 +308,7 @@ def calahorra():
     return _spanish_location("Calahorra")
 
 def calar_alto_observatory():
-    return _spanish_location("Calar Alto Observatory")
+    return Location("Calar Alto Observatory", Spain(), 2186)
 
 def calatayud():
     return _spanish_location("Calatayud")
@@ -325,8 +325,8 @@ def cambrils():
 def caminito_del_ray():
     return _spanish_location("Caminito del Ray")
 
-def camins_del_penyagolosa(municipality = None):
-    return _spanish_location("Camins del Penyagolosa", municipality)
+def camins_del_penyagolosa():
+    return _spanish_location("Camins del Penyagolosa")
 
 def campo_de_criptana():
     return _spanish_location("Campo de Criptana")
@@ -364,8 +364,8 @@ def caso():
 def castellar_de_n_hug():
     return _spanish_location("Castellar de n'Hug")
 
-def castellar_del_riu(municipality = None):
-    return _spanish_location("Castellar del Riu", municipality)
+def castellar_del_riu():
+    return _spanish_location("Castellar del Riu")
 
 def castelldefels():
     return _spanish_location("Castelldefels")
@@ -383,7 +383,7 @@ def cercedilla():
     return _spanish_location("Cercedilla")
 
 def cerler():
-    return _spanish_location("Cerler")
+    return Location("Cerler", Spain(), 1500)
 
 def circuito_de_navarra():
     return _spanish_location("Circuito de Navarra")
@@ -436,11 +436,11 @@ def cuitu_negro():
 def cullera():
     return _spanish_location("Cullera")
 
-def cumbre_del_sol(municipality = None):
-    return _spanish_location("Cumbre del Sol", municipality)
+def cumbre_del_sol():
+    return _spanish_location("Cumbre del Sol")
 
-def cumbres_verdes(municipality = None):
-    return _spanish_location("Cumbres Verdes", municipality)
+def cumbres_verdes():
+    return _spanish_location("Cumbres Verdes")
 
 # D
 def dehesa_de_campoamor():
@@ -471,8 +471,8 @@ def el_ejido():
 def el_espinar():
     return _spanish_location("El Espinar")
 
-def el_fuerte_del_rapitan(municipality = None):
-    return _spanish_location("El Fuerte del Rapitan", municipality)
+def el_fuerte_del_rapitan():
+    return _spanish_location("El Fuerte del Rapitan")
 
 def el_pozo():
     return _spanish_location("El Pozo")
@@ -489,8 +489,8 @@ def elche():
 def empuriabrava():
     return _spanish_location("Empuriabrava")
 
-def ermita_del_alba(municipality = None):
-    return _spanish_location("Ermita del Alba", municipality)
+def ermita_del_alba():
+    return _spanish_location("Ermita del Alba")
 
 def esparreguera():
     return _spanish_location("Esparreguera")
@@ -514,8 +514,8 @@ def ezcaray():
 def factoria_ford_almussafes():
     return _spanish_location("Factoria Ford (Almussafes)")
 
-def faustino_v(municipality = None):
-    return _spanish_location("Faustino V", municipality)
+def faustino_v():
+    return _spanish_location("Faustino V")
 
 def fermosella():
     return _spanish_location("Fermosella")
@@ -533,7 +533,7 @@ def finisterra():
     return _spanish_location("Finisterra")
 
 def formigal():
-    return _spanish_location("Formigal")
+    return Location("Formigal", Spain(), 1510)
 
 def fuengirola():
     return _spanish_location("Fuengirola")
@@ -620,8 +620,8 @@ def irun():
     return _spanish_location("Irun")
 
 # J
-def jaca(municipality = None):
-    return _spanish_location("Jaca", municipality)
+def jaca():
+    return _spanish_location("Jaca")
 
 def jaen():
     return _spanish_location("Jaén")
@@ -635,8 +635,8 @@ def jerez_de_la_frontera():
 def jodar():
     return _spanish_location("Jodar")
 
-def jurassic_museum_of_asturias(municipality = None):
-    return _spanish_location("Jurassic Museum of Asturias", municipality)
+def jurassic_museum_of_asturias():
+    return _spanish_location("Jurassic Museum of Asturias")
 
 # L
 def la_alpujarra():
@@ -645,14 +645,14 @@ def la_alpujarra():
 def la_baneza():
     return _spanish_location("La Baneza")
 
-def la_camperona(municipality = None):
-    return _spanish_location("La Camperona", municipality)
+def la_camperona():
+    return _spanish_location("La Camperona")
 
-def la_covatilla(municipality = None):
-    return _spanish_location("La Covatilla", municipality)
+def la_covatilla():
+    return _spanish_location("La Covatilla", 2000)
 
-def la_farrapona(municipality = None):
-    return _spanish_location("La Farrapona", municipality)
+def la_farrapona():
+    return _spanish_location("La Farrapona")
 
 def la_granja_de_san_ildefonso():
     return _spanish_location("La Granja de San Ildefonso")
@@ -699,8 +699,8 @@ def la_senia():
 def la_seu_d_urgell():
     return _spanish_location("La Seu d'Urgell")
 
-def la_tossa_de_montbui(municipality = None):
-    return _spanish_location("La Tossa de Montbui", municipality)
+def la_tossa_de_montbui():
+    return _spanish_location("La Tossa de Montbui")
 
 def la_vall_d_en_bas():
     return _spanish_location("La Vall d'en Bas")
@@ -842,7 +842,7 @@ def mijas():
     return _spanish_location("Mijas")
 
 def mirador_de_ezaro():
-    return _spanish_location("Mirador de Ézaro")
+    return _spanish_location("Mirador de Ézaro", 274)
 
 def mirador_de_lobeira():
     return _spanish_location("Mirador de Lobeira")
@@ -871,8 +871,8 @@ def mondonedo():
 def monforte_de_lemos():
     return _spanish_location("Monforte de Lemos")
 
-def mont_castrove(municipality = None):
-    return _spanish_location("Mont Castrove", municipality)
+def mont_castrove():
+    return _spanish_location("Mont Castrove")
 
 def monte_da_groba():
     return _spanish_location("Monte da Groba")
@@ -997,8 +997,8 @@ def panticosa():
 def parades_de_nava():
     return _spanish_location("Parades de Nava")
 
-def parque_de_cabarceno(municipality = None):
-    return _spanish_location("Parque de Cabarceno", municipality)
+def parque_de_cabarceno():
+    return _spanish_location("Parque de Cabarceno")
 
 def parque_nautico_castrelo_de_mino():
     return _spanish_location("Parque Náutico Castrelo de Miño")
@@ -1146,8 +1146,8 @@ def sagunto():
 def salamanca():
     return _spanish_location("Salamanca")
 
-def salardu(municipality = None):
-    return _spanish_location("Salardu", municipality)
+def salardu():
+    return _spanish_location("Salardu")
 
 def salas():
     return _spanish_location("Salas")
@@ -1230,8 +1230,8 @@ def santiago_bernabeu_stadium_madrid():
 def santiago_de_compostela():
     return _spanish_location("Santiago de Compostela")
 
-def santillana_del_mar(municipality = None):
-    return _spanish_location("Santillana del Mar", municipality)
+def santillana_del_mar():
+    return _spanish_location("Santillana del Mar")
 
 def santo_domingo_de_la_calzada():
     return _spanish_location("Santo Domingo de la Calzada")
@@ -1245,8 +1245,8 @@ def santo_toribo_de_liebana():
 def santona():
     return _spanish_location("Santoña")
 
-def santuario_de_la_bien_aparecida(municipality = None):
-    return _spanish_location("Santuario de la Bien Aparecida", municipality)
+def santuario_de_la_bien_aparecida():
+    return _spanish_location("Santuario de la Bien Aparecida")
 
 def santuario_de_san_miguel_de_aralar():
     return _spanish_location("Santuario de San Miguel de Aralar")
@@ -1273,7 +1273,7 @@ def sierra_de_la_demanda():
     return _spanish_location("Sierra de la Demanda")
 
 def sierra_nevada():
-    return _spanish_location("Sierra Nevada")
+    return _spanish_location("Sierra Nevada", elevation=2100)
 
 def sitges():
     return _spanish_location("Sitges")
@@ -1449,8 +1449,8 @@ def vilanova_de_arousa():
 def vilanova_i_la_geltru():
     return _spanish_location("Vilanova i la Geltru")
 
-def villa_romana_la_olmeda(municipality = None):
-    return _spanish_location("Villa Romana la Olmeda", municipality)
+def villa_romana_la_olmeda():
+    return _spanish_location("Villa Romana la Olmeda")
 
 def villabona():
     return _spanish_location("Villabona")
@@ -1511,8 +1511,9 @@ def zaragoza():
 def zarautz():
     return _spanish_location("Zarautz")
 
-def _spanish_location(name, municipality = None):
-    if municipality is None:
-        return Location(name, Spain())
-    else:
-        return Location('{} ({})'.format(name, municipality), Spain())
+def _spanish_location(name, elevation = None):
+   if elevation is None:
+      return Location(name, Spain())
+   else:
+      return Location(name, Spain(), elevation)
+
