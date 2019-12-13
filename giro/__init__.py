@@ -10,6 +10,7 @@ from .editions import giro1980, giro1981, giro1982, giro1983, giro1984, giro1985
 from .editions import giro1990, giro1991, giro1992, giro1993, giro1994, giro1995, giro1996, giro1997, giro1998, giro1999
 from .editions import giro2000, giro2001, giro2002, giro2003, giro2004, giro2005, giro2006, giro2007, giro2008, giro2009
 from .editions import giro2010, giro2011, giro2012, giro2013, giro2014, giro2015, giro2016, giro2017, giro2018, giro2019
+from .editions import editions
 
 all = [ giro1909
       , giro1910
@@ -113,4 +114,5 @@ all = [ giro1909
       , giro2017
       , giro2018
       , giro2019
+      , editions
       ]

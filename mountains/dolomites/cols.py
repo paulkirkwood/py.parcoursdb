@@ -7,11 +7,11 @@ def alpe_di_pampeago():
 def alpe_di_siusi():
     return italian_col(italy.alpe_di_siusi().name, italy.alpe_di_siusi().elevation)
 
+def andalo():
+    return italian_col(italy.andalo().name, italy.andalo().elevation)
+
 def anterselva():
     return italian_col("Anterselva", 1635)
-
-def antholz():
-    return italian_col("Antholz", 1635)
 
 def cima_campo():
     return italian_col("Cima Campo", 1425)
@@ -33,6 +33,9 @@ def monte_grappa():
 
 def monte_zoncolan():
     return italian_col("Monte Zoncolan", 1730)
+
+def passo_fedaia():
+    return italian_col("Passo Fedaia", 2057)
 
 def passo_manghen():
     return italian_col("Passo Manghen", 2047)
@@ -63,3 +66,6 @@ def terento():
 
 def tre_cime_di_lavaredo():
     return italian_col("Tre Cime di Lavaredo", 2333)
+
+def zoldo_alto():
+    return italian_col("Zoldo Alto", 1514)

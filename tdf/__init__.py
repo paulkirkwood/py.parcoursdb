@@ -11,6 +11,7 @@ from .editions import tdf1980, tdf1981, tdf1982, tdf1983, tdf1984, tdf1985, tdf1
 from .editions import tdf1990, tdf1991, tdf1992, tdf1993, tdf1994, tdf1995, tdf1996, tdf1997, tdf1998, tdf1999
 from .editions import tdf2000, tdf2001, tdf2002, tdf2003, tdf2004, tdf2005, tdf2006, tdf2007, tdf2008, tdf2009
 from .editions import tdf2010, tdf2011, tdf2012, tdf2013, tdf2014, tdf2015, tdf2016, tdf2017, tdf2018
+from .editions import editions
 
 all = [ tdf1903
       , tdf1904
@@ -118,4 +119,5 @@ all = [ tdf1903
       , tdf2016
       , tdf2017
       , tdf2018
+      , editions
       ]

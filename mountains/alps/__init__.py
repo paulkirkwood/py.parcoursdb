@@ -51,9 +51,9 @@ from .cols import col_du_noyer
 from .cols import col_du_pre
 from .cols import col_du_rousset
 from .cols import col_du_semnoz
-from .cols import col_du_telegraphe
+from .cols import col_du_telegraphe, col_saint_pantaleon, col_tsecore
 from .cols import colle_del_lys
-from .cols import colle_del_morte
+from .cols import colle_del_morte, colle_delle_finestre
 from .cols import colle_san_carlo
 from .cols import colma_di_sormano
 from .cols import cormet_de_roselend, cortina_d_ampezzo
@@ -65,6 +65,7 @@ from .cols import crans_montana
 from .cols import croix_de_fer
 from .cols import cucheron
 from .cols import finhaut_emosson
+from .cols import grossglockner
 from .cols import la_plagne
 from .cols import la_rosiere
 from .cols import la_ruchere
@@ -76,13 +77,13 @@ from .cols import le_pleynet
 from .cols import les_arcs
 from .cols import les_deux_alpes
 from .cols import les_menuires
-from .cols import les_orres
-from .cols import madonna_del_ghisallo
+from .cols import les_orres, livigno
+from .cols import madonna_del_ghisallo, madonna_di_campiglio
 from .cols import meribel_les_allues
-from .cols import mont_cenis
+from .cols import montecampione, mont_cenis
 from .cols import mont_revard
 from .cols import mont_saleve
-from .cols import monte_jafferau
+from .cols import monte_bondone, monte_generoso, monte_jafferau, monte_maddalena
 from .cols import montee_d_hauteville
 from .cols import montee_de_tignes
 from .cols import montee_du_bisanne
@@ -90,8 +91,8 @@ from .cols import montee_du_plateau_des_glieres
 from .cols import montgenevre
 from .cols import montoso
 from .cols import orcieres_merlette
-from .cols import pas_de_morgins, passo_del_mortirolo, passo_dello_stelvio, pian_del_lupo, pian_del_lupo, pra_loup
-from .cols import prato_nevoso
+from .cols import pas_de_morgins, passo_del_mortirolo, passo_dello_stelvio, pian_del_lupo, pian_del_lupo
+from .cols import plan_de_corones, plan_di_montecampione, pra_loup, prato_nevoso
 from .cols import ramaz, restefond, risoul
 from .cols import saint_gervais_mont_blanc, saint_moritz, saint_nizier, serre_chevalier, sestriere
 from .cols import truc_d_arbe
@@ -162,9 +163,11 @@ all = [ alpe_d_huez
       , col_du_rousset
       , col_du_semnoz
       , col_du_telegraphe
+      , col_saint_pantaleon
+      , col_tsecore
       , colle_del_lys
       , colle_del_morte
-      , colle_san_carlo
+      , colle_delle_finestre
       , colma_di_sormano
       , cormet_de_roselend
       , cortina_d_ampezzo
@@ -189,12 +192,18 @@ all = [ alpe_d_huez
       , les_deux_alpes
       , les_menuires
       , les_orres
+      , livigno
       , madonna_del_ghisallo
+      , madonna_di_campiglio
       , meribel_les_allues
+      , montecampione
       , mont_cenis
       , mont_revard
       , mont_saleve
+      , monte_bondone
+      , monte_generoso
       , monte_jafferau
+      , monte_maddalena
       , montee_d_hauteville
       , montee_de_tignes
       , montee_du_bisanne
@@ -206,6 +215,8 @@ all = [ alpe_d_huez
       , passo_del_mortirolo
       , passo_dello_stelvio
       , pian_del_lupo
+      , plan_de_corones
+      , plan_di_montecampione
       , pra_loup
       , prato_nevoso
       , ramaz

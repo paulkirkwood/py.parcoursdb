@@ -1,6 +1,6 @@
 import copy
 import stage
-from col        import CategorisedCol
+from col        import CategorisedCol, Col, ColCategory
 from datetime   import datetime, timedelta
 from stage      import Criterium, IndividualTimeTrial
 from stage      import Prologue, PrologueTeamTimeTrial, PrologueTwoManTeamTimeTrial
@@ -46,6 +46,16 @@ class StageRaceBuilder(object):
     def mountain_time_trial(self, start):
         self._stage_start = start
         self._new_state(MountainTimeTrialBuilder)
+
+    def start(self, stage_start, distance):
+        self._stage_start = stage_start
+        self._stage_distance = distance
+        self._new_state(RoadStageBuilder)
+
+    def tt_start(self, stage_start, distance):
+        self._stage_start = stage_start
+        self._stage_distance = distance
+        self._new_state(IndividualTimeTrialBuilder)
 
     def non_consecutive_stages(self):
         self._new_stage(NonConsecutiveStageRaceBuilder)
@@ -274,6 +284,72 @@ class StageBBuilder(StageABuilder):
         self._increment_stage_date()
         self._increment_stage_number()
         self._new_state(ConsecutiveStageBuilder)
+
+class RoadStageBuilder(ConsecutiveStageBuilder):
+
+    def finish(self, stage_finish):
+        stage = RoadStage(self._date, self.stage_id(), self._stage_start, stage_finish, self._stage_distance,
+            copy.deepcopy(self._cols))
+        self._cols.clear()
+        self._stages.append(stage)
+        self._increment_stage_date()
+        self._increment_stage_number()
+        self._increment_stage_suffix()
+        self._new_state(ConsecutiveStageBuilder)
+
+    def add_col_to_stage(self, col, category, km):
+        if km < 0:
+            raise InvalidKilometreError( "'km' must be greater than 0" )
+        #if km > self._stage_distance:
+        #    raise InvalidKilometreError( "'km' cannot be greater than the stage length")
+        if km in self._cols:
+            raise DuplicateColError( "There is already a Col at that point in the stage" )
+        self._cols[km] = CategorisedCol(col, category)
+
+    def road_stage(self):
+        raise NotImplementedError( "A road stage cannot be added during a mountain stage" )
+
+    def team_time_trial(self):
+        raise NotImplementedError( "A team time trial cannot be added during a mountain stage" )
+
+    def individual_time_trial(self):
+        raise NotImplementedError( "A individual time trial cannot be added during a mountain stage" )
+
+    def rest_day(self,location):
+        raise NotImplementedError( "A rest day cannot be added during a mountain stage" )
+
+class IndividualTimeTrialBuilder(ConsecutiveStageBuilder):
+
+    def tt_finish(self, stage_finish):
+        stage = IndividualTimeTrial(self._date, self.stage_id(), self._stage_start, stage_finish, self._stage_distance,
+            copy.deepcopy(self._cols))
+        self._cols.clear()
+        self._stages.append(stage)
+        self._increment_stage_date()
+        self._increment_stage_number()
+        self._increment_stage_suffix()
+        self._new_state(ConsecutiveStageBuilder)
+
+    def add_col_to_stage(self, col, category, km):
+        if km < 0:
+            raise InvalidKilometreError( "'km' must be greater than 0" )
+        #if km > self._stage_distance:
+        #    raise InvalidKilometreError( "'km' cannot be greater than the stage length")
+        if km in self._cols:
+            raise DuplicateColError( "There is already a Col at that point in the stage" )
+        self._cols[km] = CategorisedCol(col, category)
+
+    def road_stage(self):
+        raise NotImplementedError( "A road stage cannot be added whilst building an individual time trial")
+
+    def team_time_trial(self):
+        raise NotImplementedError( "A team time trial cannot be added whilst building an individual time trial")
+
+    def individual_time_trial(self):
+        raise NotImplementedError( "A individual time trial cannot be added whilst building an individual time trial")
+
+    def rest_day(self,location):
+        raise NotImplementedError( "A rest day cannot be added whilst building an individual time trial")
 
 class NonConsecutiveStageRaceBuilder(object):
 

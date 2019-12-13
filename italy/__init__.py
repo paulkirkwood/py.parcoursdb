@@ -39,7 +39,7 @@ from .locations import arta_terme
 from .locations import arzignano
 from .locations import ascoli_piceno
 from .locations import asiago
-from .locations import asolo, asolo_monte_grappa
+from .locations import asolo
 from .locations import assisi
 from .locations import asti
 from .locations import aulla
@@ -428,15 +428,9 @@ from .locations import monesi
 from .locations import montalcino
 from .locations import montalto_di_castro
 from .locations import monte_argentario
-from .locations import monte_bondone
-from .locations import monte_carpegna
 from .locations import monte_di_procida
 from .locations import monte_generoso
-from .locations import monte_maddalena
-from .locations import monte_petrano
 from .locations import monte_san_vicino
-from .locations import monte_terminillo
-from .locations import monte_trebbio
 from .locations import montebelluna
 from .locations import montecampione
 from .locations import montecassino
@@ -503,7 +497,6 @@ from .locations import passo_del_bocco
 from .locations import passo_del_tonale
 from .locations import passo_di_pampeagno
 from .locations import passo_di_san_pellegrino
-from .locations import passo_fedaia
 from .locations import pavia
 from .locations import pedara
 from .locations import pedavena
@@ -790,7 +783,6 @@ from .locations import viterbo
 from .locations import vittorio_veneto
 from .locations import voghera
 from .locations import zingonia
-from .locations import zoldo_alto
 
 all = [ abano_terme
       , abbadia_san_salvatore
@@ -837,7 +829,6 @@ all = [ abano_terme
       , ascoli_piceno
       , asiago
       , asolo
-      , asolo_monte_grappa
       , assisi
       , asti
       , aulla
@@ -1232,15 +1223,9 @@ all = [ abano_terme
       , montalcino
       , montalto_di_castro
       , monte_argentario
-      , monte_bondone
-      , monte_carpegna
       , monte_di_procida
       , monte_generoso
-      , monte_maddalena
-      , monte_petrano
       , monte_san_vicino
-      , monte_terminillo
-      , monte_trebbio
       , montebelluna
       , montecampione
       , montecassino
@@ -1308,7 +1293,6 @@ all = [ abano_terme
       , passo_del_tonale
       , passo_di_pampeagno
       , passo_di_san_pellegrino
-      , passo_fedaia
       , pavia
       , pedara
       , pedavena
@@ -1600,5 +1584,4 @@ all = [ abano_terme
       , vittorio_veneto
       , voghera
       , zingonia
-      , zoldo_alto
       ]

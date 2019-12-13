@@ -8,6 +8,8 @@ import italy
 import luxembourg
 import monaco
 import mountains.alps
+import mountains.alps.maritime
+import mountains.alps.provence
 import mountains.massif_amorican
 import mountains.massif_central
 import mountains.pyrenees
@@ -21,6 +23,13 @@ from col                import ColCategory
 from stage_race         import TourDeFrance
 from stage_race_builder import NonConsecutiveStageRaceBuilder, TourDeFranceBuilder
 
+_editions = []
+
+def edition(edition_func):
+    _editions.append(edition_func)
+    return edition_func
+
+@edition
 def tdf1903():
 
     paris     = france.paris()
@@ -39,6 +48,7 @@ def tdf1903():
     builder.road_stage(7, 18, nantes, paris, 471)
     return builder.build()
 
+@edition
 def tdf1904():
 
     montgeron = france.montgeron()
@@ -58,6 +68,7 @@ def tdf1904():
     builder.road_stage(7, 23, nantes, paris, 471)
     return builder.build()
 
+@edition
 def tdf1905():
 
     paris       = france.paris()
@@ -86,6 +97,7 @@ def tdf1905():
     builder.road_stage(7, 29, caen, paris, 253)
     return builder.build()
 
+@edition
 def tdf1906():
     paris       = france.paris()
     lille       = france.lille()
@@ -118,6 +130,7 @@ def tdf1906():
     builder.road_stage(7, 29, caen, paris, 259.0)
     return builder.build()
 
+@edition
 def tdf1907():
 
     bayonne  = france.bayonne()
@@ -152,6 +165,7 @@ def tdf1907():
     builder.road_stage(8, 4, caen, paris, 251)
     return builder.build()
 
+@edition
 def tdf1908():
 
     bayonne  = france.bayonne()
@@ -186,6 +200,7 @@ def tdf1908():
     builder.road_stage(8,  9, caen, paris, 251)
     return builder.build()
 
+@edition
 def tdf1909():
 
     bayonne  = france.bayonne()
@@ -203,7 +218,7 @@ def tdf1909():
     roubaix  = france.roubaix()
     toulouse = france.toulouse()
 
-    builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1908)
+    builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1909)
     builder.road_stage(7,  5, paris, roubaix, 272)
     builder.road_stage(7,  7, roubaix, metz, 398)
     builder.road_stage(7,  9, metz, belfort, 259)
@@ -220,6 +235,7 @@ def tdf1909():
     builder.road_stage(8,  1, caen, paris, 250)
     return builder.build()
 
+@edition
 def tdf1910():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1910)
@@ -239,6 +255,7 @@ def tdf1910():
     builder.road_stage(7, 31, france.caen(), france.paris(), 262.0)
     return builder.build()
 
+@edition
 def tdf1911():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1911)
@@ -259,6 +276,7 @@ def tdf1911():
     builder.road_stage(7, 30, france.le_havre(), france.paris(), 317.0)
     return builder.build()
 
+@edition
 def tdf1912():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1912)
@@ -279,6 +297,7 @@ def tdf1912():
     builder.road_stage(7, 28, france.le_havre(), france.paris(), 317.0)
     return builder.build()
 
+@edition
 def tdf1913():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1913)
@@ -299,6 +318,7 @@ def tdf1913():
     builder.road_stage(7, 27, france.dunkerque(), france.paris(), 340.0)
     return builder.build()
 
+@edition
 def tdf1914():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1914)
@@ -319,6 +339,7 @@ def tdf1914():
     builder.road_stage(7, 26, france.dunkerque(), france.paris(), 340.0)
     return builder.build()
 
+@edition
 def tdf1919():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1919)
@@ -339,6 +360,7 @@ def tdf1919():
     builder.road_stage(7, 27, france.dunkerque(), france.paris(), 340.0)
     return builder.build()
 
+@edition
 def tdf1920():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1920)
@@ -359,6 +381,7 @@ def tdf1920():
     builder.road_stage(7, 27, france.dunkerque(), france.paris(), 340.0)
     return builder.build()
 
+@edition
 def tdf1921():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1921)
@@ -379,6 +402,7 @@ def tdf1921():
     builder.road_stage(7, 24, france.dunkerque(), france.paris(), 340.0)
     return builder.build()
 
+@edition
 def tdf1922():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1922)
@@ -399,6 +423,7 @@ def tdf1922():
     builder.road_stage(7, 23, france.dunkerque(), france.paris(), 340.0)
     return builder.build()
 
+@edition
 def tdf1923():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1923)
@@ -419,6 +444,7 @@ def tdf1923():
     builder.road_stage(7, 22, france.dunkerque(), france.paris(), 343.0)
     return builder.build()
 
+@edition
 def tdf1924():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1924)
@@ -439,6 +465,7 @@ def tdf1924():
     builder.road_stage(7, 20, france.dunkerque(), france.paris(), 343.0)
     return builder.build()
 
+@edition
 def tdf1925():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1925)
@@ -462,6 +489,7 @@ def tdf1925():
     builder.road_stage(7, 19, france.dunkerque(), france.paris(), 343.0)
     return builder.build()
 
+@edition
 def tdf1926():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1926)
@@ -484,6 +512,7 @@ def tdf1926():
     builder.road_stage(7, 18, france.dijon(), france.paris(), 341.0)
     return builder.build()
 
+@edition
 def tdf1927():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1927)
@@ -513,6 +542,7 @@ def tdf1927():
     builder.road_stage(7, 17, france.dunkerque(), france.paris(), 344.0)
     return builder.build()
 
+@edition
 def tdf1928():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1928)
@@ -540,6 +570,7 @@ def tdf1928():
     builder.road_stage(7, 15, france.dieppe(), france.paris(), 331.0)
     return builder.build()
 
+@edition
 def tdf1929():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1929)
@@ -567,6 +598,7 @@ def tdf1929():
     builder.road_stage(7, 28, france.dieppe(), france.paris(), 332.0)
     return builder.build()
 
+@edition
 def tdf1930():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1930)
@@ -593,6 +625,7 @@ def tdf1930():
     builder.road_stage(7, 28, france.malo_les_bains(), france.paris(), 300.0)
     return builder.build()
 
+@edition
 def tdf1931():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1931)
@@ -622,6 +655,7 @@ def tdf1931():
     builder.road_stage(7, 28, france.malo_les_bains(), france.paris(), 313.0)
     return builder.build()
 
+@edition
 def tdf1932():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1932)
@@ -648,6 +682,7 @@ def tdf1932():
     builder.road_stage(7, 31, france.amiens(), france.paris(), 159.0)
     return builder.build()
 
+@edition
 def tdf1933():
 
     builder = NonConsecutiveStageRaceBuilder(TourDeFrance(), 1933)
@@ -676,6 +711,7 @@ def tdf1933():
     builder.road_stage(7, 23, france.caen(), france.paris(), 222.0)
     return builder.build()
 
+@edition
 def tdf1934():
 
     builder = TourDeFranceBuilder(1934,7,3)
@@ -769,6 +805,7 @@ def tdf1934():
 
     return builder.build()
 
+@edition
 def tdf1935():
 
     builder = TourDeFranceBuilder(1935,7,4)
@@ -868,6 +905,7 @@ def tdf1935():
 
     return builder.build()
 
+@edition
 def tdf1936():
 
     builder = TourDeFranceBuilder(1936,7,7)
@@ -971,6 +1009,7 @@ def tdf1936():
 
     return builder.build()
 
+@edition
 def tdf1937():
 
     builder = TourDeFranceBuilder(1937,6,30)
@@ -1082,6 +1121,7 @@ def tdf1937():
 
     return builder.build()
 
+@edition
 def tdf1938():
 
     builder = TourDeFranceBuilder(1938,7,5)
@@ -1187,6 +1227,7 @@ def tdf1938():
 
     return builder.build()
 
+@edition
 def tdf1939():
 
     builder = TourDeFranceBuilder(1939,7,10)
@@ -1282,6 +1323,7 @@ def tdf1939():
 
     return builder.build()
 
+@edition
 def tdf1947():
 
     builder = TourDeFranceBuilder(1947,6,25)
@@ -1366,6 +1408,7 @@ def tdf1947():
 
     return builder.build()
 
+@edition
 def tdf1948():
 
     builder = TourDeFranceBuilder(1948,6,30)
@@ -1450,6 +1493,7 @@ def tdf1948():
 
     return builder.build()
 
+@edition
 def tdf1949():
 
     builder = TourDeFranceBuilder(1949,6,30)
@@ -1533,6 +1577,7 @@ def tdf1949():
 
     return builder.build()
 
+@edition
 def tdf1950():
 
     builder = TourDeFranceBuilder(1950,7,13)
@@ -1618,6 +1663,7 @@ def tdf1950():
 
     return builder.build()
 
+@edition
 def tdf1951():
 
     builder = TourDeFranceBuilder(1951,7,4)
@@ -1703,6 +1749,7 @@ def tdf1951():
 
     return builder.build()
 
+@edition
 def tdf1952():
 
     builder = TourDeFranceBuilder(1952,6,25)
@@ -1788,6 +1835,7 @@ def tdf1952():
 
     return builder.build()
 
+@edition
 def tdf1953():
 
     builder = TourDeFranceBuilder(1953,7,3)
@@ -1868,6 +1916,7 @@ def tdf1953():
 
     return builder.build()
 
+@edition
 def tdf1954():
 
     builder = TourDeFranceBuilder(1954,7,8)
@@ -1955,6 +2004,7 @@ def tdf1954():
 
     return builder.build()
 
+@edition
 def tdf1955():
 
     builder = TourDeFranceBuilder(1955,7,7)
@@ -2038,6 +2088,7 @@ def tdf1955():
 
     return builder.build()
 
+@edition
 def tdf1956():
 
     builder = TourDeFranceBuilder(1956,7,5)
@@ -2119,6 +2170,7 @@ def tdf1956():
 
     return builder.build()
 
+@edition
 def tdf1957():
 
     builder = TourDeFranceBuilder(1957,6,27)
@@ -2203,6 +2255,7 @@ def tdf1957():
 
     return builder.build()
 
+@edition
 def tdf1958():
 
     builder = TourDeFranceBuilder(1958,6,26)
@@ -2282,6 +2335,7 @@ def tdf1958():
 
     return builder.build()
 
+@edition
 def tdf1959():
 
     builder = TourDeFranceBuilder(1959,6,25)
@@ -2363,6 +2417,7 @@ def tdf1959():
 
     return builder.build()
 
+@edition
 def tdf1960():
 
     builder = TourDeFranceBuilder(1960,6,26)
@@ -2439,6 +2494,7 @@ def tdf1960():
 
     return builder.build()
 
+@edition
 def tdf1961():
 
     builder = TourDeFranceBuilder(1961,6,25)
@@ -2515,6 +2571,7 @@ def tdf1961():
 
     return builder.build()
 
+@edition
 def tdf1962():
 
     builder = TourDeFranceBuilder(1962,6,24)
@@ -2594,6 +2651,7 @@ def tdf1962():
 
     return builder.build()
 
+@edition
 def tdf1963():
 
     builder = TourDeFranceBuilder(1963,6,23)
@@ -2674,6 +2732,7 @@ def tdf1963():
 
     return builder.build()
 
+@edition
 def tdf1964():
 
     builder = TourDeFranceBuilder(1964,6,22)
@@ -2759,6 +2818,7 @@ def tdf1964():
 
     return builder.build()
 
+@edition
 def tdf1965():
 
     builder = TourDeFranceBuilder(1965,6,22)
@@ -2842,6 +2902,7 @@ def tdf1965():
 
     return builder.build()
 
+@edition
 def tdf1966():
 
     builder = TourDeFranceBuilder(1966,6,21)
@@ -2929,6 +2990,7 @@ def tdf1966():
 
     return builder.build()
 
+@edition
 def tdf1967():
 
     builder = TourDeFranceBuilder(1967,6,29)
@@ -3018,6 +3080,7 @@ def tdf1967():
 
     return builder.build()
 
+@edition
 def tdf1968():
 
     builder = TourDeFranceBuilder(1968,6,27)
@@ -3108,6 +3171,7 @@ def tdf1968():
 
     return builder.build()
 
+@edition
 def tdf1969():
 
     builder = TourDeFranceBuilder(1969,6,28)
@@ -3193,6 +3257,7 @@ def tdf1969():
 
     return builder.build()
 
+@edition
 def tdf1970():
 
     builder = TourDeFranceBuilder(1970,6,26)
@@ -3287,6 +3352,7 @@ def tdf1970():
 
     return builder.build()
 
+@edition
 def tdf1971():
 
     builder = TourDeFranceBuilder(1971,6,26)
@@ -3375,6 +3441,7 @@ def tdf1971():
 
     return builder.build()
 
+@edition
 def tdf1972():
 
     builder = TourDeFranceBuilder(1972,7,1)
@@ -3464,6 +3531,7 @@ def tdf1972():
 
     return builder.build()
 
+@edition
 def tdf1973():
 
     builder = TourDeFranceBuilder(1973,6,30)
@@ -3561,6 +3629,7 @@ def tdf1973():
 
     return builder.build()
 
+@edition
 def tdf1974():
 
     builder = TourDeFranceBuilder(1974,6,27)
@@ -3656,6 +3725,7 @@ def tdf1974():
 
     return builder.build()
 
+@edition
 def tdf1975():
 
     builder = TourDeFranceBuilder(1975,6,26)
@@ -3748,6 +3818,7 @@ def tdf1975():
 
     return builder.build()
 
+@edition
 def tdf1976():
     builder = TourDeFranceBuilder(1976,6,24)
 
@@ -3842,6 +3913,7 @@ def tdf1976():
 
     return builder.build()
 
+@edition
 def tdf1977():
     builder = TourDeFranceBuilder(1977,6,30)
 
@@ -3939,6 +4011,7 @@ def tdf1977():
 
     return builder.build()
 
+@edition
 def tdf1978():
     builder = TourDeFranceBuilder(1978,6,29)
 
@@ -4028,6 +4101,7 @@ def tdf1978():
 
     return builder.build()
 
+@edition
 def tdf1979():
     builder = TourDeFranceBuilder(1979,6,27)
 
@@ -4116,6 +4190,7 @@ def tdf1979():
 
     return builder.build()
 
+@edition
 def tdf1980():
 
     builder = TourDeFranceBuilder(1980,6,26)
@@ -4204,6 +4279,7 @@ def tdf1980():
 
     return builder.build()
 
+@edition
 def tdf1981():
 
     builder = TourDeFranceBuilder(1981,6,25)
@@ -4294,6 +4370,7 @@ def tdf1981():
 
     return builder.build()
 
+@edition
 def tdf1982():
 
     builder = TourDeFranceBuilder(1982,7,2)
@@ -4377,6 +4454,7 @@ def tdf1982():
 
     return builder.build()
 
+@edition
 def tdf1983():
 
     builder = TourDeFranceBuilder(1983,7,1)
@@ -4458,6 +4536,7 @@ def tdf1983():
 
     return builder.build()
 
+@edition
 def tdf1984():
 
     builder = TourDeFranceBuilder(1984,6,29)
@@ -4545,6 +4624,7 @@ def tdf1984():
 
     return builder.build()
 
+@edition
 def tdf1985():
 
     builder = TourDeFranceBuilder(1985,6,28)
@@ -4629,6 +4709,7 @@ def tdf1985():
 
     return builder.build()
 
+@edition
 def tdf1986():
 
     builder = TourDeFranceBuilder(1986,7,4)
@@ -4715,6 +4796,7 @@ def tdf1986():
 
     return builder.build()
 
+@edition
 def tdf1987():
 
     builder = TourDeFranceBuilder(1987,7,1)
@@ -4812,6 +4894,7 @@ def tdf1987():
 
     return builder.build()
 
+@edition
 def tdf1988():
 
     builder = TourDeFranceBuilder(1988,7,3)
@@ -4897,6 +4980,7 @@ def tdf1988():
 
     return builder.build()
 
+@edition
 def tdf1989():
 
     builder = TourDeFranceBuilder(1989,7,1)
@@ -4981,6 +5065,7 @@ def tdf1989():
 
     return builder.build()
 
+@edition
 def tdf1990():
 
     builder = TourDeFranceBuilder(1990,6,30)
@@ -5063,6 +5148,7 @@ def tdf1990():
 
     return builder.build()
 
+@edition
 def tdf1991():
 
     builder = TourDeFranceBuilder(1991,7,6)
@@ -5143,6 +5229,7 @@ def tdf1991():
 
     return builder.build()
 
+@edition
 def tdf1992():
 
     builder = TourDeFranceBuilder(1992,7,4)
@@ -5221,6 +5308,7 @@ def tdf1992():
 
     return builder.build()
 
+@edition
 def tdf1993():
 
     builder = TourDeFranceBuilder(1993,7,3)
@@ -5298,6 +5386,7 @@ def tdf1993():
 
     return builder.build()
 
+@edition
 def tdf1994():
 
     builder = TourDeFranceBuilder(1994,7,2)
@@ -5379,6 +5468,7 @@ def tdf1994():
 
     return builder.build()
 
+@edition
 def tdf1995():
 
     builder = TourDeFranceBuilder(1995,7,1)
@@ -5458,6 +5548,7 @@ def tdf1995():
 
     return builder.build()
 
+@edition
 def tdf1996():
 
     builder = TourDeFranceBuilder(1996,6,29)
@@ -5539,6 +5630,7 @@ def tdf1996():
 
     return builder.build()
 
+@edition
 def tdf1997():
 
     builder = TourDeFranceBuilder(1997,7,5)
@@ -5617,6 +5709,7 @@ def tdf1997():
 
     return builder.build()
 
+@edition
 def tdf1998():
 
     builder = TourDeFranceBuilder(1998,7,11)
@@ -5694,6 +5787,7 @@ def tdf1998():
 
     return builder.build()
 
+@edition
 def tdf1999():
 
     builder = TourDeFranceBuilder(1999,7,3)
@@ -5772,6 +5866,7 @@ def tdf1999():
 
     return builder.build()
 
+@edition
 def tdf2000():
 
     builder = TourDeFranceBuilder(2000,7,1)
@@ -5850,6 +5945,7 @@ def tdf2000():
 
     return builder.build()
 
+@edition
 def tdf2001():
 
     builder = TourDeFranceBuilder(2001,7,7)
@@ -5929,6 +6025,7 @@ def tdf2001():
 
     return builder.build()
 
+@edition
 def tdf2002():
 
     builder = TourDeFranceBuilder(2002,7,6)
@@ -6009,6 +6106,7 @@ def tdf2002():
 
     return builder.build()
 
+@edition
 def tdf2003():
 
     builder = TourDeFranceBuilder(2003,7,5)
@@ -6088,6 +6186,7 @@ def tdf2003():
 
     return builder.build()
 
+@edition
 def tdf2004():
 
     builder = TourDeFranceBuilder(2004,7,3)
@@ -6167,6 +6266,7 @@ def tdf2004():
 
     return builder.build()
 
+@edition
 def tdf2005():
 
     builder = TourDeFranceBuilder(2005,7,2)
@@ -6244,6 +6344,7 @@ def tdf2005():
 
     return builder.build()
 
+@edition
 def tdf2006():
 
     builder = TourDeFranceBuilder(2006,7,1)
@@ -6322,6 +6423,7 @@ def tdf2006():
 
     return builder.build()
 
+@edition
 def tdf2007():
 
     builder = TourDeFranceBuilder(2007,7,7)
@@ -6398,6 +6500,7 @@ def tdf2007():
 
     return builder.build()
 
+@edition
 def tdf2008():
 
     builder = TourDeFranceBuilder(2008,7,5)
@@ -6477,6 +6580,7 @@ def tdf2008():
 
     return builder.build()
 
+@edition
 def tdf2009():
 
     builder = TourDeFranceBuilder(2009,7,4)
@@ -6555,6 +6659,7 @@ def tdf2009():
 
     return builder.build()
 
+@edition
 def tdf2010():
 
     builder = TourDeFranceBuilder(2010,7,3)
@@ -6632,6 +6737,7 @@ def tdf2010():
 
     return builder.build()
 
+@edition
 def tdf2011():
 
     builder = TourDeFranceBuilder(2011,7,2)
@@ -6713,6 +6819,7 @@ def tdf2011():
 
     return builder.build()
 
+@edition
 def tdf2012():
 
     builder = TourDeFranceBuilder(2012,6,30)
@@ -6790,6 +6897,7 @@ def tdf2012():
 
     return builder.build()
 
+@edition
 def tdf2013():
 
     builder = TourDeFranceBuilder(2013,6,29)
@@ -6868,6 +6976,7 @@ def tdf2013():
 
     return builder.build()
 
+@edition
 def tdf2014():
 
     builder = TourDeFranceBuilder(2014,7,5)
@@ -6947,6 +7056,7 @@ def tdf2014():
 
     return builder.build()
 
+@edition
 def tdf2015():
 
     builder = TourDeFranceBuilder(2015,7,4)
@@ -7028,6 +7138,7 @@ def tdf2015():
 
     return builder.build()
 
+@edition
 def tdf2016():
 
     builder = TourDeFranceBuilder(2016,7,2)
@@ -7106,6 +7217,7 @@ def tdf2016():
 
     return builder.build()
 
+@edition
 def tdf2017():
 
     builder = TourDeFranceBuilder(2017,7,1)
@@ -7185,6 +7297,7 @@ def tdf2017():
 
     return builder.build()
 
+@edition
 def tdf2018():
 
     builder = TourDeFranceBuilder(2018,7,7)
@@ -7264,3 +7377,6 @@ def tdf2018():
     builder.road_stage(france.houilles(), france.paris(), 116)
 
     return builder.build()
+
+def editions():
+    return _editions

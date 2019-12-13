@@ -15,7 +15,7 @@ def abbiategrasso():
     return _italian_location("Abbiategrasso")
 
 def abetone():
-    return _italian_location("Abetone")
+    return _italian_location("Abetone", 1386)
 
 def acquappesa():
     return _italian_location("Acquappesa")
@@ -90,7 +90,7 @@ def ancona():
     return _italian_location("Ancona")
 
 def andalo():
-    return _italian_location("Andalo")
+    return _italian_location("Andalo", 1024)
 
 def anterselva_antholz():
     return _italian_location("Anterselva/Antholz")
@@ -136,9 +136,6 @@ def asiago():
 
 def asolo():
     return _italian_location("Asolo")
-
-def asolo_monte_grappa():
-    return _italian_location("Asolo (Monte Grappa)")
 
 def assisi():
     return _italian_location("Assisi")
@@ -557,7 +554,7 @@ def cervia():
     return _italian_location("Cervia")
 
 def cervinia():
-    return _italian_location("Cervinia", 2050)
+    return _italian_location("Cervinia", 2001)
 
 def cesana_torinese():
     return _italian_location("Cesana Torinese")
@@ -1095,7 +1092,7 @@ def lissone():
     return _italian_location("Lissone")
 
 def livigno():
-    return _italian_location("Livigno")
+    return _italian_location("Livigno", 1816)
 
 def livorno():
     return _italian_location("Livorno")
@@ -1150,7 +1147,7 @@ def madesimo():
     return _italian_location("Madesimo")
 
 def madonna_di_campiglio():
-    return _italian_location("Madonna di Campiglio")
+    return _italian_location("Madonna di Campiglio", 1715)
 
 def madonna_di_san_luca():
     return _italian_location("Madonna di San Luca")
@@ -1335,38 +1332,20 @@ def montalto_di_castro():
 def monte_argentario():
     return _italian_location("Monte Argentario")
 
-def monte_bondone():
-    return _italian_location("Monte Bondone")
-
-def monte_carpegna():
-    return _italian_location("Monte Carpegna")
-
 def monte_di_procida():
     return _italian_location("Monte di Procida")
 
 def monte_generoso():
     return _italian_location("Monte Generoso")
 
-def monte_maddalena():
-    return _italian_location("Monte Maddalena")
-
-def monte_petrano():
-    return _italian_location("Monte Petrano")
-
 def monte_san_vicino():
     return _italian_location("Monte San Vicino")
-
-def monte_terminillo():
-    return _italian_location("Monte Terminillo")
-
-def monte_trebbio():
-    return _italian_location("Monte Trebbio")
 
 def montebelluna():
     return _italian_location("Montebelluna")
 
 def montecampione():
-    return _italian_location("Montecampione")
+    return _italian_location("Montecampione", 1200)
 
 def montecassino():
     return _italian_location("Montecassino")
@@ -1432,7 +1411,7 @@ def mount_etna():
     return _italian_location("Mount Etna")
 
 def mount_vesuvius():
-    return _italian_location("Mount Vesuvius")
+    return _italian_location("Mount Vesuvius", 1030)
 
 def muggio():
     return _italian_location("Muggio")
@@ -1566,9 +1545,6 @@ def passo_di_pampeagno():
 def passo_di_san_pellegrino():
     return _italian_location("Passo di San Pellegrino")
 
-def passo_fedaia():
-    return _italian_location("Passo Fedaia")
-
 def pavia():
     return _italian_location("Pavia")
 
@@ -1675,7 +1651,7 @@ def plan_de_corones():
     return _italian_location("Plan de Corones", 2273)
 
 def plan_di_montecampione():
-    return _italian_location("Plan di Montecampione")
+    return _italian_location("Plan di Montecampione", 1732)
 
 def poggibonsi():
     return _italian_location("Poggibonsi")
@@ -1774,7 +1750,7 @@ def prato():
     return _italian_location("Prato")
 
 def prato_nevoso():
-    return _italian_location("Prato Nevoso", 1480)
+    return _italian_location("Prato Nevoso", 1607)
 
 def predappio():
     return _italian_location("Predappio")
@@ -2448,9 +2424,6 @@ def voghera():
 # Z
 def zingonia():
     return _italian_location("Zingonia")
-
-def zoldo_alto():
-    return _italian_location("Zoldo Alto")
 
 def _italian_location(name, elevation = None):
     if elevation is None:

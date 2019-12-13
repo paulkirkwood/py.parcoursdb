@@ -4,6 +4,9 @@ from col import Col
 def andorran_col(name, height, length = None, average_gradient = None, maximum_gradient = None):
     return Col(name, country.Andorra(), height, length, average_gradient, maximum_gradient)
 
+def austrian_col(name, height, length = None, average_gradient = None, maximum_gradient = None):
+    return Col(name, country.Austria(), height, length, average_gradient, maximum_gradient)
+
 def french_col(name, height, length = None, average_gradient = None, maximum_gradient = None):
     return Col(name, country.France(), height, length, average_gradient, maximum_gradient)
 

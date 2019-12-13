@@ -1,4 +1,5 @@
-from ..util import french_col, italian_col, swiss_col
+from ..util import austrian_col, french_col, italian_col, swiss_col
+import austria
 import france
 import italy
 import switzerland
@@ -41,7 +42,7 @@ def cote_de_brie():
     return french_col("Cote de Brie", 450, 2.4, 6.9)
 
 def bardonecchia_monte_jafferau():
-    return italian_col("Bardonecchia (Monte Jafferau)",  1980)
+    return italian_col("Bardonecchia (Monte Jafferau)",  1908)
 
 def bormio():
     return italian_col(italy.bormio().name, italy.bormio().elevation)
@@ -89,6 +90,12 @@ def col_du_corbier():
 def col_de_cordon():
     return french_col("Col de Cordon",975)
 
+def col_saint_pantaleon():
+    return italian_col("Col Saint Pantaléon", 1664)
+
+def col_tsecore():
+    return italian_col("Col Tsecore", 1623)
+
 def colma_di_sormano():
     return italian_col("Colman di Sormano",1124)
 
@@ -109,6 +116,9 @@ def col_de_la_croix():
 
 def colle_del_morte():
     return french_col("Colle del Morte",710)
+
+def colle_delle_finestre():
+    return italian_col("Colle delle Finestre", 2178)
 
 def colle_san_carlo():
     return italian_col("Colle San Carlo",1951)
@@ -158,6 +168,9 @@ def col_du_granier():
 def col_du_granon():
     return french_col("Col du Granon",2413)
 
+def grossglockner():
+    return austrian_col(austria.grossglockner().name, austria.grossglockner().elevation)
+
 # H
 def montee_d_hauteville():
     return french_col("Montée d’Hauteville",1639)
@@ -171,7 +184,7 @@ def col_d_izoard():
 
 # J
 def monte_jafferau():
-    return italian_col("Monte Jafferau",1980)
+    return italian_col("Monte Jafferau",1908)
 
 # L
 def lacets_de_montvernier():
@@ -204,6 +217,9 @@ def les_menuires():
 def les_orres():
     return french_col("Les Orres", 1496)
 
+def livigno():
+    return italian_col(italy.livigno().name, italy.livigno().elevation)
+
 def col_du_luitel():
     return french_col("Luitel",1262)
 
@@ -223,6 +239,9 @@ def col_de_la_madeleine():
 def madonna_del_ghisallo():
     return italian_col("Madonna del Ghisallo",754)
 
+def madonna_di_campiglio():
+    return italian_col(italy.madonna_di_campiglio().name, italy.madonna_di_campiglio().elevation)
+
 def col_de_manse():
     return french_col("Col de Manse",1268)
 
@@ -237,6 +256,18 @@ def col_de_la_morte():
 
 def mont_cenis():
     return french_col("Mont-Cenis",2083)
+
+def montecampione():
+    return italian_col(italy.montecampione().name, italy.montecampione().elevation)
+
+def monte_bondone():
+    return italian_col("Monte Bondone", 1685)
+
+def monte_generoso():
+    return swiss_col("Monte Generoso", 1158)
+
+def monte_maddalena():
+    return italian_col("Monte Maddalena", 844)
 
 def montgenevre():
     return french_col("Montgenèvre",1860)
@@ -297,7 +328,7 @@ def pra_loup():
     return french_col(france.pra_loup().name, france.pra_loup().elevation)
 
 def prato_nevoso():
-    return italian_col("Prato Nevoso", 1607)
+    return italian_col(italy.prato_nevoso().name, italy.prato_nevoso().elevation)
 
 def prapoutel_les_sept_laux():
     return french_col("Prapoutel-les-Sept-Laux",1358)
@@ -307,6 +338,9 @@ def col_des_pres():
 
 def plan_de_corones():
     return italian_col(italy.plan_de_corones().name, italy.plan_de_corones().elevation)
+
+def plan_di_montecampione():
+    return italian_col(italy.plan_di_montecampione().name, italy.plan_di_montecampione().elevation)
 
 # R
 def ramaz():

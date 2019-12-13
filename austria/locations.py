@@ -2,7 +2,7 @@ from country import Austria
 from location import Location
 
 def grossglockner():
-    return _austrian_location("Großglockner")
+    return Location("Großglockner", Austria(), 1908)
 
 def innsbruck():
     return _austrian_location("Innsbruck")

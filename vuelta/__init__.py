@@ -13,6 +13,7 @@ from .editions import vuelta2000, vuelta2001, vuelta2002, vuelta2003, vuelta2004
 from .editions import vuelta2005, vuelta2006, vuelta2007, vuelta2008, vuelta2009
 from .editions import vuelta2010, vuelta2011, vuelta2012, vuelta2013, vuelta2014
 from .editions import vuelta2015, vuelta2016, vuelta2017, vuelta2018
+from .editions import editions
 
 all = [ vuelta1935
       , vuelta1936
@@ -85,4 +86,5 @@ all = [ vuelta1935
       , vuelta2016
       , vuelta2017
       , vuelta2018
+      , editions
       ]

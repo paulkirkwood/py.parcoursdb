@@ -49,9 +49,8 @@ class RacingStage(Stage):
     def cols(self):
         return self._cols
 
-    @property
-    def stage_kilometres(self):
-        return '%.1f km' % (self.distance)
+    def kilometres(self, km):
+        return '%.1f km' % (km)
 
     def from_to(self,country):
         if self.start.fqnc == self.finish.fqnc:
@@ -60,7 +59,7 @@ class RacingStage(Stage):
             return '%s to %s' % (self.start.qualified_location(country), self.finish.qualified_location(country))
 
     def route(self,country):
-        return '%s,%s,%s,%s,%s' % (self.id, self.day_and_date, self.from_to(country), self.stage_kilometres, self.description)
+        return '%s,%s,%s,%s,%s' % (self.id, self.day_and_date, self.from_to(country), self.kilometres(self.distance), self.description)
 
     @property
     def is_summit_finish(self):
@@ -69,6 +68,20 @@ class RacingStage(Stage):
         else:
             summits = sorted(self.cols.keys(), reverse=True)
             return summits[0] == self.distance
+
+    @property
+    def profile(self):
+        summit_kms = sorted(self.cols.keys())
+        stage_cols = []
+        for km in summit_kms:
+            col = self.cols[km].col
+            category = self.cols[km].category
+            if col.length is None:
+                stage_cols.append('{:0.1f} km,{},{},{}m'.format(km, col.name, str(category), col.height))
+            else:
+                stage_cols.append('{:0.1f} km,{} ({:0.1f} @ {:0.1f}%),{},{}m'.format(km, col.name,
+                    col.length, col.average_gradient, str(category), col.height))
+        return '\n'.join(stage_cols)
 
 class RoadStage(RacingStage):
 
@@ -108,7 +121,7 @@ class IndividualTimeTrial(RacingStage):
         return "Individual time trial"
 
     def __repr__(self):
-        return 'IndividualTimeTrial(%r, %r, %r, %r, %r)' % (self.date, self.id, self.start, self.finish, self.distance)
+        return 'IndividualTimeTrial(%r, %r, %r, %r, %r, %r)' % (self.date, self.id, self.start, self.finish, self.distance, self.cols)
 
 class Prologue(RacingStage):
     def __init__(self,date,start,finish,distance):

@@ -1,5 +1,6 @@
 import country
 import re
+from operator import attrgetter
 from stage import RacingStage, RoadStage, TeamTimeTrial, IndividualTimeTrial, RestDay
 
 class StageRace(object):
@@ -169,6 +170,16 @@ class StageRace(object):
          
         return ' '.join(summary)
 
+    def longest_stage(self):
+        return max(self.racing_stages, key=attrgetter('distance'))
+
+    @property
+    def route(self):
+        return '\n'.join(stage.route(self.country) for stage in self.stages)
+
+    def get_stage(self, id):
+        return next((stage for stage in self.racing_stages if stage.id == id), None)
+
 class TourDeFrance(StageRace):
     def __init__(self):
         super().__init__("Tour de France", country.France()) 
@@ -198,4 +209,4 @@ class TirrenoAdriatico(StageRace):
 
 class TourOfSpain(StageRace):
     def __init__(self):
-        super().__init__("TourOfSpain a España", country.Spain()) 
+        super().__init__("Vuelta a España", country.Spain()) 

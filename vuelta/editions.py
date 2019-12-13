@@ -21,6 +21,13 @@ from col                import Col, ColCategory
 from location           import vicinity
 from stage_race_builder import TourOfSpainBuilder
 
+_editions = []
+
+def edition(edition_func):
+    _editions.append(edition_func)
+    return edition_func
+
+@edition
 def vuelta1935():
 
     builder = TourOfSpainBuilder(1935,4,29)
@@ -78,6 +85,7 @@ def vuelta1935():
 
     return builder.build()
 
+@edition
 def vuelta1936():
 
     builder = TourOfSpainBuilder(1936,5,5)
@@ -165,6 +173,7 @@ def vuelta1936():
 
     return builder.build()
 
+@edition
 def vuelta1941():
 
     builder = TourOfSpainBuilder(1941,6,12)
@@ -249,6 +258,7 @@ def vuelta1941():
 
     return builder.build()
 
+@edition
 def vuelta1942():
 
     builder = TourOfSpainBuilder(1942,6,30)
@@ -318,6 +328,7 @@ def vuelta1942():
 
     return builder.build()
 
+@edition
 def vuelta1945():
 
     builder = TourOfSpainBuilder(1945,5,10)
@@ -393,6 +404,7 @@ def vuelta1945():
 
     return builder.build()
 
+@edition
 def vuelta1946():
 
     builder = TourOfSpainBuilder(1946,5,7)
@@ -480,6 +492,7 @@ def vuelta1946():
 
     return builder.build()
 
+@edition
 def vuelta1947():
 
     builder = TourOfSpainBuilder(1947,5,12)
@@ -564,6 +577,7 @@ def vuelta1947():
 
     return builder.build()
 
+@edition
 def vuelta1948():
 
     builder = TourOfSpainBuilder(1948,6,13)
@@ -639,6 +653,7 @@ def vuelta1948():
 
     return builder.build()
 
+@edition
 def vuelta1950():
 
     builder = TourOfSpainBuilder(1950,8,17)
@@ -729,6 +744,7 @@ def vuelta1950():
 
     return builder.build()
 
+@edition
 def vuelta1955():
 
     builder = TourOfSpainBuilder(1955,4,23)
@@ -783,6 +799,7 @@ def vuelta1955():
 
     return builder.build()
 
+@edition
 def vuelta1956():
 
     builder = TourOfSpainBuilder(1956,4,26)
@@ -849,6 +866,7 @@ def vuelta1956():
 
     return builder.build()
 
+@edition
 def vuelta1957():
 
     builder = TourOfSpainBuilder(1957,4,26)
@@ -906,6 +924,7 @@ def vuelta1957():
 
     return builder.build()
 
+@edition
 def vuelta1958():
 
     builder = TourOfSpainBuilder(1958,4,30)
@@ -966,6 +985,7 @@ def vuelta1958():
 
     return builder.build()
 
+@edition
 def vuelta1959():
 
     builder = TourOfSpainBuilder(1959,4,29)
@@ -1026,6 +1046,7 @@ def vuelta1959():
 
     return builder.build()
 
+@edition
 def vuelta1960():
 
     builder = TourOfSpainBuilder(1960,4,29)
@@ -1086,6 +1107,7 @@ def vuelta1960():
 
     return builder.build()
 
+@edition
 def vuelta1961():
 
     builder = TourOfSpainBuilder(1961,4,26)
@@ -1143,6 +1165,7 @@ def vuelta1961():
 
     return builder.build()
 
+@edition
 def vuelta1962():
 
     builder = TourOfSpainBuilder(1962,4,27)
@@ -1200,6 +1223,7 @@ def vuelta1962():
 
     return builder.build()
 
+@edition
 def vuelta1963():
 
     builder = TourOfSpainBuilder(1963,5,1)
@@ -1257,6 +1281,7 @@ def vuelta1963():
 
     return builder.build()
 
+@edition
 def vuelta1964():
 
     builder = TourOfSpainBuilder(1964,4,30)
@@ -1320,6 +1345,7 @@ def vuelta1964():
 
     return builder.build()
 
+@edition
 def vuelta1965():
 
     builder = TourOfSpainBuilder(1965,4,29)
@@ -1386,6 +1412,7 @@ def vuelta1965():
 
     return builder.build()
 
+@edition
 def vuelta1966():
 
     builder = TourOfSpainBuilder(1966,4,28)
@@ -1458,6 +1485,7 @@ def vuelta1966():
 
     return builder.build()
 
+@edition
 def vuelta1967():
 
     builder = TourOfSpainBuilder(1967,4,27)
@@ -1527,6 +1555,7 @@ def vuelta1967():
 
     return builder.build()
 
+@edition
 def vuelta1968():
 
     builder = TourOfSpainBuilder(1968,4,25)
@@ -1593,6 +1622,7 @@ def vuelta1968():
 
     return builder.build()
 
+@edition
 def vuelta1969():
 
     builder = TourOfSpainBuilder(1969,4,23)
@@ -1661,6 +1691,7 @@ def vuelta1969():
 
     return builder.build()
 
+@edition
 def vuelta1970():
 
     builder = TourOfSpainBuilder(1970,4,23)
@@ -1733,6 +1764,7 @@ def vuelta1970():
 
     return builder.build()
 
+@edition
 def vuelta1971():
 
     builder = TourOfSpainBuilder(1971,4,29)
@@ -1799,6 +1831,7 @@ def vuelta1971():
 
     return builder.build()
 
+@edition
 def vuelta1972():
 
     builder = TourOfSpainBuilder(1972,4,27)
@@ -1869,6 +1902,7 @@ def vuelta1972():
 
     return builder.build()
 
+@edition
 def vuelta1973():
 
     builder = TourOfSpainBuilder(1973,4,26)
@@ -1941,6 +1975,7 @@ def vuelta1973():
 
     return builder.build()
 
+@edition
 def vuelta1974():
 
     builder = TourOfSpainBuilder(1974,4,23)
@@ -2016,6 +2051,7 @@ def vuelta1974():
 
     return builder.build()
 
+@edition
 def vuelta1975():
 
     builder = TourOfSpainBuilder(1975,4,22)
@@ -2086,6 +2122,7 @@ def vuelta1975():
 
     return builder.build()
 
+@edition
 def vuelta1976():
 
     builder = TourOfSpainBuilder(1976,4,27)
@@ -2158,6 +2195,7 @@ def vuelta1976():
 
     return builder.build()
 
+@edition
 def vuelta1977():
 
     builder = TourOfSpainBuilder(1977,4,26)
@@ -2228,6 +2266,7 @@ def vuelta1977():
 
     return builder.build()
 
+@edition
 def vuelta1978():
 
     builder = TourOfSpainBuilder(1978,4,25)
@@ -2302,6 +2341,7 @@ def vuelta1978():
 
     return builder.build()
 
+@edition
 def vuelta1979():
 
     builder = TourOfSpainBuilder(1979,4,24)
@@ -2378,6 +2418,7 @@ def vuelta1979():
 
     return builder.build()
 
+@edition
 def vuelta1980():
 
     builder = TourOfSpainBuilder(1980,4,22)
@@ -2447,6 +2488,7 @@ def vuelta1980():
 
     return builder.build()
 
+@edition
 def vuelta1981():
 
     builder = TourOfSpainBuilder(1981,4,21)
@@ -2520,6 +2562,7 @@ def vuelta1981():
 
     return builder.build()
 
+@edition
 def vuelta1982():
 
     builder = TourOfSpainBuilder(1982,4,20)
@@ -2593,6 +2636,7 @@ def vuelta1982():
 
     return builder.build()
 
+@edition
 def vuelta1983():
 
     builder = TourOfSpainBuilder(1983,4,19)
@@ -2663,6 +2707,7 @@ def vuelta1983():
 
     return builder.build()
 
+@edition
 def vuelta1984():
 
     builder = TourOfSpainBuilder(1984,4,17)
@@ -2733,6 +2778,7 @@ def vuelta1984():
 
     return builder.build()
 
+@edition
 def vuelta1985():
 
     builder = TourOfSpainBuilder(1985,4,23)
@@ -2801,6 +2847,7 @@ def vuelta1985():
 
     return builder.build()
 
+@edition
 def vuelta1986():
 
     builder = TourOfSpainBuilder(1986,4,22)
@@ -2876,6 +2923,7 @@ def vuelta1986():
 
     return builder.build()
 
+@edition
 def vuelta1987():
 
     builder = TourOfSpainBuilder(1987,4,23)
@@ -2955,6 +3003,7 @@ def vuelta1987():
 
     return builder.build()
 
+@edition
 def vuelta1988():
 
     builder = TourOfSpainBuilder(1988,4,25)
@@ -3025,6 +3074,7 @@ def vuelta1988():
 
     return builder.build()
 
+@edition
 def vuelta1989():
 
     builder = TourOfSpainBuilder(1989,4,24)
@@ -3101,6 +3151,7 @@ def vuelta1989():
 
     return builder.build()
 
+@edition
 def vuelta1990():
 
     builder = TourOfSpainBuilder(1990,4,24)
@@ -3178,6 +3229,7 @@ def vuelta1990():
 
     return builder.build()
 
+@edition
 def vuelta1991():
 
     builder = TourOfSpainBuilder(1991,4,29)
@@ -3253,6 +3305,7 @@ def vuelta1991():
 
     return builder.build()
 
+@edition
 def vuelta1992():
 
     builder = TourOfSpainBuilder(1992,4,27)
@@ -3328,6 +3381,7 @@ def vuelta1992():
 
     return builder.build()
 
+@edition
 def vuelta1993():
 
     builder = TourOfSpainBuilder(1993,4,26)
@@ -3403,6 +3457,7 @@ def vuelta1993():
 
     return builder.build()
 
+@edition
 def vuelta1994():
 
     builder = TourOfSpainBuilder(1994,4,25)
@@ -3476,6 +3531,7 @@ def vuelta1994():
 
     return builder.build()
 
+@edition
 def vuelta1995():
 
     builder = TourOfSpainBuilder(1995,9,2)
@@ -3555,6 +3611,7 @@ def vuelta1995():
 
     return builder.build()
 
+@edition
 def vuelta1996():
 
     builder = TourOfSpainBuilder(1996,9,7)
@@ -3634,6 +3691,7 @@ def vuelta1996():
 
     return builder.build()
 
+@edition
 def vuelta1997():
 
     builder = TourOfSpainBuilder(1997,9,6)
@@ -3710,6 +3768,7 @@ def vuelta1997():
 
     return builder.build()
 
+@edition
 def vuelta1998():
 
     builder = TourOfSpainBuilder(1998,9,5)
@@ -3788,6 +3847,7 @@ def vuelta1998():
 
     return builder.build()
 
+@edition
 def vuelta1999():
 
     builder = TourOfSpainBuilder(1999,9,4)
@@ -3868,6 +3928,7 @@ def vuelta1999():
 
     return builder.build()
 
+@edition
 def vuelta2000():
 
     builder = TourOfSpainBuilder(2000,8,26)
@@ -3947,6 +4008,7 @@ def vuelta2000():
 
     return builder.build()
 
+@edition
 def vuelta2001():
 
     builder = TourOfSpainBuilder(2001,9,8)
@@ -4026,6 +4088,7 @@ def vuelta2001():
 
     return builder.build()
 
+@edition
 def vuelta2002():
 
     builder = TourOfSpainBuilder(2002,9,7)
@@ -4105,6 +4168,7 @@ def vuelta2002():
 
     return builder.build()
 
+@edition
 def vuelta2003():
 
     builder = TourOfSpainBuilder(2003,9,6)
@@ -4183,6 +4247,7 @@ def vuelta2003():
 
     return builder.build()
 
+@edition
 def vuelta2004():
 
     builder = TourOfSpainBuilder(2004,9,4)
@@ -4263,6 +4328,7 @@ def vuelta2004():
 
     return builder.build()
 
+@edition
 def vuelta2005():
 
     builder = TourOfSpainBuilder(2005,8,27)
@@ -4341,6 +4407,7 @@ def vuelta2005():
 
     return builder.build()
 
+@edition
 def vuelta2006():
 
     builder = TourOfSpainBuilder(2006,8,26)
@@ -4422,6 +4489,7 @@ def vuelta2006():
 
     return builder.build()
 
+@edition
 def vuelta2007():
 
     builder = TourOfSpainBuilder(2007,9,1)
@@ -4501,6 +4569,7 @@ def vuelta2007():
 
     return builder.build()
 
+@edition
 def vuelta2008():
 
     builder = TourOfSpainBuilder(2008,8,30)
@@ -4578,6 +4647,7 @@ def vuelta2008():
 
     return builder.build()
 
+@edition
 def vuelta2009():
 
     builder = TourOfSpainBuilder(2009,8,29)
@@ -4657,6 +4727,7 @@ def vuelta2009():
 
     return builder.build()
 
+@edition
 def vuelta2010():
 
     builder = TourOfSpainBuilder(2010,8,28)
@@ -4734,6 +4805,7 @@ def vuelta2010():
 
     return builder.build()
 
+@edition
 def vuelta2011():
 
     builder = TourOfSpainBuilder(2011,8,20)
@@ -4815,6 +4887,7 @@ def vuelta2011():
 
     return builder.build()
 
+@edition
 def vuelta2012():
 
     builder = TourOfSpainBuilder(2012,8,18)
@@ -4895,6 +4968,7 @@ def vuelta2012():
 
     return builder.build()
 
+@edition
 def vuelta2013():
 
     builder = TourOfSpainBuilder(2013,8,24)
@@ -4977,6 +5051,7 @@ def vuelta2013():
 
     return builder.build()
 
+@edition
 def vuelta2014():
 
     builder = TourOfSpainBuilder(2014,8,23)
@@ -5058,6 +5133,7 @@ def vuelta2014():
 
     return builder.build()
 
+@edition
 def vuelta2015():
 
     builder = TourOfSpainBuilder(2015,8,22)
@@ -5136,6 +5212,7 @@ def vuelta2015():
 
     return builder.build()
 
+@edition
 def vuelta2016():
 
     builder = TourOfSpainBuilder(2016,8,20)
@@ -5220,6 +5297,7 @@ def vuelta2016():
 
     return builder.build()
 
+@edition
 def vuelta2017():
 
     builder = TourOfSpainBuilder(2017,8,19)
@@ -5300,6 +5378,7 @@ def vuelta2017():
 
     return builder.build()
 
+@edition
 def vuelta2018():
 
     builder = TourOfSpainBuilder(2018,8,25)
@@ -5378,3 +5457,5 @@ def vuelta2018():
 
     return builder.build()
 
+def editions():
+    return _editions

@@ -46,9 +46,6 @@ def mendrisio():
 def mohin():
     return _swiss_location("Mohin")
 
-def monte_generoso():
-    return _swiss_location("Monte Generoso")
-
 def neuchatel():
     return _swiss_location("Neuchatel")
 
