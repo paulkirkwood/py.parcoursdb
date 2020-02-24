@@ -810,9 +810,6 @@ def la_ferte_sous_jouarre():
 def la_fouillouse():
     return _french_location("La Fouillouse")
 
-def la_grand_motte():
-    return _french_location("La Grand-Motte")
-
 def la_grande_motte():
     return _french_location("La Grande-Motte")
 

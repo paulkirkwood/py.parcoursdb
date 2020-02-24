@@ -57,9 +57,6 @@ class StageRaceBuilder(object):
         self._stage_distance = distance
         self._new_state(IndividualTimeTrialBuilder)
 
-    def non_consecutive_stages(self):
-        self._new_stage(NonConsecutiveStageRaceBuilder)
-
     def build(self):
         if len(self._stages) == 0:
             raise NotImplementedError( "No stages have been added")

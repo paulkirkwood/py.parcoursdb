@@ -241,7 +241,6 @@ from .locations import la_chatre
 from .locations import la_defense
 from .locations import la_ferte_sous_jouarre
 from .locations import la_fouillouse
-from .locations import la_grand_motte
 from .locations import la_grande_motte
 from .locations import la_guerche_de_bretagne
 from .locations import la_haie_fouassiere
@@ -850,7 +849,6 @@ all = [ abbeville
       , la_defense
       , la_ferte_sous_jouarre
       , la_fouillouse
-      , la_grand_motte
       , la_grande_motte
       , la_guerche_de_bretagne
       , la_haie_fouassiere

@@ -733,8 +733,6 @@ def tdf1934():
 
     builder.rest_day(france.evian())
 
-
-
     # Stage 6
     builder.road_stage(france.evian(), france.aix_les_bains(), 207)
 
@@ -752,8 +750,6 @@ def tdf1934():
 
     builder.rest_day(france.nice())
 
-
-
     # Stage 11
     builder.road_stage(france.nice(), france.cannes(), 126)
 
@@ -768,8 +764,6 @@ def tdf1934():
 
     builder.rest_day(france.perpignan())
 
-
-
     # Stage 15
     builder.road_stage(france.perpignan(), france.ax_les_thermes(), 158)
 
@@ -783,7 +777,6 @@ def tdf1934():
     builder.road_stage(france.tarbes(), france.pau(), 172)
 
     builder.rest_day(france.pau())
-
 
     # Stage 19
     builder.road_stage(france.pau(), france.bordeaux(), 215)
@@ -1810,7 +1803,6 @@ def tdf1952():
     # Rest day
     builder.rest_day(france.toulouse())
 
-
     # Stage 17
     builder.road_stage(france.toulouse(), france.bagneres_de_bigorre(), 204.0)
 
@@ -2369,7 +2361,6 @@ def tdf1959():
 
     # Rest day
     builder.rest_day(france.bayonne())
-
 
     # Stage 10
     builder.road_stage(france.bayonne(), france.bagneres_de_bigorre(), 235.0)
@@ -3486,7 +3477,7 @@ def tdf1972():
     builder.road_stage(france.luchon(), france.colomiers(), 179.0)
 
     # Stage 10
-    builder.road_stage(france.castres(), france.la_grand_motte(), 210.0)
+    builder.road_stage(france.castres(), france.la_grande_motte(), 210.0)
 
     # Stage 11
     builder.mountain_stage(france.carnon_plage())
